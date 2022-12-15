@@ -41,7 +41,7 @@ export function Hero() {
       <ColorfulBackground />
       <div className="flex flex-col md:flex-row">
         <section>
-          <h1 className="mx-auto max-w-4xl font-display text-5xl font-medium tracking-tight text-slate-900 lg:text-7xl">
+          <h1 className="mx-auto max-w-4xl font-display text-5xl font-medium tracking-tight text-slate-900 md:pt-10 lg:text-7xl">
             Physiotherapie Ershausen
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg tracking-tight text-slate-700">
