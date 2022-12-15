@@ -1,4 +1,3 @@
-import { Container } from "@/components/Container"
 import gruppenfoto from "@/images/gruppenfoto.webp"
 import Image from "next/image"
 
@@ -38,11 +37,11 @@ function ColorfulBackground() {
 
 export function Hero() {
   return (
-    <Container className="lg:pt-15 pt-12 pb-16 text-center">
+    <div className="lg:pt-15 pb-16 text-center">
       <ColorfulBackground />
       <div className="flex flex-col md:flex-row">
         <section>
-          <h1 className="mx-auto max-w-4xl font-display text-5xl font-medium tracking-tight text-slate-900 sm:text-7xl">
+          <h1 className="mx-auto max-w-4xl font-display text-5xl font-medium tracking-tight text-slate-900 lg:text-7xl">
             Physiotherapie Ershausen
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg tracking-tight text-slate-700">
@@ -50,9 +49,9 @@ export function Hero() {
             zu verbessern.
           </p>
         </section>
-        <section className="mt-10 md:mt-0 md:pl-5">
+        <section className="mx-5 mt-10 md:mt-0 md:ml-5 md:mr-0">
           <Image
-            className="rounded-lg border shadow-2xl"
+            className="rounded-lg border shadow-2xl md:rounded-l-lg"
             src={gruppenfoto}
             width={800}
             height={100}
@@ -60,6 +59,6 @@ export function Hero() {
           />
         </section>
       </div>
-    </Container>
+    </div>
   )
 }
