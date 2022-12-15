@@ -26,7 +26,7 @@ function ColorfulBackground() {
               y2="474.645"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#9089FC" />
+              <stop stopColor="#69C9CD" />
               <stop offset={1} stopColor="#FF80B5" />
             </linearGradient>
           </defs>
@@ -40,7 +40,6 @@ export function Hero() {
   return (
     <Container className="lg:pt-15 pt-12 pb-16 text-center">
       <ColorfulBackground />
-      {/* <Example /> */}
       <div className="flex flex-col md:flex-row">
         <section>
           <h1 className="mx-auto max-w-4xl font-display text-5xl font-medium tracking-tight text-slate-900 sm:text-7xl">
@@ -51,7 +50,7 @@ export function Hero() {
             zu verbessern.
           </p>
         </section>
-        <section className="md:pl-5">
+        <section className="mt-10 md:mt-0 md:pl-5">
           <Image
             className="rounded-lg border shadow-2xl"
             src={gruppenfoto}
