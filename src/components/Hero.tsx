@@ -1,16 +1,51 @@
 import { Button } from "@/components/Button"
 import { Container } from "@/components/Container"
-import logoLaravel from "@/images/logos/laravel.svg"
-import logoMirage from "@/images/logos/mirage.svg"
-import logoStatamic from "@/images/logos/statamic.svg"
-import logoStaticKit from "@/images/logos/statickit.svg"
-import logoTransistor from "@/images/logos/transistor.svg"
-import logoTuple from "@/images/logos/tuple.svg"
-import Image from "next/image"
+
+const navigation = [
+  { name: "Product", href: "#" },
+  { name: "Features", href: "#" },
+  { name: "Marketplace", href: "#" },
+  { name: "Company", href: "#" },
+]
+
+function ColorfulBackground() {
+  return (
+    <div className="isolate bg-white">
+      <div className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">
+        <svg
+          className="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]"
+          viewBox="0 0 1155 678"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill="url(#45de2b6b-92d5-4d68-a6a0-9b9b2abad533)"
+            fillOpacity=".3"
+            d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z"
+          />
+          <defs>
+            <linearGradient
+              id="45de2b6b-92d5-4d68-a6a0-9b9b2abad533"
+              x1="1155.49"
+              x2="-78.208"
+              y1=".177"
+              y2="474.645"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stopColor="#9089FC" />
+              <stop offset={1} stopColor="#FF80B5" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+    </div>
+  )
+}
 
 export function Hero() {
   return (
-    <Container className="pt-20 pb-16 text-center lg:pt-32">
+    <Container className="lg:pt-25 pt-20 pb-16 text-center">
+      <ColorfulBackground />
       <h1 className="mx-auto max-w-4xl font-display text-5xl font-medium tracking-tight text-slate-900 sm:text-7xl">
         Accounting{" "}
         <span className="relative whitespace-nowrap text-blue-600">
@@ -44,41 +79,6 @@ export function Hero() {
           </svg>
           <span className="ml-3">Watch video</span>
         </Button>
-      </div>
-      <div className="mt-36 lg:mt-44">
-        <p className="font-display text-base text-slate-900">
-          Trusted by these six companies so far
-        </p>
-        <ul
-          role="list"
-          className="mt-8 flex items-center justify-center gap-x-8 sm:flex-col sm:gap-x-0 sm:gap-y-10 xl:flex-row xl:gap-x-12 xl:gap-y-0"
-        >
-          {[
-            [
-              { name: "Transistor", logo: logoTransistor },
-              { name: "Tuple", logo: logoTuple },
-              { name: "StaticKit", logo: logoStaticKit },
-            ],
-            [
-              { name: "Mirage", logo: logoMirage },
-              { name: "Laravel", logo: logoLaravel },
-              { name: "Statamic", logo: logoStatamic },
-            ],
-          ].map((group, groupIndex) => (
-            <li key={groupIndex}>
-              <ul
-                role="list"
-                className="flex flex-col items-center gap-y-8 sm:flex-row sm:gap-x-12 sm:gap-y-0"
-              >
-                {group.map((company) => (
-                  <li key={company.name} className="flex">
-                    <Image src={company.logo} alt={company.name} unoptimized />
-                  </li>
-                ))}
-              </ul>
-            </li>
-          ))}
-        </ul>
       </div>
     </Container>
   )
