@@ -4,7 +4,7 @@ import { Footer } from "@/components/Footer"
 import { Header } from "@/components/Header"
 import { Hero } from "@/components/Hero"
 import { Pricing } from "@/components/Pricing"
-import { Testimonials } from "@/components/Testimonials"
+import { Testimonials } from "@/components/Leistungen"
 import Welcome from "@/components/Welcome"
 import Head from "next/head"
 

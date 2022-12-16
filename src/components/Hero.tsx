@@ -1,11 +1,10 @@
 import { colors } from "@/colors"
 import gruppenfoto from "@/images/gruppenfoto.webp"
-import clsx from "clsx"
 import Image from "next/image"
-import Link from "next/link"
+import { Button } from "./Button"
 
 const buttonClasses =
-  "text-dark mt-3 inline-flex items-center rounded-full border border-transparent bg-accent px-3.5 py-2 text-sm font-medium leading-4 shadow-sm hover:bg-primary hover:text-white focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2"
+  "text-dark mt-3 inline-flex items-center rounded-full border border-transparent bg-accent px-3.5 py-2 text-md transition duration-300 font-medium leading-4 shadow-sm hover:bg-primary hover:text-white focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2"
 
 function SprinkleBackground() {
   return (
@@ -64,18 +63,17 @@ export function Hero() {
               Wir sind für Sie da, um Schmerzen zu lindern und Ihre
               Beweglichkeit zu verbessern.
             </p>
-            <Link href="/leistungen" className={buttonClasses}>
+            <Button href="/leistungen" variant="solid" color="accent">
               Unsere Leistungen
-            </Link>
-            <Link
+            </Button>
+            <Button
               href="/team"
-              className={clsx(
-                buttonClasses,
-                "ml-2 border-accent bg-transparent"
-              )}
+              variant="outline"
+              color="accent"
+              className="ml-2"
             >
               Unser Team
-            </Link>
+            </Button>
           </section>
           <section className="mx-5 mt-10 md:mt-0 md:ml-5 md:mr-0">
             <Image
