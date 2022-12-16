@@ -7,7 +7,7 @@ export default function Example() {
     <div className="bg-accent px-4 py-5">
       <Container>
         <div className="relative">
-          <div className=" my-7 mx-6 rounded-lg bg-white px-4 py-5 shadow-2xl sm:px-6">
+          <div className="my-7 mx-6 rounded-lg bg-white px-4 py-5 shadow-2xl sm:px-6">
             <h2 className="pb-3 text-3xl">Herzlich Willkommen</h2>
             <p>
               Herzlich willkommen bei der Physiotherapie Ershausen! Wir sind ein
