@@ -1,5 +1,6 @@
 import { Container } from "@/components/Container"
 import Link from "next/link"
+import { Button } from "./Button"
 
 const leistungen = [
   {
@@ -39,7 +40,7 @@ const leistungen = [
   },
 ]
 
-export function Testimonials() {
+export function Leistungen() {
   return (
     <section
       id="testimonials"
@@ -68,6 +69,13 @@ export function Testimonials() {
                   <p className="text-lg tracking-tight text-slate-900">
                     {leistung.heading}
                   </p>
+                  <Button
+                    className="text-sm"
+                    variant="outline"
+                    href={leistung.href}
+                  >
+                    Zur Beschreibung
+                  </Button>
                 </div>
               </Link>
             </div>
