@@ -1,6 +1,12 @@
+// import { Button } from "@/components/Button"
 import { Container } from "@/components/Container"
-import Link from "next/link"
-import { Button } from "./Button"
+import dynamic from "next/dynamic"
+const Button = dynamic(
+  () => import("@/components/Button").then((module) => module.Button),
+  {
+    ssr: false,
+  }
+)
 
 const leistungen = [
   {
@@ -43,8 +49,8 @@ const leistungen = [
 export function Leistungen() {
   return (
     <section
-      id="testimonials"
-      aria-label="What our customers are saying"
+      id="leistungen"
+      aria-label="Übersicht über unsere Leistungen"
       className="bg-slate-50 py-20 sm:py-32"
     >
       <Container>
@@ -64,20 +70,19 @@ export function Leistungen() {
         >
           {leistungen.map((leistung, leistungIndex) => (
             <div key={leistungIndex}>
-              <Link href={leistung.href}>
-                <div className="relative rounded-xl bg-white p-6 shadow-xl shadow-slate-900/10 transition duration-300 ease-in hover:shadow-2xl">
-                  <p className="text-lg tracking-tight text-slate-900">
-                    {leistung.heading}
-                  </p>
-                  <Button
-                    className="text-sm"
-                    variant="outline"
-                    href={leistung.href}
-                  >
-                    Zur Beschreibung
-                  </Button>
-                </div>
-              </Link>
+              <div className="relative rounded-xl bg-white p-6 shadow-xl shadow-slate-900/10 transition duration-300 ease-in hover:shadow-2xl">
+                <p className="text-lg tracking-tight text-slate-900">
+                  {leistung.heading}
+                </p>
+                <Button
+                  key={leistungIndex + "-button"}
+                  className="text-sm"
+                  variant="outline"
+                  href={leistung.href}
+                >
+                  Zur Beschreibung
+                </Button>
+              </div>
             </div>
           ))}
         </div>

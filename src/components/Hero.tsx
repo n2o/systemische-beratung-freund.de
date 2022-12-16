@@ -81,7 +81,8 @@ export function Hero() {
               src={gruppenfoto}
               width={800}
               height={100}
-              alt="Ein Teamfoto der fünf Physiotherapeutinnen"
+              priority
+              alt="Ein Teamfoto der Physiotherapeutinnen"
             />
           </section>
         </div>
