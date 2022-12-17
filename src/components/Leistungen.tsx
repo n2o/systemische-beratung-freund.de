@@ -55,9 +55,11 @@ function Leistung({ leistung }) {
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
     >
-      <div className="relative rounded-xl bg-white p-6 shadow-xl shadow-slate-900/10 transition duration-300 ease-in hover:shadow-2xl">
-        <p className="text-lg tracking-tight text-slate-900">{heading}</p>
-        <Button className="text-sm" variant="solid" href={href}>
+      <div className="relative rounded-xl bg-slate-100 p-6 shadow-xl shadow-slate-900/10 transition duration-300 ease-in hover:shadow-2xl">
+        <p className="text-lg font-medium tracking-tight text-slate-900">
+          {heading}
+        </p>
+        <Button className="text-sm" variant="outline" href={href}>
           Zur Beschreibung
         </Button>
       </div>
