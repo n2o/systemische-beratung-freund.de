@@ -1,5 +1,6 @@
 // import { Button } from "@/components/Button"
 import { Container } from "@/components/Container"
+import { motion } from "framer-motion"
 import dynamic from "next/dynamic"
 const Button = dynamic(
   () => import("@/components/Button").then((module) => module.Button),
@@ -46,6 +47,24 @@ const leistungen = [
   },
 ]
 
+function Leistung({ leistung }) {
+  const { heading, href } = leistung
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+    >
+      <div className="relative rounded-xl bg-white p-6 shadow-xl shadow-slate-900/10 transition duration-300 ease-in hover:shadow-2xl">
+        <p className="text-lg tracking-tight text-slate-900">{heading}</p>
+        <Button className="text-sm" variant="solid" href={href}>
+          Zur Beschreibung
+        </Button>
+      </div>
+    </motion.div>
+  )
+}
+
 export function Leistungen() {
   return (
     <section
@@ -66,23 +85,11 @@ export function Leistungen() {
         </div>
         <div
           role="list"
-          className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:gap-8 lg:mt-20 lg:max-w-none lg:grid-cols-3"
+          className="mx-auto mt-16 grid max-w-2xl grid-cols-2 gap-6 sm:gap-8 lg:mt-20 lg:max-w-none lg:grid-cols-3 xl:grid-cols-4"
         >
           {leistungen.map((leistung, leistungIndex) => (
             <div key={leistungIndex}>
-              <div className="relative rounded-xl bg-white p-6 shadow-xl shadow-slate-900/10 transition duration-300 ease-in hover:shadow-2xl">
-                <p className="text-lg tracking-tight text-slate-900">
-                  {leistung.heading}
-                </p>
-                <Button
-                  key={leistungIndex + "-button"}
-                  className="text-sm"
-                  variant="solid"
-                  href={leistung.href}
-                >
-                  Zur Beschreibung
-                </Button>
-              </div>
+              <Leistung leistung={leistung} />
             </div>
           ))}
         </div>
