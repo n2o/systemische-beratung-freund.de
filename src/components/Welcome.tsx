@@ -8,14 +8,14 @@ export default function Example() {
       <Container>
         <div className="relative">
           <div className="my-7 mx-6 rounded-lg bg-white px-4 py-5 shadow-2xl sm:px-6">
-            <h2 className="pb-3 text-3xl">Herzlich Willkommen</h2>
+            <h2 className="pb-3 text-3xl">Willkommen!</h2>
             <p>
-              Herzlich willkommen bei der Physiotherapie Ershausen! Wir sind ein
-              Team von erfahrenen Physiotherapeutinnen, die sich auf die
-              Behandlung von Schmerzen und Bewegungsproblemen jeglicher Art
-              spezialisiert haben. Unser Ziel ist es, Sie wieder fit und gesund
-              zu machen und Ihnen dabei zu helfen, Ihre Gesundheit und Ihr
-              Wohlbefinden zu verbessern. Wir freuen uns darauf, Sie
+              Herzlich willkommen bei der Physiotherapie Gebhard und Schrader!
+              Wir sind ein Team von erfahrenen Physiotherapeutinnen, die sich
+              auf die Behandlung von Schmerzen und Bewegungsproblemen jeglicher
+              Art spezialisiert haben. Unser Ziel ist es, Sie wieder fit und
+              gesund zu machen und Ihnen dabei zu helfen, Ihre Gesundheit und
+              Ihr Wohlbefinden zu verbessern. Wir freuen uns darauf, Sie
               kennenzulernen und Ihnen bei Ihren Therapiebedürfnissen zu helfen
             </p>
           </div>

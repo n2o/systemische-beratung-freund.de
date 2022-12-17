@@ -1,4 +1,3 @@
-import { Divider } from "@/components/Divider"
 import { Faqs } from "@/components/Faqs"
 import { Footer } from "@/components/Footer"
 import { Header } from "@/components/Header"
@@ -22,7 +21,6 @@ export default function Home() {
         <Hero />
         {/* <PrimaryFeatures /> */}
         {/* <SecondaryFeatures /> */}
-        <Divider />
         <Welcome />
         <Leistungen />
         <Faqs />

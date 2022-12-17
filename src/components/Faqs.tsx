@@ -3,57 +3,47 @@ import backgroundImage from "@/images/background-faqs.jpg"
 import Image from "next/image"
 
 const faqs = [
-  [
-    {
-      question: "Does TaxPal handle VAT?",
-      answer:
-        "Well no, but if you move your company offshore you can probably ignore it.",
-    },
-    {
-      question: "Can I pay for my subscription via purchase order?",
-      answer: "Absolutely, we are happy to take your money in all forms.",
-    },
-    {
-      question: "How do I apply for a job at TaxPal?",
-      answer:
-        "We only hire our customers, so subscribe for a minimum of 6 months and then let’s talk.",
-    },
-  ],
-  [
-    {
-      question: "What was that testimonial about tax fraud all about?",
-      answer:
-        "TaxPal is just a software application, ultimately your books are your responsibility.",
-    },
-    {
-      question:
-        "TaxPal sounds horrible but why do I still feel compelled to purchase?",
-      answer:
-        "This is the power of excellent visual design. You just can’t resist it, no matter how poorly it actually functions.",
-    },
-    {
-      question:
-        "I found other companies called TaxPal, are you sure you can use this name?",
-      answer:
-        "Honestly not sure at all. We haven’t actually incorporated or anything, we just thought it sounded cool and made this website.",
-    },
-  ],
-  [
-    {
-      question: "How do you generate reports?",
-      answer:
-        "You just tell us what data you need a report for, and we get our kids to create beautiful charts for you using only the finest crayons.",
-    },
-    {
-      question: "Can we expect more inventory features?",
-      answer: "In life it’s really better to never expect anything at all.",
-    },
-    {
-      question: "I lost my password, how do I get into my account?",
-      answer:
-        "Send us an email and we will send you a copy of our latest password spreadsheet so you can find your information.",
-    },
-  ],
+  {
+    question: "Benötige ich eine Überweisung des Arztes?",
+    answer:
+      "Eine ärztliche Verordnung ist für die therapeutische Behandlung erforderlich. Selbstverständlich können Sie alle Leistungen unserer Praxis auch privat zahlen und uns ohne den Kontakt zum Arzt aufsuchen.",
+  },
+  {
+    question: "Übernimmt meine Krankenkasse die Kosten?",
+    answer:
+      "Wenn Sie eine Verordnung vom Arzt vorlegen, übernehmen die gesetzlichen und privaten Krankenkassen die Kosten. Der Eigenanteil, den Sie leisten müssen, variiert je nach Kasse und Verordnung. Seit dem 01.01.2004 ist es gesetzliche vorgeschrieben, dass gesetzlich Versicherte einen Eigenanteil von 10% pro Rezept selbst zahlen müssen. Kinder und Jugendliche sind von Zuzahlungen befreit. Weitere Fragen dazu beantwortet Ihnen Ihre Krankenkasse.",
+  },
+  {
+    question: "Wie lange ist mein Rezept gültig?",
+    answer:
+      "Sind Sie gesetzlich versichert muss das Rezept innerhalb von 28 Tagen nach Ausstellungsdatum angefangen werden. Sie sollten also so bald wie möglich einen Termin vereinbaren. Die Behandlung sollte nicht länger als 14 Tage unterbrochen werden, da die Verordnung ansonsten ungültig wird.",
+  },
+  {
+    question: "Wer entscheidet, wie viele Rezepte ich bekomme?",
+    answer:
+      "Wann und wie viele Verordnungen Ihnen zustehen, richtet sich nach der Diagnose des Arztes, sowie nach den Vorgaben des Heilmittelkataloges, nachzulesen unter www.heilmittelkatalog.de",
+  },
+  {
+    question: "Wie lange dauert eine Behandlung?",
+    answer:
+      "Die Dauer der Behandlung hängt von dem vom Arzt verordneten Heilmittel ab.",
+  },
+  {
+    question: "Was muss ich zur Behandlung mitbringen?",
+    answer:
+      "Beim ersten Termin bringen Sie bitte die ärztliche Verordnung, Ihre Versichertenkarte und ein großes Handtuch oder Spannbettlaken mit. Bitte tragen Sie bequeme Kleidung und kommen pünktlich zum Termin.",
+  },
+  {
+    question: "Was ist, wenn ich meinen Termin nicht einhalten kann?",
+    answer:
+      "Teilen Sie uns so bald wie möglich, spätestens 24 Stunden vor Behandlungsbeginn, mit, wenn Sie aus einem wichtigen Grund Ihren Termin absagen müssen. Wir können so anderen Patienten, die auf einen Termin warten, die frei gewordene Zeit anbieten. Sollten Sie ohne Absage den Termin verfallen lassen, müssen wir Ihnen pauschal einen Betrag von 25€ in Rechnung stellen.",
+  },
+  {
+    question:
+      "Wie kann ich mich als Patient zum Thema Datenschutz in Ihrer Praxis informieren?",
+    answer:
+      "Gerne beantworten wir alle Fragen zum Thema Datenschutz. Unser Musterformular finden Sie hier TODO.",
+  },
 ]
 
 export function Faqs() {
@@ -73,36 +63,24 @@ export function Faqs() {
       />
       <Container className="relative">
         <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2
-            id="faq-title"
-            className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl"
-          >
-            Frequently asked questions
+          <h2 className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">
+            Häufig gestellte Fragen
           </h2>
-          <p className="mt-4 text-lg tracking-tight text-slate-700">
-            If you can’t find what you’re looking for, email our support team
-            and if you’re lucky someone will get back to you.
+          <p className="my-6 text-lg tracking-tight text-slate-700">
+            Hier finden Sie eine Auswahl der häufig gestellten Fragen. Sollten
+            Sie weitere Fragen haben, zögern Sie nicht uns zu kontaktieren.
           </p>
         </div>
-        <ul
-          role="list"
-          className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3"
-        >
-          {faqs.map((column, columnIndex) => (
-            <li key={columnIndex}>
-              <ul role="list" className="flex flex-col gap-y-8">
-                {column.map((faq, faqIndex) => (
-                  <li key={faqIndex}>
-                    <h3 className="font-display text-lg leading-7 text-slate-900">
-                      {faq.question}
-                    </h3>
-                    <p className="mt-4 text-sm text-slate-700">{faq.answer}</p>
-                  </li>
-                ))}
-              </ul>
-            </li>
+        <div className="grid grid-cols-3 gap-4">
+          {faqs.map((faq, faqIndex) => (
+            <div key={faqIndex} className="pb-4">
+              <h3 className="font-display text-lg leading-7 text-slate-900">
+                {faq.question}
+              </h3>
+              <p className="text-md mt-4 text-slate-700">{faq.answer}</p>
+            </div>
           ))}
-        </ul>
+        </div>
       </Container>
     </section>
   )
