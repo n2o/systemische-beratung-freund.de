@@ -77,7 +77,7 @@ export function Leistungen() {
                 <Button
                   key={leistungIndex + "-button"}
                   className="text-sm"
-                  variant="outline"
+                  variant="solid"
                   href={leistung.href}
                 >
                   Zur Beschreibung
