@@ -13,7 +13,7 @@ export default function Home() {
         <title>Gebhardt und Schrader Physiotherapie GbR</title>
         <meta
           name="description"
-          content="Most bookkeeping software is accurate, but hard to use. We make the opposite trade-off, and hope you don’t get audited."
+          content="Physiotherapie Gebhardt und Schrader in Ershausen. Wir sind ein Team von erfahrenen Physiotherapeutinnen, die sich auf die Behandlung von Schmerzen und Bewegungsproblemen jeglicher Art spezialisiert haben."
         />
       </Head>
       <Header />
