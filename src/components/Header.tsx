@@ -8,9 +8,12 @@ import { Fragment } from "react"
 
 function MobileNavLink({ href, children }) {
   return (
-    <Popover.Button as={Link} href={href} className="block w-full p-2">
+    <Link
+      href={href}
+      className="block w-full rounded p-2 hover:bg-slate-100 hover:underline"
+    >
       {children}
-    </Popover.Button>
+    </Link>
   )
 }
 
