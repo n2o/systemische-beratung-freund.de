@@ -22,4 +22,8 @@
   p {
     @apply pb-2;
   }
+
+  .link {
+    @apply text-primary hover:underline;
+  }
 }
