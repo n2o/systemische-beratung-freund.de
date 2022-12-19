@@ -67,7 +67,7 @@ function Leistung({ leistung }) {
       >
         <article className="relative rounded-xl bg-white p-6 shadow-xl shadow-slate-900/10 transition duration-300 ease-in hover:shadow-2xl">
           <p
-            className="hyphens-manual whitespace-normal text-lg font-medium tracking-tight text-slate-900"
+            className="hyphens-manual whitespace-normal font-medium tracking-tight text-slate-900 md:text-lg"
             dangerouslySetInnerHTML={{ __html: heading }}
           ></p>
           <Button className="text-sm" variant="outline" href={href}>
