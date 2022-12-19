@@ -6,6 +6,18 @@
   min-height: 100%;
 }
 
+.hyphens-none {
+  hyphens: none;
+}
+
+.hyphens-manual {
+  hyphens: manual;
+}
+
+.hyphens-auto {
+  hyphens: auto;
+}
+
 @layer base {
   p {
     @apply pb-2;

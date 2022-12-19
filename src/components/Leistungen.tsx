@@ -1,7 +1,9 @@
 // import { Button } from "@/components/Button"
 import { Container } from "@/components/Container"
-import { motion } from "framer-motion"
+import { Transition } from "@headlessui/react"
+import { useInView } from "framer-motion"
 import dynamic from "next/dynamic"
+import { Fragment, useRef } from "react"
 const Button = dynamic(
   () => import("@/components/Button").then((module) => module.Button),
   {
@@ -26,7 +28,7 @@ const leistungen = [
     href: "/leistungen#manuelle-therapie",
   },
   {
-    heading: "Kiefergelenksbehandlung / CMD",
+    heading: "Kiefergelenks&shy;behandlung / CMD",
     description: "",
     href: "/leistungen#kiefergelenksbehandlung",
   },
@@ -49,21 +51,31 @@ const leistungen = [
 
 function Leistung({ leistung }) {
   const { heading, href } = leistung
+  const ref = useRef(null)
+
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-    >
-      <div className="relative rounded-xl bg-slate-100 p-6 shadow-xl shadow-slate-900/10 transition duration-300 ease-in hover:shadow-2xl">
-        <p className="text-lg font-medium tracking-tight text-slate-900">
-          {heading}
-        </p>
-        <Button className="text-sm" variant="outline" href={href}>
-          Zur Beschreibung
-        </Button>
-      </div>
-    </motion.div>
+    <span ref={ref}>
+      <Transition
+        as={Fragment}
+        show={useInView(ref, { once: true })}
+        enter="transform transition duration-[400ms]"
+        enterFrom="opacity-0 scale-50"
+        enterTo="opacity-100 scale-100"
+        leave="transform duration-200 transition ease-in-out"
+        leaveFrom="opacity-100 scale-100 "
+        leaveTo="opacity-0 scale-95 "
+      >
+        <article className="relative rounded-xl bg-white p-6 shadow-xl shadow-slate-900/10 transition duration-300 ease-in hover:shadow-2xl">
+          <p
+            className="hyphens-manual whitespace-normal text-lg font-medium tracking-tight text-slate-900"
+            dangerouslySetInnerHTML={{ __html: heading }}
+          ></p>
+          <Button className="text-sm" variant="outline" href={href}>
+            Zur Beschreibung
+          </Button>
+        </article>
+      </Transition>
+    </span>
   )
 }
 
@@ -80,9 +92,9 @@ export function Leistungen() {
             Unsere Leistungen
           </h2>
           <p className="mt-4 text-lg tracking-tight text-slate-700">
-            Our software is so simple that people can’t help but fall in love
-            with it. Simplicity is easy when you just skip tons of
-            mission-critical features.
+            Wir bieten Ihnen eine Vielzahl an Behandlungsmöglichkeiten an.
+            Finden Sie hier eine Übersicht und weitere Informationen zu den
+            einzelnen Behandlungsmethoden.
           </p>
         </div>
         <div
