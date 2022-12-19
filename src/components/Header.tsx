@@ -2,6 +2,7 @@ import { Container } from "@/components/Container"
 import { Logo } from "@/components/Logo"
 import { NavLink } from "@/components/NavLink"
 import { Popover, Transition } from "@headlessui/react"
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"
 import clsx from "clsx"
 import Link from "next/link"
 import { Fragment } from "react"
@@ -19,28 +20,20 @@ function MobileNavLink({ href, children }) {
 
 function MobileNavIcon({ open }) {
   return (
-    <svg
-      aria-hidden="true"
-      className="h-3.5 w-3.5 overflow-visible stroke-slate-700"
-      fill="none"
-      strokeWidth={2}
-      strokeLinecap="round"
-    >
-      <path
-        d="M0 1H14M0 7H14M0 13H14"
+    <div className="h-3.5 w-3.5 overflow-visible stroke-slate-700">
+      <Bars3Icon
         className={clsx(
-          "origin-center transition",
-          open && "scale-90 opacity-0"
+          "h-5 origin-center transition",
+          open && "hidden scale-90 opacity-0"
         )}
       />
-      <path
-        d="M2 2L12 12M12 2L2 12"
+      <XMarkIcon
         className={clsx(
-          "origin-center transition",
-          !open && "scale-90 opacity-0"
+          "h-5 origin-center transition",
+          !open && "hidden scale-90 opacity-0"
         )}
       />
-    </svg>
+    </div>
   )
 }
 
