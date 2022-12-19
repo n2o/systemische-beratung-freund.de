@@ -4,7 +4,7 @@ import backgroundImage from "@/images/behandlungsraum.webp"
 import Image from "next/image"
 
 const heading = "Willkommen!"
-const lead = "Herzlich willkommen bei der Physiotherapie Gebhard und Schrader"
+const lead = "Herzlich willkommen bei der Physiotherapie Gebhardt und Schrader"
 const body =
   "Wir sind ein Team von erfahrenen Physiotherapeutinnen, die sich auf die Behandlung von Schmerzen und Bewegungsproblemen jeglicher Art spezialisiert haben. Unser Ziel ist es, Sie wieder fit und gesund zu machen und Ihnen dabei zu helfen, Ihre Gesundheit und Ihr Wohlbefinden zu verbessern. Wir freuen uns darauf, Sie kennenzulernen und Ihnen bei Ihren Therapiebedürfnissen zu helfen."
 
