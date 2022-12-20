@@ -1,10 +1,10 @@
 // import { Button } from "@/components/Button"
 import { Container } from "@/components/Container"
+import { Karte } from "@/components/Karte"
 import { Transition } from "@headlessui/react"
 import { useInView } from "framer-motion"
 import dynamic from "next/dynamic"
 import { Fragment, useRef } from "react"
-import { Karte } from "./Karte"
 const Button = dynamic(
   () => import("@/components/Button").then((module) => module.Button),
   {
