@@ -23,13 +23,13 @@ function MobileNavIcon({ open }) {
     <div className="h-3.5 w-3.5 overflow-visible stroke-slate-700">
       <Bars3Icon
         className={clsx(
-          "h-5 origin-center transition",
+          "h-8 origin-center transition",
           open && "hidden scale-90 opacity-0"
         )}
       />
       <XMarkIcon
         className={clsx(
-          "h-5 origin-center transition",
+          "h-8 origin-center transition",
           !open && "hidden scale-90 opacity-0"
         )}
       />
