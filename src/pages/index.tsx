@@ -3,7 +3,7 @@ import { Footer } from "@/components/Footer"
 import { Header } from "@/components/Header"
 import { Hero } from "@/components/Hero"
 import { KontaktKarte } from "@/components/KontaktKarte"
-import { Leistungen } from "@/components/Leistungen"
+import { LeistungenKurz } from "@/components/Leistungen"
 import Welcome from "@/components/Welcome"
 import Head from "next/head"
 
@@ -17,7 +17,7 @@ export default function Home() {
       <main>
         <Hero />
         <Welcome />
-        <Leistungen />
+        <LeistungenKurz />
         <KontaktKarte />
         <Faqs />
       </main>

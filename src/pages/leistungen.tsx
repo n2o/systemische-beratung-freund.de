@@ -1,4 +1,6 @@
-import { Hero } from "@/components/Hero"
+import { Footer } from "@/components/Footer"
+import { Header } from "@/components/Header"
+import { Heading } from "@/components/Heading"
 import { KontaktKarte } from "@/components/KontaktKarte"
 import Head from "next/head"
 
@@ -8,10 +10,16 @@ export default function Home() {
       <Head>
         <title>Gebhardt und Schrader Physiotherapie GbR: Leistungen</title>
       </Head>
+      <Header />
       <main>
-        <Hero />
+        <Heading heading="Unsere Leistungen">
+          Wir bieten Ihnen eine Vielzahl an Behandlungsmöglichkeiten an. Finden
+          Sie hier eine Übersicht und weitere Informationen zu den einzelnen
+          Behandlungsmethoden.
+        </Heading>
         <KontaktKarte />
       </main>
+      <Footer />
     </>
   )
 }

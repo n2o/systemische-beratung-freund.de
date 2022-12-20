@@ -3,9 +3,6 @@ import gruppenfoto from "@/images/gruppenfoto.webp"
 import Image from "next/image"
 import { Button } from "./Button"
 
-const buttonClasses =
-  "text-dark mt-3 inline-flex items-center rounded-full border border-transparent bg-accent px-3.5 py-2 text-md transition duration-300 font-medium leading-4 shadow-sm hover:bg-primary hover:text-white focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2"
-
 export function SprinkleBackground() {
   return (
     <div className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">

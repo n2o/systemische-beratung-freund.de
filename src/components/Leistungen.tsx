@@ -14,37 +14,44 @@ const Button = dynamic(
 const leistungen = [
   {
     heading: "Physiotherapie / Krankengymnastik",
-    description: "",
+    description:
+      "...beinhaltet verschiedene Formen aktiver und passiver Bewegungstherapien, um Schmerzen zu lindern, gestörte oder verloren gegangene Funktionen wiederherzustellen und Ihr körperliches und geistiges Wohlbefinden zu erreichen. Sie arbeiten aktiv mit uns als Therapeuten zusammen, um den Heilungsprozess mitzugestalten.",
     href: "/leistungen#physiotherapie",
   },
   {
     heading: "KG-ZNS nach Bobath für Erwachsene",
-    description: "",
+    description:
+      "...findet bei Menschen mit angeborenen oder erworbenen Erkrankungen des Nervensystems seine Anwendung. Mit dem Ziel, die größtmögliche Selbständigkeit des Patienten zu erreichen, erarbeiten Therapeut und Patient alltagsbezogene Bewegungsabläufe.",
     href: "/leistungen#neurologische-behandlung",
   },
   {
     heading: "Manuelle Therapie / MT",
-    description: "",
+    description:
+      "...dient der Behandlung von Störungen im Muskel-, Skelett- und Nervensystem. Nach einem Anfangsbefund wählt die Therapeutin Techniken aus, um Schmerzen und Bewegungseinschränkungen zu beheben.",
     href: "/leistungen#manuelle-therapie",
   },
   {
     heading: "Kiefergelenks&shy;behandlung / CMD",
-    description: "",
+    description:
+      "...befasst sich mit der Untersuchung und Behandlung des Kiefergelenkes und der dazugehörigen Muskulatur. Spannungen und Fehlstellungen des Kiefers kann der Zahnarzt feststellen und dementsprechende Verordnungen ausstellen.",
     href: "/leistungen#kiefergelenksbehandlung",
   },
   {
     heading: "Manuelle Lymphdrainage / MLD",
-    description: "",
+    description:
+      "...fördert den Abtransport von Gewebeflüssigkeit über das Lymphsystem. Dazu massiert die Therapeutin schonend das Gewebe entlang dem Verlauf der Lymphgefäße. Die Lymphdrainage wird an einem oder mehreren Körperteilen angewandt und dauert dementsprechend 30, 45 oder 60 min",
     href: "/leistungen#manuelle-lymphdrainage",
   },
   {
     heading: "Klassische Massagetherapie / KMT",
-    description: "",
+    description:
+      "...lindert Schmerzen, verbessert die Beweglichkeit und kräftigt das Immunsystem. Verschiedene passive Techniken behandeln Spannungen in der Muskulatur und im Bindegewebe.",
     href: "/leistungen#klassische-massagetherapie",
   },
   {
     heading: "Fango",
-    description: "",
+    description:
+      "...ist ein Heilschlamm, der in einer Packung auf ca. 50° erhitzt und auf den Körper aufgelegt wird. Sie entspannen in Decken eingehüllt, während die Wärme tief ins Gewebe eindringen kann, um Schmerzen zu lindern und die Durchblutung zu fördern.",
     href: "/leistungen#fango",
   },
 ]
@@ -79,7 +86,7 @@ function Leistung({ leistung }) {
   )
 }
 
-export function Leistungen() {
+export function LeistungenKurz() {
   return (
     <section
       id="leistungen"
@@ -92,9 +99,9 @@ export function Leistungen() {
             Unsere Leistungen
           </h2>
           <p className="mt-4 text-lg tracking-tight text-slate-700">
-            Wir bieten Ihnen eine Vielzahl an Behandlungsmöglichkeiten an.
-            Finden Sie hier eine Übersicht und weitere Informationen zu den
-            einzelnen Behandlungsmethoden.
+            In unserer Praxis für Physiotherapie kommen verschiedene Techniken
+            zum Einsatz, die die Bewegungs- und Funktionsfähigkeit des Körpers
+            wiederherstellen bzw. erhalten.
           </p>
         </div>
         <div
