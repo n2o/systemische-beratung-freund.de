@@ -24,7 +24,7 @@ export function KontaktKarte() {
             <div className={classes}>
               <Link href={"mailto:" + email} className="link mx-auto">
                 <EnvelopeIcon className="mx-auto h-6" />
-                {email}
+                <span dangerouslySetInnerHTML={{ __html: email}}></span>
               </Link>
             </div>
             <div className={classes}>
