@@ -36,7 +36,7 @@ const faqs = [
   {
     question: "Was ist, wenn ich meinen Termin nicht einhalten kann?",
     answer:
-      "Teilen Sie uns so bald wie möglich, spätestens 24 Stunden vor Behandlungsbeginn, mit, wenn Sie aus einem wichtigen Grund Ihren Termin absagen müssen. Wir können so anderen Patienten, die auf einen Termin warten, die frei gewordene Zeit anbieten. Sollten Sie ohne Absage den Termin verfallen lassen, müssen wir Ihnen pauschal einen Betrag von 25€ in Rechnung stellen.",
+      "Teilen Sie uns so bald wie möglich, spätestens 24 Stunden vor Behandlungsbeginn, mit, wenn Sie aus einem wichtigen Grund Ihren Termin absagen müssen. Wir können so anderen Patienten, die auf einen Termin warten, die frei gewordene Zeit anbieten. Sollten Sie ohne Absage den Termin verfallen lassen, müssen wir Ihnen pauschal einen Betrag von 25 € in Rechnung stellen.",
   },
   {
     question:
