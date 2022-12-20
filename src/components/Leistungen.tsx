@@ -1,4 +1,3 @@
-// import { Button } from "@/components/Button"
 import { Container } from "@/components/Container"
 import { Karte } from "@/components/Karte"
 import { Transition } from "@headlessui/react"
