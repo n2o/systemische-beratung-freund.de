@@ -71,7 +71,7 @@ function Leistung({ leistung }) {
             dangerouslySetInnerHTML={{ __html: heading }}
           ></p>
           <Button className="text-sm" variant="outline" href={href}>
-            Zur Beschreibung
+            Beschreibung
           </Button>
         </article>
       </Transition>

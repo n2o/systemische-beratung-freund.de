@@ -1,24 +1,20 @@
-import { address, email, fax, phone } from "@/common"
+import { email, phone } from "@/common"
 import { Container } from "@/components/Container"
 import { Karte } from "@/components/Karte"
-import {
-  EnvelopeIcon,
-  PhoneIcon,
-  PrinterIcon,
-} from "@heroicons/react/24/outline"
+import { EnvelopeIcon, MapIcon, PhoneIcon } from "@heroicons/react/24/outline"
 import Link from "next/link"
 
 export function KontaktKarte() {
   const heading = "Kontakt"
   const lead = "Haben Sie weitere Fragen? Dann kontaktieren Sie uns gerne!"
 
-  const classes = "w-100 text-center pb-3 md:pb-0"
+  const classes = "w-100 text-center pb-5 md:pb-0"
 
   return (
-    <div className="bg-accent px-4 py-5">
+    <div className="bg-accent px-4 py-5" id="kontakt">
       <Container>
         <Karte heading={heading} lead={lead}>
-          <div className="grid grid-cols-1 md:grid-cols-3">
+          <div className="grid grid-cols-2 pt-5 md:grid-cols-3">
             <div className={classes}>
               <Link href={"tel:" + phone} className="link mx-auto">
                 <PhoneIcon className="mx-auto h-6" />
@@ -32,16 +28,19 @@ export function KontaktKarte() {
               </Link>
             </div>
             <div className={classes}>
-              <Link href={"tel:" + fax} className="link mx-auto">
-                <PrinterIcon className="mx-auto h-6" />
-                {fax}
+              <Link
+                href="https://goo.gl/maps/2m7HQbsNsRS4hLUK8"
+                className="link mx-auto"
+              >
+                <MapIcon className="mx-auto h-6" />
+                <p>
+                  Kreisstr. 46a
+                  <br />
+                  37308 Schimberg
+                </p>
               </Link>
             </div>
           </div>
-          <div
-            className="pt-5"
-            dangerouslySetInnerHTML={{ __html: address }}
-          ></div>
         </Karte>
       </Container>
     </div>

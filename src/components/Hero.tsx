@@ -63,16 +63,26 @@ export function Hero() {
               Wir sind für Sie da, um Schmerzen zu lindern und Ihre
               Beweglichkeit zu verbessern.
             </p>
-            <Button href="/leistungen" variant="solid" color="accent">
-              Unsere Leistungen
-            </Button>
+            <div>
+              <Button href="/leistungen" variant="solid" color="accent">
+                Unsere Leistungen
+              </Button>
+              <Button
+                href="/team"
+                variant="outline"
+                color="accent"
+                className="ml-2"
+              >
+                Unser Team
+              </Button>
+            </div>
             <Button
-              href="/team"
+              href="#kontakt"
               variant="outline"
               color="accent"
               className="ml-2"
             >
-              Unser Team
+              Kontakt
             </Button>
           </section>
           <section className="mx-5 mt-10 md:mt-0 md:ml-5 md:mr-0">
