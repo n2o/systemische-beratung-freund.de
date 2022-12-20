@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Gebhardt und Schrader Physiotherapie GbR</title>
+        <title>Gebhardt und Schrader Physiotherapie GbR: Leistungen</title>
       </Head>
       <Header />
       <main>
