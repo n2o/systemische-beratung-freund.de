@@ -2,6 +2,7 @@ import { Footer } from "@/components/Footer"
 import { Header } from "@/components/Header"
 import { Heading } from "@/components/Heading"
 import { KontaktKarte } from "@/components/KontaktKarte"
+import { LeistungenLang, LeistungsKarte } from "@/components/Leistungen"
 import Head from "next/head"
 
 export default function Home() {
@@ -17,6 +18,8 @@ export default function Home() {
           Sie hier eine Übersicht und weitere Informationen zu den einzelnen
           Behandlungsmethoden.
         </Heading>
+        <LeistungsKarte />
+        <LeistungenLang />
         <KontaktKarte />
       </main>
       <Footer />
