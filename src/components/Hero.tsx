@@ -1,6 +1,7 @@
 import { colors } from "@/colors"
 import { Button } from "@/components/Button"
 import gruppenfoto from "@/images/gruppenfoto.webp"
+import gruppenfotopng from "@/images/gruppenfoto_transparent_kurz.webp"
 import Image from "next/image"
 
 export function SprinkleBackground() {
@@ -39,7 +40,7 @@ export function Hero() {
   return (
     <div className="isolate bg-white">
       <SprinkleBackground />
-      <div className="lg:pt-15 pb-16 text-center">
+      <div className="text-center">
         <div className="flex flex-col md:flex-row">
           <section className="md:mx-auto">
             <h1 className="mx-auto max-w-4xl font-display text-3xl font-medium tracking-tight text-slate-900 md:pt-10 lg:text-6xl">
@@ -85,8 +86,17 @@ export function Hero() {
           </section>
           <section className="mx-5 mt-10 md:mt-0 md:ml-5 md:mr-0">
             <Image
-              className="border shadow-2xl md:rounded-l-lg"
+              className="hidden border shadow-2xl md:rounded-l-lg"
               src={gruppenfoto}
+              width={800}
+              height={100}
+              priority
+              alt="Ein Teamfoto der Physiotherapeutinnen"
+            />
+            <Image
+              className=""
+              style={{}}
+              src={gruppenfotopng}
               width={800}
               height={100}
               priority
