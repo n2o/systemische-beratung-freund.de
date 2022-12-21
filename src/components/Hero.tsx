@@ -1,5 +1,4 @@
 import { colors } from "@/colors"
-import { Button } from "@/components/Button"
 import gruppenfoto from "@/images/gruppenfoto.webp"
 import gruppenfotopng from "@/images/gruppenfoto_transparent_kurz.webp"
 import Image from "next/image"
@@ -40,7 +39,7 @@ export function Hero() {
   return (
     <div className="isolate bg-white">
       <SprinkleBackground />
-      <div className="text-center">
+      <div className="text-center 2xl:mx-auto 2xl:w-2/3">
         <div className="flex flex-col md:flex-row">
           <section className="md:mx-auto">
             <h1 className="mx-auto max-w-4xl font-display text-3xl font-medium tracking-tight text-slate-900 md:pt-10 lg:text-6xl">
@@ -57,32 +56,10 @@ export function Hero() {
                 <span className="relative">Gebhardt und Schrader</span>
               </span>{" "}
             </h1>
-            <p className="mx-auto mt-6 max-w-2xl text-lg tracking-tight text-slate-700">
+            <p className="mx-auto mt-10 max-w-2xl text-lg tracking-tight text-slate-700">
               Wir sind für Sie da, um Schmerzen zu lindern und Ihre
               Beweglichkeit zu verbessern.
             </p>
-            {/* <div>
-              <Button href="/leistungen" variant="solid" color="accent">
-                Unsere Leistungen
-              </Button>
-              <Button
-                href="/team"
-                variant="outline"
-                color="accent"
-                className="ml-2"
-              >
-                Unser Team
-              </Button>
-            </div>
-            */}
-            <Button
-              href="#kontakt"
-              variant="outline"
-              color="accent"
-              className="ml-2"
-            >
-              Kontakt
-            </Button>
           </section>
           <section className="mx-5 mt-10 md:mt-0 md:ml-5 md:mr-0">
             <Image
