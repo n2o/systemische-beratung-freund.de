@@ -1,6 +1,6 @@
 import { Container } from "@/components/container"
 import { Karte } from "@/components/karte"
-import backgroundImage from "@/images/behandlungsraum.webp"
+import backgroundImage from "@/images/praxis/behandlungsraum.webp"
 import Image from "next/image"
 
 const heading = "Willkommen!"
