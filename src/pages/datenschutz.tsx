@@ -267,7 +267,7 @@ export default function Page() {
           an uns wenden. Das Recht auf Einschränkung der Verarbeitung besteht in
           folgenden Fällen:
         </p>
-        <ul>
+        <ul className="list-disc">
           <li>
             Wenn Sie die Richtigkeit Ihrer bei uns gespeicherten
             personenbezogenen Daten bestreiten, benötigen wir in der Regel Zeit,
