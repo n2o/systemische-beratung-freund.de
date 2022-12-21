@@ -71,7 +71,7 @@ export function Faqs() {
             Sie weitere Fragen haben, zögern Sie nicht uns zu kontaktieren.
           </p>
         </div>
-        <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
           {faqs.map((faq, faqIndex) => (
             <div key={faqIndex} className="pb-4">
               <h3 className="font-display text-lg leading-7 text-slate-900">
