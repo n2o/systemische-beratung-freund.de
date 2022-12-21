@@ -70,10 +70,6 @@ export function Example() {
     <div className="bg-white">
       <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:px-8 lg:py-24">
         <div className="space-y-12">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Meet our leadership
-          </h2>
-
           <ul
             role="list"
             className="space-y-12 lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8 lg:gap-y-12 lg:space-y-0"
