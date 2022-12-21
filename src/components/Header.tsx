@@ -1,8 +1,9 @@
+import { phone } from "@/common"
 import { Container } from "@/components/container"
 import { Logo } from "@/components/logo"
 import { NavLink } from "@/components/nav-link"
 import { Popover, Transition } from "@headlessui/react"
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"
+import { Bars3Icon, PhoneIcon, XMarkIcon } from "@heroicons/react/24/outline"
 import clsx from "clsx"
 import Link from "next/link"
 import { Fragment } from "react"
@@ -97,6 +98,12 @@ export function Header() {
             </div>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
+            <div className="hidden md:block">
+              <NavLink href={`tel:${phone}`}>
+                <PhoneIcon className="mr-2 inline h-5" />
+                {phone}
+              </NavLink>
+            </div>
             <div className="-mr-1 md:hidden">
               <MobileNavigation />
             </div>
