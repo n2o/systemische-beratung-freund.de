@@ -1,6 +1,6 @@
 import { SprinkleBackground } from "@/components/Hero"
 
-export function Heading({ heading, children }) {
+export function Heading({ heading, children = null }) {
   return (
     <div className="isolate bg-white">
       <SprinkleBackground />

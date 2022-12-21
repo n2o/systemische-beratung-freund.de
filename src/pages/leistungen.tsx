@@ -5,7 +5,7 @@ import { KontaktKarte } from "@/components/KontaktKarte"
 import { LeistungenLang, LeistungsKarte } from "@/components/Leistungen"
 import Head from "next/head"
 
-export default function Home() {
+export default function Page() {
   return (
     <>
       <Head>

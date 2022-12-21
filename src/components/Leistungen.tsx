@@ -44,7 +44,7 @@ const leistungen = [
     heading: "Manuelle Lymphdrainage / MLD",
     id: "manuelle-lymphdrainage",
     description:
-      "...fördert den Abtransport von Gewebeflüssigkeit über das Lymphsystem. Dazu massiert die Therapeutin schonend das Gewebe entlang dem Verlauf der Lymphgefäße. Die Lymphdrainage wird an einem oder mehreren Körperteilen angewandt und dauert dementsprechend 30, 45 oder 60 min",
+      "...fördert den Abtransport von Gewebeflüssegkeit über das Lymphsystem. Dazu massiert die Therapeutin schonend das Gewebe entlang dem Verlauf der Lymphgefäße. Die Lymphdrainage wird an einem oder mehreren Körperteilen angewandt und dauert dementsprechend 30, 45 oder 60 min",
     href: "/leistungen#manuelle-lymphdrainage",
   },
   {
