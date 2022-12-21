@@ -14,7 +14,7 @@ export function KontaktKarte() {
     <div className="bg-accent px-4 py-5" id="kontakt">
       <Container>
         <Karte heading={heading} lead={lead}>
-          <div className="grid grid-cols-2 pt-5 md:grid-cols-3">
+          <div className="grid grid-cols-1 pt-5 sm:grid-cols-2 md:grid-cols-3">
             <div className={classes}>
               <Link href={"tel:" + phone} className="link mx-auto">
                 <PhoneIcon className="mx-auto h-6" />
@@ -24,7 +24,7 @@ export function KontaktKarte() {
             <div className={classes}>
               <Link href={"mailto:" + email} className="link mx-auto">
                 <EnvelopeIcon className="mx-auto h-6" />
-                <span dangerouslySetInnerHTML={{ __html: email}}></span>
+                <span dangerouslySetInnerHTML={{ __html: email }}></span>
               </Link>
             </div>
             <div className={classes}>
