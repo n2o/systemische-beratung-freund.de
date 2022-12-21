@@ -24,7 +24,7 @@ export default function Welcome() {
             body={body}
           />
           <div className="relative md:-left-24 md:w-1/3">
-            <PraxisBild className="md:object-contain" fill />
+            <PraxisBild className="rounded md:object-contain" fill />
           </div>
           <PraxisBild className="mx-auto w-2/3 rounded shadow-lg md:hidden" />
         </div>

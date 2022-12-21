@@ -1,7 +1,7 @@
 import { colors } from "@/colors"
+import { Button } from "@/components/Button"
 import gruppenfoto from "@/images/gruppenfoto.webp"
 import Image from "next/image"
-import { Button } from "./Button"
 
 export function SprinkleBackground() {
   return (
@@ -60,7 +60,7 @@ export function Hero() {
               Wir sind für Sie da, um Schmerzen zu lindern und Ihre
               Beweglichkeit zu verbessern.
             </p>
-            <div>
+            {/* <div>
               <Button href="/leistungen" variant="solid" color="accent">
                 Unsere Leistungen
               </Button>
@@ -73,6 +73,7 @@ export function Hero() {
                 Unser Team
               </Button>
             </div>
+            */}
             <Button
               href="#kontakt"
               variant="outline"

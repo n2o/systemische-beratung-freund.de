@@ -19,14 +19,14 @@ const faqs = [
       "Sind Sie gesetzlich versichert, muss das Rezept innerhalb von 28 Tagen nach Ausstellungsdatum angefangen werden. Sie sollten also so bald wie möglich einen Termin vereinbaren. Die Behandlung sollte nicht länger als 14 Tage unterbrochen werden, da die Verordnung ansonsten ungültig wird.",
   },
   {
+    question: "Was ist, wenn ich meinen Termin nicht einhalten kann?",
+    answer:
+      "Teilen Sie uns so bald wie möglich, spätestens 24 Stunden vor Behandlungsbeginn, mit, wenn Sie aus einem wichtigen Grund Ihren Termin absagen müssen. Wir können so anderen Patienten, die auf einen Termin warten, die frei gewordene Zeit anbieten. Sollten Sie ohne Absage den Termin verfallen lassen, müssen wir Ihnen pauschal einen Betrag von 25 € in Rechnung stellen.",
+  },
+  {
     question: "Wer entscheidet, wie viele Rezepte ich bekomme?",
     answer:
       "Wann und wie viele Verordnungen Ihnen zustehen, richtet sich nach der Diagnose des Arztes, sowie nach den Vorgaben des Heilmittelkataloges, nachzulesen unter www.heilmittelkatalog.de",
-  },
-  {
-    question: "Wie lange dauert eine Behandlung?",
-    answer:
-      "Die Dauer der Behandlung hängt von dem vom Arzt verordneten Heilmittel ab.",
   },
   {
     question: "Was muss ich zur Behandlung mitbringen?",
@@ -34,9 +34,9 @@ const faqs = [
       "Beim ersten Termin bringen Sie bitte die ärztliche Verordnung, Ihre Versichertenkarte und ein großes Handtuch oder Spannbettlaken mit. Bitte tragen Sie bequeme Kleidung und kommen pünktlich zum Termin.",
   },
   {
-    question: "Was ist, wenn ich meinen Termin nicht einhalten kann?",
+    question: "Wie lange dauert eine Behandlung?",
     answer:
-      "Teilen Sie uns so bald wie möglich, spätestens 24 Stunden vor Behandlungsbeginn, mit, wenn Sie aus einem wichtigen Grund Ihren Termin absagen müssen. Wir können so anderen Patienten, die auf einen Termin warten, die frei gewordene Zeit anbieten. Sollten Sie ohne Absage den Termin verfallen lassen, müssen wir Ihnen pauschal einen Betrag von 25 € in Rechnung stellen.",
+      "Die Dauer der Behandlung hängt von dem vom Arzt verordneten Heilmittel ab.",
   },
 ]
 
@@ -50,7 +50,7 @@ export function Faqs() {
       <Image
         className="absolute top-0 left-1/2 hidden max-w-none translate-x-[-30%] -translate-y-1/4 md:block"
         src={backgroundImage}
-        alt=""
+        alt="Farbiges Hintergrundbild"
         width={1558}
         height={946}
         unoptimized
