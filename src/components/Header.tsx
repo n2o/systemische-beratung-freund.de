@@ -21,7 +21,7 @@ function MobileNavLink({ href, children }) {
 
 function MobileNavIcon({ open }) {
   return (
-    <div className="h-3.5 w-3.5 overflow-visible stroke-slate-700">
+    <div className="m-3 overflow-visible stroke-slate-700">
       <Bars3Icon
         className={clsx(
           "h-8 origin-center transition",
