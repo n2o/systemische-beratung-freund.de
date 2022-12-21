@@ -1,10 +1,8 @@
 import { Container } from "@/components/Container"
 import { Footer } from "@/components/Footer"
 import { Header } from "@/components/Header"
-import { Heading } from "@/components/Heading"
 import Head from "next/head"
-
-const h2Classes = "text-2xl pt-3 pb-1"
+import Link from "next/link"
 
 export default function Page() {
   return (
@@ -14,9 +12,8 @@ export default function Page() {
       </Head>
       <Header />
       <Container>
-        <Heading heading="Impressum" />
-        <h1 className="text-3xl">Impressum</h1>
-        <h2 className={h2Classes}>Angaben gem&auml;&szlig; &sect; 5 TMG</h2>
+        <h1>Datenschutz</h1>
+        <h2>Angaben gemäß &sect; 5 TMG</h2>
         <p>
           Gebhardt und Schrader Physiotherapie GbR
           <br />
@@ -25,14 +22,14 @@ export default function Page() {
           37308 Schimberg OT Ershausen
         </p>
 
-        <h3 className="text-lg">Vertreten durch</h3>
+        <h3>Vertreten durch</h3>
         <p>
           Imke Schrader
           <br />
           Alexandra Gebhardt
         </p>
 
-        <h2 className={h2Classes}>Kontakt</h2>
+        <h2>Kontakt</h2>
         <p>
           Telefon: (03 60 82) 90 82 17
           <br />
@@ -41,21 +38,19 @@ export default function Page() {
           E-Mail: gebhardtundschrader@outlook.de
         </p>
 
-        <h2 className={h2Classes}>Steuernummer</h2>
-        <p>
-          157/154/22201
-        </p>
+        <h2>Steuernummer</h2>
+        <p>157/154/22201</p>
 
-        <h2 className={h2Classes}>
+        {/* <h2 >
           Berufsbezeichnung und berufsrechtliche Regelungen
         </h2>
         <p>
           Berufsbezeichnung:
           <br />
           Physiotherapeut
-        </p>
+        </p> */}
         {/* <p>
-          Zust&auml;ndige Kammer:
+          Zuständige Kammer:
           <br />
         </p>
         <p>
@@ -63,7 +58,7 @@ export default function Page() {
           <br />
         </p> */}
         <p>Es gelten folgende berufsrechtliche Regelungen:</p>
-        <h2 className={h2Classes}>
+        <h2>
           Verbraucher&shy;streit&shy;beilegung /
           Universal&shy;schlichtungs&shy;stelle
         </h2>
@@ -73,7 +68,10 @@ export default function Page() {
         </p>
 
         <p>
-          Quelle: <a href="https://www.e-recht24.de">e-recht24.de</a>
+          Quelle:{" "}
+          <Link href="https://www.e-recht24.de" target="_blank">
+            e-recht24.de
+          </Link>
         </p>
       </Container>
       <Footer />
