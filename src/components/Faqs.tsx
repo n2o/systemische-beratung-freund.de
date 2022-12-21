@@ -11,12 +11,12 @@ const faqs = [
   {
     question: "Übernimmt meine Krankenkasse die Kosten?",
     answer:
-      "Wenn Sie eine Verordnung vom Arzt vorlegen, übernehmen die gesetzlichen und privaten Krankenkassen die Kosten. Der Eigenanteil, den Sie leisten müssen, variiert je nach Kasse und Verordnung. Seit dem 01.01.2004 ist es gesetzliche vorgeschrieben, dass gesetzlich Versicherte einen Eigenanteil von 10% pro Rezept selbst zahlen müssen. Kinder und Jugendliche sind von Zuzahlungen befreit. Weitere Fragen dazu beantwortet Ihnen Ihre Krankenkasse.",
+      "Wenn Sie eine Verordnung vom Arzt vorlegen, übernehmen die gesetzlichen und privaten Krankenkassen die Kosten. Der Eigenanteil, den Sie leisten müssen, variiert je nach Kasse und Verordnung. Seit dem 01.01.2004 ist es vorgeschrieben, dass gesetzlich Versicherte einen Eigenanteil von 10% pro Rezept selbst zahlen müssen. Kinder und Jugendliche sind von Zuzahlungen befreit. Weitere Fragen dazu beantwortet Ihnen Ihre Krankenkasse.",
   },
   {
     question: "Wie lange ist mein Rezept gültig?",
     answer:
-      "Sind Sie gesetzlich versichert muss das Rezept innerhalb von 28 Tagen nach Ausstellungsdatum angefangen werden. Sie sollten also so bald wie möglich einen Termin vereinbaren. Die Behandlung sollte nicht länger als 14 Tage unterbrochen werden, da die Verordnung ansonsten ungültig wird.",
+      "Sind Sie gesetzlich versichert, muss das Rezept innerhalb von 28 Tagen nach Ausstellungsdatum angefangen werden. Sie sollten also so bald wie möglich einen Termin vereinbaren. Die Behandlung sollte nicht länger als 14 Tage unterbrochen werden, da die Verordnung ansonsten ungültig wird.",
   },
   {
     question: "Wer entscheidet, wie viele Rezepte ich bekomme?",
@@ -38,12 +38,6 @@ const faqs = [
     answer:
       "Teilen Sie uns so bald wie möglich, spätestens 24 Stunden vor Behandlungsbeginn, mit, wenn Sie aus einem wichtigen Grund Ihren Termin absagen müssen. Wir können so anderen Patienten, die auf einen Termin warten, die frei gewordene Zeit anbieten. Sollten Sie ohne Absage den Termin verfallen lassen, müssen wir Ihnen pauschal einen Betrag von 25 € in Rechnung stellen.",
   },
-  {
-    question:
-      "Wie kann ich mich als Patient zum Thema Datenschutz in Ihrer Praxis informieren?",
-    answer:
-      "Gerne beantworten wir alle Fragen zum Thema Datenschutz. Unser Musterformular finden Sie hier TODO.",
-  },
 ]
 
 export function Faqs() {
@@ -51,10 +45,10 @@ export function Faqs() {
     <section
       id="faq"
       aria-labelledby="faq-title"
-      className="relative overflow-hidden bg-slate-50 py-20 sm:py-32"
+      className="relative overflow-hidden bg-slate-50 sm:py-20 md:py-20"
     >
       <Image
-        className="absolute top-0 left-1/2 max-w-none translate-x-[-30%] -translate-y-1/4"
+        className="absolute top-0 left-1/2 hidden max-w-none translate-x-[-30%] -translate-y-1/4 md:block"
         src={backgroundImage}
         alt=""
         width={1558}
@@ -62,7 +56,7 @@ export function Faqs() {
         unoptimized
       />
       <Container className="relative">
-        <div className="mx-auto max-w-2xl lg:mx-0">
+        <div className="mx-0 max-w-2xl md:mx-auto md:text-center">
           <h2 className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">
             Häufig gestellte Fragen
           </h2>
@@ -77,7 +71,9 @@ export function Faqs() {
               <h3 className="font-display text-lg leading-7 text-slate-900">
                 {faq.question}
               </h3>
-              <p className="text-md mt-4 text-slate-700">{faq.answer}</p>
+              <p className="text-md mt-4 text-justify text-slate-700">
+                {faq.answer}
+              </p>
             </div>
           ))}
         </div>
