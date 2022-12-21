@@ -1,4 +1,4 @@
-import { email, phone } from "@/common"
+import { phone } from "@/common"
 import { Container } from "@/components/Container"
 import { Karte } from "@/components/Karte"
 import { EnvelopeIcon, MapIcon, PhoneIcon } from "@heroicons/react/24/outline"
@@ -22,9 +22,16 @@ export function KontaktKarte() {
               </Link>
             </div>
             <div className={classes}>
-              <Link href={"mailto:" + email} className="link mx-auto">
+              <Link
+                href="mailto:gebhardtundschrader@outlook.de"
+                className="link mx-auto"
+              >
                 <EnvelopeIcon className="mx-auto h-6" />
-                <span dangerouslySetInnerHTML={{ __html: email }}></span>
+                <span
+                  dangerouslySetInnerHTML={{
+                    __html: "gebhardtundschrader&hairsp;@outlook.de",
+                  }}
+                ></span>
               </Link>
             </div>
             <div className={classes}>

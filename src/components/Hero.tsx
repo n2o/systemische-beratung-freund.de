@@ -42,7 +42,7 @@ export function Hero() {
       <div className="text-center 2xl:mx-auto 2xl:w-2/3">
         <div className="flex flex-col md:flex-row">
           <section className="md:mx-auto">
-            <h1 className="mx-auto max-w-4xl font-display text-3xl font-medium tracking-tight text-slate-900 md:pt-10 lg:text-6xl">
+            <h1 className="mx-auto max-w-4xl font-display text-3xl font-medium tracking-tight text-slate-900 md:pt-10 md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl">
               Physiotherapie{" "}
               <span className="relative whitespace-nowrap text-primary">
                 <svg
