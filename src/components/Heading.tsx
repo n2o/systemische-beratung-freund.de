@@ -1,4 +1,4 @@
-import { SprinkleBackground } from "@/components/Hero"
+import { SprinkleBackground } from "@/components/hero"
 
 export function Heading({ heading, children = null }) {
   return (

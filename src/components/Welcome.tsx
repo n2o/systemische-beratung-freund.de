@@ -1,5 +1,5 @@
-import { Container } from "@/components/Container"
-import { Karte } from "@/components/Karte"
+import { Container } from "@/components/container"
+import { Karte } from "@/components/karte"
 import backgroundImage from "@/images/behandlungsraum.webp"
 import Image from "next/image"
 

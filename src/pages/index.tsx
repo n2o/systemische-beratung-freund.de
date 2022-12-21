@@ -1,10 +1,10 @@
-import { Faqs } from "@/components/Faqs"
-import { Footer } from "@/components/Footer"
-import { Header } from "@/components/Header"
-import { Hero } from "@/components/Hero"
-import { KontaktKarte } from "@/components/KontaktKarte"
-import { LeistungenKurz } from "@/components/Leistungen"
-import Welcome from "@/components/Welcome"
+import { Faqs } from "@/components/faqs"
+import { Footer } from "@/components/footer"
+import { Header } from "@/components/header"
+import { Hero } from "@/components/hero"
+import { KontaktKarte } from "@/components/kontakt-karte"
+import { LeistungenKurz } from "@/components/leistungen"
+import Welcome from "@/components/welcome"
 import Head from "next/head"
 
 export default function Home() {

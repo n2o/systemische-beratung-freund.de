@@ -1,6 +1,6 @@
 import { phone } from "@/common"
-import { Container } from "@/components/Container"
-import { Karte } from "@/components/Karte"
+import { Container } from "@/components/container"
+import { Karte } from "@/components/karte"
 import { EnvelopeIcon, MapIcon, PhoneIcon } from "@heroicons/react/24/outline"
 import Link from "next/link"
 

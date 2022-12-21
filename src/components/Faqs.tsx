@@ -1,4 +1,4 @@
-import { Container } from "@/components/Container"
+import { Container } from "@/components/container"
 import backgroundImage from "@/images/background-faqs.jpg"
 import Image from "next/image"
 

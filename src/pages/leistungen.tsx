@@ -1,8 +1,8 @@
-import { Footer } from "@/components/Footer"
-import { Header } from "@/components/Header"
-import { Heading } from "@/components/Heading"
-import { KontaktKarte } from "@/components/KontaktKarte"
-import { LeistungenLang, LeistungsKarte } from "@/components/Leistungen"
+import { Footer } from "@/components/footer"
+import { Header } from "@/components/header"
+import { Heading } from "@/components/heading"
+import { KontaktKarte } from "@/components/kontakt-karte"
+import { LeistungenLang, LeistungsKarte } from "@/components/leistungen"
 import Head from "next/head"
 
 export default function Page() {
