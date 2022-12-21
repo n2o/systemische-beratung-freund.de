@@ -8,7 +8,7 @@ export default function Page() {
   return (
     <>
       <Head>
-        <title>Gebhardt und Schrader Physiotherapie GbR: Impressum</title>
+        <title>Gebhardt und Schrader Physiotherapie GbR: Datenschutz</title>
       </Head>
       <Header />
       <Container>
