@@ -62,7 +62,7 @@ export function Faqs() {
           </h2>
           <p className="my-6 text-lg tracking-tight text-slate-700">
             Hier finden Sie eine Auswahl der häufig gestellten Fragen. Sollten
-            Sie weitere Fragen haben, zögern Sie nicht uns zu kontaktieren.
+            Sie weitere Fragen haben, zögern Sie nicht, uns zu kontaktieren.
           </p>
         </div>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
