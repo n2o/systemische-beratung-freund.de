@@ -1,15 +1,19 @@
 import { Container } from "@/components/container"
+import { FadeIn } from "@/components/FadeIn"
 import { Footer } from "@/components/footer"
 import { Header } from "@/components/header"
 import { Heading } from "@/components/heading"
 import { Karte } from "@/components/karte"
+import { KontaktKarte } from "@/components/kontakt-karte"
+import { PraxisBilder } from "@/components/praxis-bilder"
 import alex from "@/images/team/alex.webp"
 import antjeKristin from "@/images/team/antje-kristin.webp"
 import imke from "@/images/team/imke.webp"
 import melanie from "@/images/team/melanie.webp"
-import namefehlt from "@/images/team/namefehlt.webp"
+import ursula from "@/images/team/ursula.webp"
 import Head from "next/head"
 import Image from "next/image"
+import { useRef } from "react"
 
 function WelcomeCard() {
   return (
@@ -45,7 +49,7 @@ const people = [
   {
     name: "Alexandra Gebhardt",
     image: alex,
-    bio: "Alexandra Gebhardt ist Gesellschafterin und seit 2004 als Physiotherapeutin tätig und bringt viel Berufserfahrung mit, insbesondere im Bereich der manuellen Lymphdrainage, der Kompressionsbehandlung und der Manuellen Therapie. Zusätzlich hat sie sich in CMD/Kiefergelenksbehandlungen und der Fussreflexzonen-Therapie fortgebildet. Sie bietet auch Hausbesuche an.",
+    bio: "Alexandra Gebhardt ist Gesellschafterin und seit 2004 als Physiotherapeutin tätig und bringt viel Berufserfahrung mit, insbesondere im Bereich der manuellen Lymphdrainage, der Kompressionsbehandlung und der Manuellen Therapie. Zusätzlich hat sie sich in CMD / Kiefergelenksbehandlungen und der Fussreflexzonen-Therapie fortgebildet. Sie bietet auch Hausbesuche an.",
   },
   {
     name: "Melanie Kiep",
@@ -58,13 +62,40 @@ const people = [
     bio: "",
   },
   {
-    name: "Name fehlt",
-    image: namefehlt,
-    bio: "",
+    name: "Ursula Pudenz",
+    image: ursula,
+    bio: "Ursula Pudenz ist seit 1977 als Physiotherapeutin tätig und führte von 1996 bis 2021 erfolgreich ihre eigene Praxis in den aktuellen Räumlichkeiten. Durch ihre langjährige Erfahrung und Fortbildungen in Manueller Therapie, Manueller Lymphdrainage und Rückenschule unterstützt sie weiterhin die Praxis.",
   },
 ]
 
-export function Example() {
+function Person({ person }) {
+  const ref = useRef(null)
+  return (
+    <li ref={ref}>
+      <FadeIn parentRef={ref}>
+        <div className="space-y-4 sm:grid sm:grid-cols-3 sm:gap-6 sm:space-y-0 lg:gap-8">
+          <div className="aspect-w-3 aspect-h-4 h-0 sm:aspect-w-3 sm:aspect-h-5">
+            <Image
+              src={person.image}
+              className="rounded-lg object-cover shadow-lg"
+              alt={person.name}
+            />
+          </div>
+          <div className="sm:col-span-2">
+            <div className="space-y-1 text-lg font-medium leading-6">
+              <h3>{person.name}</h3>
+            </div>
+            <div className="text-lg">
+              <p className="text-gray-500">{person.bio}</p>
+            </div>
+          </div>
+        </div>
+      </FadeIn>
+    </li>
+  )
+}
+
+export function Personen() {
   return (
     <div className="bg-white">
       <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:px-8 lg:py-24">
@@ -74,25 +105,7 @@ export function Example() {
             className="space-y-12 lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8 lg:gap-y-12 lg:space-y-0"
           >
             {people.map((person) => (
-              <li key={person.name}>
-                <div className="space-y-4 sm:grid sm:grid-cols-3 sm:gap-6 sm:space-y-0 lg:gap-8">
-                  <div className="aspect-w-3 aspect-h-4 h-0 sm:aspect-w-3 sm:aspect-h-5">
-                    <Image
-                      src={person.image}
-                      className="rounded-lg object-cover shadow-lg"
-                      alt={person.name}
-                    />
-                  </div>
-                  <div className="sm:col-span-2">
-                    <div className="space-y-1 text-lg font-medium leading-6">
-                      <h3>{person.name}</h3>
-                    </div>
-                    <div className="text-lg">
-                      <p className="text-gray-500">{person.bio}</p>
-                    </div>
-                  </div>
-                </div>
-              </li>
+              <Person key={person.name} person={person} />
             ))}
           </ul>
         </div>
@@ -108,11 +121,15 @@ export default function Page() {
         <title>Gebhardt und Schrader Physiotherapie GbR: Team</title>
       </Head>
       <Header />
-      <Heading heading="Unser Team">
+      <Heading heading="Über uns">
         <p>Lernen Sie das Team hinter unserer Physiotherapiepraxis kennen.</p>
       </Heading>
       <WelcomeCard />
-      <Example />
+      <Personen />
+      <Container>
+        <PraxisBilder />
+      </Container>
+      <KontaktKarte />
       <Footer />
     </>
   )

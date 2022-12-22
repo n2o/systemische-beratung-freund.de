@@ -1,9 +1,8 @@
 import { Container } from "@/components/container"
+import { FadeIn } from "@/components/FadeIn"
 import { Karte } from "@/components/karte"
-import { Transition } from "@headlessui/react"
-import { useInView } from "framer-motion"
 import dynamic from "next/dynamic"
-import { Fragment, useRef } from "react"
+import { useRef } from "react"
 const Button = dynamic(
   () => import("@/components/button").then((module) => module.Button),
   {
@@ -103,16 +102,7 @@ function Leistung({ leistung, withDescription = false }) {
 
   return (
     <span ref={ref}>
-      <Transition
-        as={Fragment}
-        show={useInView(ref, { once: true })}
-        enter="transform transition duration-[400ms]"
-        enterFrom="opacity-0 scale-50"
-        enterTo="opacity-100 scale-100"
-        leave="transform duration-200 transition ease-in-out"
-        leaveFrom="opacity-100 scale-100 "
-        leaveTo="opacity-0 scale-95 "
-      >
+      <FadeIn parentRef={ref}>
         <article
           id={id}
           className="relative rounded-xl bg-white p-6 shadow-xl shadow-slate-900/10 transition duration-300 ease-in hover:shadow-2xl"
@@ -128,7 +118,7 @@ function Leistung({ leistung, withDescription = false }) {
           )}
           {withDescription && <p>{description}</p>}
         </article>
-      </Transition>
+      </FadeIn>
     </span>
   )
 }

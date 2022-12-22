@@ -73,8 +73,8 @@ function MobileNavigation() {
             className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5"
           >
             <MobileNavLink href="/leistungen">Leistungen</MobileNavLink>
-            <MobileNavLink href="/team">Team</MobileNavLink>
-            <MobileNavLink href="#kontakt">Kontakt</MobileNavLink>
+            <MobileNavLink href="/ueber-uns">Über uns</MobileNavLink>
+            <MobileNavLink href="/kontakt">Kontakt</MobileNavLink>
           </Popover.Panel>
         </Transition.Child>
       </Transition.Root>
@@ -93,8 +93,8 @@ export function Header() {
             </Link>
             <div className="hidden md:flex md:gap-x-6">
               <NavLink href="/leistungen">Leistungen</NavLink>
-              <NavLink href="/team">Team</NavLink>
-              <NavLink href="#kontakt">Kontakt</NavLink>
+              <NavLink href="/ueber-uns">Über uns</NavLink>
+              <NavLink href="/kontakt">Kontakt</NavLink>
             </div>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">

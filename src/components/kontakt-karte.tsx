@@ -2,9 +2,10 @@ import { phone } from "@/common"
 import { Container } from "@/components/container"
 import { Karte } from "@/components/karte"
 import { EnvelopeIcon, MapIcon, PhoneIcon } from "@heroicons/react/24/outline"
+import clsx from "clsx"
 import Link from "next/link"
 
-const sprechzeiten = [
+export const sprechzeiten = [
   { tag: "Mo", zeit: "8 - 14 Uhr" },
   { tag: "Di", zeit: "8 - 18 Uhr" },
   { tag: "Mi", zeit: "8 - 14 Uhr" },
@@ -12,56 +13,54 @@ const sprechzeiten = [
   { tag: "Fr", zeit: "8 - 13 Uhr" },
 ]
 
-const days = ["Montags", "Dienstags", "Mittwochs", "Donnerstags", "Freitags"]
-const times = ["8-14 Uhr", "8-18 Uhr", "8-14 Uhr", "8-17 Uhr", "8-13 Uhr"]
-
-export function Example() {
+export function AdresseLink({ className = "", ...props }) {
   return (
-    <div className="px-4 sm:px-6 lg:px-8">
-      <div className="mt-8 flex flex-col">
-        <div className="-my-2 -mx-4  sm:-mx-6 lg:-mx-8">
-          <div className="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
-            <div className="overflow-hidden shadow md:rounded-lg">
-              <table className="min-w-full divide-y divide-gray-300">
-                <thead className="bg-gray-50">
-                  <tr>
-                    {days.map((day, index) => (
-                      <th
-                        key={index}
-                        scope="col"
-                        className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6"
-                      >
-                        {day}
-                      </th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-gray-200 bg-white">
-                  <tr>
-                    {times.map((time, index) => (
-                      <td
-                        key={index}
-                        className="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6"
-                      >
-                        {time}
-                      </td>
-                    ))}
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <Link
+      href="https://goo.gl/maps/2m7HQbsNsRS4hLUK8"
+      className={clsx("link mx-auto", className)}
+      {...props}
+    >
+      <MapIcon className="mx-auto h-6" />
+      <p>
+        Kreisstr. 46a
+        <br />
+        37308 Schimberg OT Ershausen
+      </p>
+    </Link>
   )
 }
 
-export default function Sprechzeiten({ ...props }) {
+export function MailLink({ className = "", ...props }) {
   return (
-    <section {...props}>
+    <Link
+      href="mailto:gebhardtundschrader@outlook.de"
+      className={clsx("link mx-auto", className)}
+      {...props}
+    >
+      <EnvelopeIcon className="mx-auto h-6" />
+      <span
+        dangerouslySetInnerHTML={{
+          __html: "gebhardtundschrader&hairsp;@&hairsp;outlook.de",
+        }}
+      ></span>
+    </Link>
+  )
+}
+
+export function TelefonLink() {
+  return (
+    <Link href={"tel:" + phone} className="link mx-auto">
+      <PhoneIcon className="mx-auto h-6" />
+      {phone}
+    </Link>
+  )
+}
+
+export function Sprechzeiten({ className = "", listStyle = null, ...props }) {
+  return (
+    <section className={className} {...props}>
       <h3>Sprechzeiten</h3>
-      <ul className="list-disc pl-7">
+      <ul className={clsx({ "pl-7": !listStyle, "list-disc": !listStyle })}>
         {sprechzeiten.map(({ tag, zeit }, index) => (
           <li key={index} className="whitespace-nowrap">
             {tag}: {zeit}
@@ -83,39 +82,19 @@ export function KontaktKarte() {
       <Container>
         <Karte heading={heading} lead={lead}>
           <div className="flex flex-col sm:flex-row">
-            <Sprechzeiten className="mx-3" />
+            <Sprechzeiten
+              className="mx-auto text-center text-primary"
+              listStyle="list-none"
+            />
             <div className="grid grid-cols-1 pt-5 sm:grid-cols-2 md:grid-cols-3">
               <div className={classes}>
-                <Link href={"tel:" + phone} className="link mx-auto">
-                  <PhoneIcon className="mx-auto h-6" />
-                  {phone}
-                </Link>
+                <TelefonLink />
               </div>
               <div className={classes}>
-                <Link
-                  href="mailto:gebhardtundschrader@outlook.de"
-                  className="link mx-auto"
-                >
-                  <EnvelopeIcon className="mx-auto h-6" />
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: "gebhardtundschrader&hairsp;@outlook.de",
-                    }}
-                  ></span>
-                </Link>
+                <MailLink />
               </div>
               <div className={classes}>
-                <Link
-                  href="https://goo.gl/maps/2m7HQbsNsRS4hLUK8"
-                  className="link mx-auto"
-                >
-                  <MapIcon className="mx-auto h-6" />
-                  <p>
-                    Kreisstr. 46a
-                    <br />
-                    37308 Schimberg
-                  </p>
-                </Link>
+                <AdresseLink />
               </div>
             </div>
           </div>

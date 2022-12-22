@@ -346,7 +346,35 @@ export default function Page() {
           Anliegens). Zwingende gesetzliche Bestimmungen &ndash; insbesondere
           gesetzliche Aufbewahrungsfristen &ndash; bleiben unberührt.
         </p>
-
+        <h2>5. Plugins und Tools</h2>
+        <h3>OpenStreetMap</h3>{" "}
+        <p>Wir nutzen den Kartendienst von OpenStreetMap (OSM).</p>{" "}
+        <p>
+          Wir binden das Kartenmaterial von OpenStreetMap auf dem Server der
+          OpenStreetMap Foundation, St John&rsquo;s Innovation Centre, Cowley
+          Road, Cambridge, CB4 0WS, Großbritannien, ein. Großbritannien gilt als
+          datenschutzrechtlich sicherer Drittstaat. Das bedeutet, dass
+          Großbritannien ein Datenschutzniveau aufweist, das dem
+          Datenschutzniveau in der Europäischen Union entspricht. Bei der
+          Nutzung der OpenStreetMap-Karten wird eine Verbindung zu den Servern
+          der OpenStreetMap-Foundation hergestellt. Dabei können u.&nbsp;a. Ihre
+          IP-Adresse und weitere Informationen über Ihr Verhalten auf dieser
+          Website an die OSMF weitergeleitet werden. OpenStreetMap speichert
+          hierzu unter Umständen Cookies in Ihrem Browser oder setzt
+          vergleichbare Wiedererkennungstechnologien ein.
+        </p>
+        <p>
+          Die Nutzung von OpenStreetMap erfolgt im Interesse einer ansprechenden
+          Darstellung unserer Online-Angebote und einer leichten Auffindbarkeit
+          der von uns auf der Website angegebenen Orte. Dies stellt ein
+          berechtigtes Interesse im Sinne von Art. 6 Abs. 1 lit. f DSGVO dar.
+          Sofern eine entsprechende Einwilligung abgefragt wurde, erfolgt die
+          Verarbeitung ausschließlich auf Grundlage von Art. 6 Abs. 1 lit. a
+          DSGVO und &sect; 25 Abs. 1 TTDSG, soweit die Einwilligung die
+          Speicherung von Cookies oder den Zugriff auf Informationen im Endgerät
+          des Nutzers (z.&nbsp;B. Device-Fingerprinting) im Sinne des TTDSG
+          umfasst. Die Einwilligung ist jederzeit widerrufbar.
+        </p>
         <p>
           Quelle:{" "}
           <Link href="https://www.e-recht24.de" target="_blank">
