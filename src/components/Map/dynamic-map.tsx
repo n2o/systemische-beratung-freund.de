@@ -12,7 +12,6 @@ export default function Map({ children, className, width, height, ...rest }) {
 
   if (className) {
     mapClassName = `${mapClassName} ${className}`
-    console.log(mapClassName)
   }
   useEffect(() => {
     ;(async function init() {
