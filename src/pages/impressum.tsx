@@ -59,7 +59,6 @@ export default function Page() {
           Verliehen in:
           <br />
         </p> */}
-        <p>Es gelten folgende berufsrechtliche Regelungen:</p>
         <h2>
           Verbraucher&shy;streit&shy;beilegung /
           Universal&shy;schlichtungs&shy;stelle
