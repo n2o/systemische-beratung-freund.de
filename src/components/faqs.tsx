@@ -55,7 +55,7 @@ export function Faqs() {
         height={946}
         unoptimized
       />
-      <Container className="relative">
+      <Container className="relative mt-10 md:mt-0">
         <div className="mx-0 max-w-2xl md:mx-auto md:text-center">
           <h2 className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">
             Häufig gestellte Fragen
