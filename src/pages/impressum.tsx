@@ -1,6 +1,7 @@
 import { Container } from "@/components/container"
 import { Footer } from "@/components/footer"
 import { Header } from "@/components/header"
+import { SprinkleBackground } from "@/components/hero"
 import Head from "next/head"
 import Link from "next/link"
 
@@ -11,8 +12,9 @@ export default function Page() {
         <title>Gebhardt und Schrader Physiotherapie GbR: Impressum</title>
       </Head>
       <Header />
+      <SprinkleBackground />
       <Container>
-        <h1>Datenschutz</h1>
+        <h1>Impressum</h1>
         <h2>Angaben gemäß &sect; 5 TMG</h2>
         <p>
           Gebhardt und Schrader Physiotherapie GbR

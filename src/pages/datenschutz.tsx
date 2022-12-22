@@ -1,6 +1,7 @@
 import { Container } from "@/components/container"
 import { Footer } from "@/components/footer"
 import { Header } from "@/components/header"
+import { SprinkleBackground } from "@/components/hero"
 import Head from "next/head"
 import Link from "next/link"
 
@@ -11,6 +12,7 @@ export default function Page() {
         <title>Gebhardt und Schrader Physiotherapie GbR: Datenschutz</title>
       </Head>
       <Header />
+      <SprinkleBackground />
       <Container>
         <h1>Datenschutz&shy;erklärung</h1>
         <h2>1. Datenschutz auf einen Blick</h2>
