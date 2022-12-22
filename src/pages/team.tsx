@@ -7,15 +7,9 @@ import alex from "@/images/team/alex.webp"
 import antjeKristin from "@/images/team/antje-kristin.webp"
 import imke from "@/images/team/imke.webp"
 import melanie from "@/images/team/melanie.webp"
+import namefehlt from "@/images/team/namefehlt.webp"
 import Head from "next/head"
 import Image from "next/image"
-
-const alexandraProfil =
-  "Alexandra Gebhardt ist Gesellschafterin und seit 2004 als Physiotherapeutin tätig und bringt viel Berufserfahrung mit, insbesondere im Bereich der manuellen Lymphdrainage, der Kompressionsbehandlung und der Manuellen Therapie. Zusätzlich hat sie sich in CMD/Kiefergelenksbehandlungen und der Fussreflexzonen-Therapie fortgebildet. Sie bietet auch Hausbesuche an."
-const imkeProfil =
-  "Imke Schrader ist Gesellschafterin und seit 1998 Physiotherapeutin. Sie hat besonders in der Behandlung von neurologischen Erkrankungen in verschiedenen Kliniken und Praxen Erfahrung sammeln können. Sie hat sich in der Brügger-Therapie, der KG ZNS nach Bobath für Erwachsene und der manuellen Therapie nach dem Maitland-Konzept fortgebildet. Sie bietet auch Hausbesuche an."
-const melanieProfil =
-  "Melanie Kiep ist seit 2001 als Physiotherapeutin tätig und hat zudem eine Ausbildung als Krankenschwester absolviert. Seit 2004 arbeitet sie in der Praxis in Ershausen und verstärkt nun das neue Team. Sie hat sich insbesondere im Bereich der manuellen Therapie und der manuellen Lymphdrainage fortgebildet."
 
 function WelcomeCard() {
   return (
@@ -44,23 +38,28 @@ function WelcomeCard() {
 
 const people = [
   {
-    name: "Alexandra Gebhardt",
-    image: alex,
-    bio: alexandraProfil,
-  },
-  {
     name: "Imke Schrader",
     image: imke,
-    bio: imkeProfil,
+    bio: "Imke Schrader ist Gesellschafterin und seit 1998 Physiotherapeutin. Sie hat besonders in der Behandlung von neurologischen Erkrankungen in verschiedenen Kliniken und Praxen Erfahrung sammeln können. Sie hat sich in der Brügger-Therapie, der KG ZNS nach Bobath für Erwachsene und der manuellen Therapie nach dem Maitland-Konzept fortgebildet. Sie bietet auch Hausbesuche an.",
+  },
+  {
+    name: "Alexandra Gebhardt",
+    image: alex,
+    bio: "Alexandra Gebhardt ist Gesellschafterin und seit 2004 als Physiotherapeutin tätig und bringt viel Berufserfahrung mit, insbesondere im Bereich der manuellen Lymphdrainage, der Kompressionsbehandlung und der Manuellen Therapie. Zusätzlich hat sie sich in CMD/Kiefergelenksbehandlungen und der Fussreflexzonen-Therapie fortgebildet. Sie bietet auch Hausbesuche an.",
   },
   {
     name: "Melanie Kiep",
     image: melanie,
-    bio: melanieProfil,
+    bio: "Melanie Kiep ist seit 2001 als Physiotherapeutin tätig und hat zudem eine Ausbildung als Krankenschwester absolviert. Seit 2004 arbeitet sie in der Praxis in Ershausen und verstärkt nun das neue Team. Sie hat sich insbesondere im Bereich der manuellen Therapie und der manuellen Lymphdrainage fortgebildet.",
   },
   {
     name: "Antje-Kristin",
     image: antjeKristin,
+    bio: "",
+  },
+  {
+    name: "Name fehlt",
+    image: namefehlt,
     bio: "",
   },
 ]
