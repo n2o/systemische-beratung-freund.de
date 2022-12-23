@@ -2,6 +2,7 @@ import { Container } from "@/components/container"
 import { FadeIn } from "@/components/FadeIn"
 import { Karte } from "@/components/karte"
 import dynamic from "next/dynamic"
+import Link from "next/link"
 import { useRef } from "react"
 const Button = dynamic(
   () => import("@/components/button").then((module) => module.Button),
@@ -88,7 +89,11 @@ export function LeistungsKarte() {
           </p>
           <p>
             Wenn Sie Fragen haben, wenden Sie sich gerne persönlich oder
-            telefonisch an uns oder lesen unter der Rubrik Fragen&Antworten nach
+            telefonisch an uns oder lesen unter der Rubrik{" "}
+            <Link href="/#faq" className="link">
+              Fragen & Antworten
+            </Link>{" "}
+            nach.
           </p>
         </Karte>
       </Container>
