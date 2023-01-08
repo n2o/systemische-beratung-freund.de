@@ -21,3 +21,20 @@ export function Heading({ heading, children = null, className = "" }) {
     </div>
   )
 }
+
+export function HeadingFuerSection({
+  heading = "",
+  children = null,
+  ...props
+}) {
+  return (
+    <div className="mx-auto max-w-2xl md:text-center" {...props}>
+      <h2 className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">
+        {heading}
+      </h2>
+      <div className="mt-4 text-lg tracking-tight text-slate-700">
+        {children}
+      </div>
+    </div>
+  )
+}

@@ -1,6 +1,6 @@
 import { Container } from "@/components/Container"
 import { Karte } from "@/components/Karte"
-import womananddog from "@/images/womandog.webp"
+import womandog from "@/images/womandog.webp"
 import Image from "next/image"
 
 export function Kurzprofil() {
@@ -9,7 +9,7 @@ export function Kurzprofil() {
       <Container>
         <section className="content mt-5 mb-1">
           <div className="md:flex">
-            <Karte className="md:mr-5" heading="Kurzprofil">
+            <Karte className="md:mr-5" heading="Über Lisa">
               <p>
                 In meiner beraterischen / therapeutischen Tätigkeit widme ich
                 mich mit Leidenschaft, Empathie, Professionalität und Klarheit
@@ -42,7 +42,7 @@ export function Kurzprofil() {
             </Karte>
             <Image
               className="image"
-              src={womananddog}
+              src={womandog}
               alt="Bild von Lisa mit ihrem Hund Lasse"
               width={300}
               height={30}

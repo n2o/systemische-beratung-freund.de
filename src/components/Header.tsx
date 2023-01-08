@@ -1,4 +1,3 @@
-import { phone } from "@/common"
 import { Container } from "@/components/Container"
 import { Logo } from "@/components/Logo"
 import { NavLink } from "@/components/NavLink"
@@ -73,7 +72,11 @@ function MobileNavigation() {
             className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5"
           >
             <MobileNavLink href="/leistungen">Leistungen</MobileNavLink>
-            <MobileNavLink href="/ueber-uns">Über uns</MobileNavLink>
+            <MobileNavLink href="/tiergestuetzte-arbeit">
+              Tiergestützte Arbeit
+            </MobileNavLink>
+            <MobileNavLink href="/leitbild">Leitbild</MobileNavLink>
+            <MobileNavLink href="/profil">Profil</MobileNavLink>
             <MobileNavLink href="/kontakt">Kontakt</MobileNavLink>
           </Popover.Panel>
         </Transition.Child>
@@ -93,15 +96,18 @@ export function Header() {
             </Link>
             <div className="hidden md:flex md:gap-x-6">
               <NavLink href="/leistungen">Leistungen</NavLink>
-              <NavLink href="/ueber-uns">Über uns</NavLink>
-              <NavLink href="/kontakt">Kontakt</NavLink>
+              <NavLink href="/tiergestuetzte-arbeit">
+                Tiergestützte Arbeit
+              </NavLink>
+              <NavLink href="/leitbild">Leitbild</NavLink>
+              <NavLink href="/profil">Profil</NavLink>
             </div>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
             <div className="hidden md:block">
-              <NavLink href={`tel:${phone}`}>
+              <NavLink href="/kontakt">
                 <PhoneIcon className="mr-2 inline h-5" />
-                {phone}
+                Kontakt
               </NavLink>
             </div>
             <div className="-mr-1 md:hidden">
