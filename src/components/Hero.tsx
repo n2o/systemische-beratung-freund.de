@@ -1,7 +1,4 @@
 import { colors } from "@/colors"
-import gruppenfoto from "@/images/gruppenfoto.webp"
-import gruppenfotopng from "@/images/gruppenfoto_transparent_kurz.webp"
-import Image from "next/image"
 
 export function SprinkleBackground() {
   return (
@@ -60,25 +57,6 @@ export function Hero() {
               Wir sind für Sie da, um Schmerzen zu lindern und Ihre
               Beweglichkeit zu verbessern.
             </p>
-          </section>
-          <section className="mx-5 mt-10 md:mt-0 md:ml-5 md:mr-0">
-            <Image
-              className="hidden border shadow-2xl md:rounded-l-lg"
-              src={gruppenfoto}
-              width={800}
-              height={100}
-              priority
-              alt="Ein Teamfoto der Physiotherapeutinnen"
-            />
-            <Image
-              className=""
-              style={{}}
-              src={gruppenfotopng}
-              width={800}
-              height={100}
-              priority
-              alt="Ein Teamfoto der Physiotherapeutinnen"
-            />
           </section>
         </div>
       </div>
