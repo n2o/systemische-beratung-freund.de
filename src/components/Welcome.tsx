@@ -1,24 +1,30 @@
 import { Container } from "@/components/Container"
 import { Karte } from "@/components/Karte"
 
-const heading = "Willkommen!"
-const lead = "Herzlich willkommen bei der Physiotherapie Gebhardt und Schrader"
-const body =
-  "Wir sind ein Team von erfahrenen Physiotherapeutinnen, die sich auf die Behandlung von Schmerzen und Bewegungsproblemen jeglicher Art spezialisiert haben. Unser Ziel ist es, Sie wieder fit und gesund zu machen und Ihnen dabei zu helfen, Ihre Gesundheit und Ihr Wohlbefinden zu verbessern. Wir freuen uns darauf, Sie kennenzulernen und Ihnen bei Ihren Therapiebedürfnissen zu helfen."
-
 export default function Welcome() {
   return (
-    <div className="bg-accent px-4 py-5">
-      <Container>
-        <div className="my-12 md:flex">
-          <Karte
-            className="z-10 md:w-2/3"
-            heading={heading}
-            lead={lead}
-            body={body}
-          />
-        </div>
-      </Container>
-    </div>
+    <Container>
+      <div className="my-12 md:flex">
+        <Karte className="z-10 md:w-2/3" heading="Herzlich Willkommen">
+          <p>
+            Sehen wir uns nicht alle bei Zeit im Alltag gewissen
+            Herausforderungen ausgesetzt, die in einem Moment kaum der Rede wert
+            sind und an anderer Stelle schier unüberwindbar scheinen? Viel zu
+            oft geraten wir im Leben in Situationen, die wir als Experten in
+            eigener Sache ohne weiteres zu lösen wüssten, wenn da nicht all die
+            äußeren Einflüsse und/oder individuellen Gedankenmodelle wären, die
+            einen konstruktiven, selbstsicheren Blick auf die Dinge erschweren.
+          </p>
+          <p>
+            Trotz der Vielzahl an Angeboten scheint die Hemmschwelle sich dann
+            Unterstützung zu suchen immer noch sehr hoch. So sei Ihnen an dieser
+            Stelle gesagt:
+          </p>
+          <p className="italic">
+            Den ersten Schritt zur Veränderung haben Sie bereits gemacht!
+          </p>
+        </Karte>
+      </div>
+    </Container>
   )
 }

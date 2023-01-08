@@ -4,7 +4,6 @@ export function Karte({
   className = "",
   heading = "",
   lead = "",
-  body = "",
   children = null,
   ...props
 }) {
@@ -18,7 +17,6 @@ export function Karte({
     >
       {heading && <h2 className="pb-3 text-3xl">{heading}</h2>}
       {lead && <p>{lead}</p>}
-      {body && <p>{body}</p>}
       {children}
     </div>
   )
