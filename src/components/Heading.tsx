@@ -1,4 +1,4 @@
-import { SprinkleBackground } from "@/components/hero"
+import { SprinkleBackground } from "@/components/Hero"
 import clsx from "clsx"
 
 export function Heading({ heading, children = null, className = "" }) {

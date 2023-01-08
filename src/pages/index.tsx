@@ -1,7 +1,7 @@
-import { Footer } from "@/components/footer"
-import { Header } from "@/components/header"
-import { Hero } from "@/components/hero"
-import Welcome from "@/components/welcome"
+import { Footer } from "@/components/Footer"
+import { Header } from "@/components/Header"
+import { Hero } from "@/components/Hero"
+import Welcome from "@/components/Welcome"
 import Head from "next/head"
 
 export default function Home() {

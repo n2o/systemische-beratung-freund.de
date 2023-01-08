@@ -1,5 +1,5 @@
-import { Container } from "@/components/container"
-import { Karte } from "@/components/karte"
+import { Container } from "@/components/Container"
+import { Karte } from "@/components/Karte"
 
 const heading = "Willkommen!"
 const lead = "Herzlich willkommen bei der Physiotherapie Gebhardt und Schrader"
