@@ -1,7 +1,7 @@
-import { Button } from "@/components/button"
-import { Container } from "@/components/container"
-import { Footer } from "@/components/footer"
-import { Header } from "@/components/header"
+import { Button } from "@/components/Button"
+import { Container } from "@/components/Container"
+import { Footer } from "@/components/Footer"
+import { Header } from "@/components/Header"
 import { FaceSmileIcon } from "@heroicons/react/24/outline"
 
 export default function FourOhFour() {
