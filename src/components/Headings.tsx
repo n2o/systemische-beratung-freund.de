@@ -18,6 +18,17 @@ export function H2Heading({
   )
 }
 
+export function H2HeadingLeft({ heading = "", leadHeading = "" }) {
+  return (
+    <div className="max-w-prose text-base lg:max-w-none">
+      <h2 className="font-semibold leading-6 text-primary">{leadHeading}</h2>
+      <p className="mt-2 text-3xl font-bold leading-8 tracking-tight text-gray-900 sm:text-4xl">
+        {heading}
+      </p>
+    </div>
+  )
+}
+
 export function H1Heading({ heading = "", children = null, ...props }) {
   return (
     <Container className="mx-auto max-w-2xl md:text-center" {...props}>

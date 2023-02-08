@@ -20,3 +20,7 @@ export function Streifen({
     </div>
   )
 }
+
+export function Platzhalter() {
+  return <div class="mt-7 h-24 w-full bg-slate-100"></div>
+}

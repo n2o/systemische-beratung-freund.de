@@ -1,4 +1,4 @@
-import { H2Heading } from "@/components/Headings"
+import { H2Heading, H2HeadingLeft } from "@/components/Headings"
 import {
   ArrowPathIcon,
   CloudArrowUpIcon,
@@ -69,5 +69,173 @@ export function LeistungsUebersicht() {
         </div>
       </div>
     </div>
+  )
+}
+
+// "Einzelberatung"
+// "Individuelle Themen und Herausforderungen"
+function LeistungsBeschreiber({
+  heading = "",
+  leadHeading = "",
+  childrenLeft = undefined,
+  childrenRight = undefined,
+}) {
+  return (
+    <div className="overflow-hidden bg-white py-8 px-6 lg:px-8 xl:py-12">
+      <div className="mx-auto max-w-max lg:max-w-7xl">
+        <div className="relative z-10 mb-8 md:mb-2 md:px-6">
+          <H2HeadingLeft leadHeading={leadHeading} heading={heading} />
+        </div>
+        <div className="relative">
+          <svg
+            className="absolute top-0 right-0 -mt-20 -mr-20 hidden md:block md:[overflow-anchor:none]"
+            width={404}
+            height={384}
+            fill="none"
+            viewBox="0 0 404 384"
+            aria-hidden="true"
+          >
+            <defs>
+              <pattern
+                id="95e8f2de-6d30-4b7e-8159-f791729db21b"
+                x={0}
+                y={0}
+                width={20}
+                height={20}
+                patternUnits="userSpaceOnUse"
+              >
+                <rect
+                  x={0}
+                  y={0}
+                  width={4}
+                  height={4}
+                  className="text-gray-200"
+                  fill="currentColor"
+                />
+              </pattern>
+            </defs>
+            <rect
+              width={404}
+              height={384}
+              fill="url(#95e8f2de-6d30-4b7e-8159-f791729db21b)"
+            />
+          </svg>
+          <svg
+            className="absolute bottom-0 left-0 -mb-20 -ml-20 hidden md:block md:[overflow-anchor:none]"
+            width={404}
+            height={384}
+            fill="none"
+            viewBox="0 0 404 384"
+            aria-hidden="true"
+          >
+            <defs>
+              <pattern
+                id="7a00fe67-0343-4a3c-8e81-c145097a3ce0"
+                x={0}
+                y={0}
+                width={20}
+                height={20}
+                patternUnits="userSpaceOnUse"
+              >
+                <rect
+                  x={0}
+                  y={0}
+                  width={4}
+                  height={4}
+                  className="text-gray-200"
+                  fill="currentColor"
+                />
+              </pattern>
+            </defs>
+            <rect
+              width={404}
+              height={384}
+              fill="url(#7a00fe67-0343-4a3c-8e81-c145097a3ce0)"
+            />
+          </svg>
+          <div className="relative md:bg-white md:p-6">
+            <div className="lg:grid lg:grid-cols-2 lg:gap-6">
+              <div className="prose prose-lg prose-indigo text-gray-700 lg:max-w-none">
+                {childrenLeft}
+              </div>
+              <div className="prose prose-lg prose-indigo mt-6 text-gray-700 lg:mt-0">
+                {childrenRight}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export function Einzelberatung() {
+  const childrenLeft = (
+    <>
+      <p>
+        Sie haben das Gefühl auf der Stelle zu treten, ein Thema aus ihrer
+        Vergangenheit holt sie immer wieder ein, Sie stehen vor einer wichtigen
+        Entscheidung. Sie sind unzufrieden mit sich selbst oder befinden sich in
+        einer Krise, aus der Sie keinen Ausweg sehen.
+      </p>
+      <p>
+        Dann kommen Sie mit ihrem persönlichen Anliegen zu mir in die
+        Einzelberatung und wir machen uns gemeinsam auf den Weg hin zu einer
+        Zukunft gemäß ihrer Wünsche und Bedürfnisse. Erwecken Sie mit mir an
+        Ihrer Seite ihre Ressourcen und Kräfte, wagen Sie neue Perspektiven
+        einzunehmen und lernen Sie sich selbst als wichtigstes Werkzeug ihres
+        Lebens anzuwenden.
+      </p>
+    </>
+  )
+  const childrenRight = (
+    <>
+      <p>
+        Dem vorweg steht für mich eine wertschätzende und vertrauensvolle
+        Beziehung. Lernen Sie mich in einem ersten persönlichen / telefonischen
+        Gespräch kennen und überprüfen Sie für sich, ob Sie sich eine
+        Zusammenarbeit mit mir vorstellen können.
+      </p>
+    </>
+  )
+
+  return (
+    <LeistungsBeschreiber
+      leadHeading="Einzelberatung"
+      heading="Individuelle Themen und Herausforderungen"
+      childrenLeft={childrenLeft}
+      childrenRight={childrenRight}
+    />
+  )
+}
+
+export function Paarberatung() {
+  const childrenLeft = (
+    <p>
+      Bestimmen Gefühle wie Enttäuschung, Wut, Trauer, Frust, Müdigkeit, Sorge
+      oder Eifersucht den Alltag ihrer Partnerschaft kann es hilfreich sein in
+      neutraler, geschützter Atmosphäre mit Unterstützung eines objektiven
+      Dritten darüber ins Gespräch zu kommen. Weg von der Schuldfrage, sondern
+      in dem Bewusstsein, dass zu einer Partnerschaft zwei gehören, möchte ich
+      Ihnen dazu verhelfen sich ihrer persönlichen Wünsche und Bedürfnisse
+      gewahr zu werden und darüber in den Austausch zu kommen. Wagen Sie mit mir
+      einen Perspektivwechsel, um einen rationalen Blick auf ihre Probleme zu
+      entwickeln und im Miteinander konstruktive Lösungsstrategien zu
+      erarbeiten.
+    </p>
+  )
+  const childrenRight = (
+    <p>
+      Vereinbaren Sie gern einen Kennenlerntermin mit mir, um herauszufinden, ob
+      ich für Sie die passende Wegbegleiterin bin.
+    </p>
+  )
+  return (
+    <LeistungsBeschreiber
+      leadHeading="Paarberatung"
+      heading="Konflikte innerhalb einer Beziehung"
+      childrenLeft={childrenLeft}
+      childrenRight={childrenRight}
+    />
   )
 }
