@@ -1,8 +1,13 @@
-import { Streifen } from "@/components/Streifen"
+import { Container } from "@/components/Container"
+import { H2Heading } from "@/components/Headings"
 
 export default function Welcome() {
   return (
-    <Streifen heading="Herzlich Willkommen">
+    <Container className="my-12">
+      <H2Heading
+        heading="Herzlich Willkommen"
+        leadHeading="Systemische Beratung Freund"
+      />
       <p>
         Sehen wir uns nicht alle bei Zeit im Alltag gewissen Herausforderungen
         ausgesetzt, die in einem Moment kaum der Rede wert sind und an anderer
@@ -20,6 +25,6 @@ export default function Welcome() {
       <p className="italic">
         Den ersten Schritt zur Veränderung haben Sie bereits gemacht!
       </p>
-    </Streifen>
+    </Container>
   )
 }

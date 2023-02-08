@@ -1,5 +1,6 @@
 import { Footer } from "@/components/Footer"
 import { Header } from "@/components/Header"
+import { LeistungsUebersicht } from "@/components/Leistungen"
 import { Kurzprofil } from "@/components/Profil"
 import Welcome from "@/components/Welcome"
 import Head from "next/head"
@@ -30,6 +31,7 @@ export default function Home() {
 
         <Welcome />
         <Kurzprofil />
+        <LeistungsUebersicht />
       </main>
       <Footer />
     </>
