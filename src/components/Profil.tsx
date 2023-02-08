@@ -1,15 +1,27 @@
 import { Container } from "@/components/Container"
-import { Karte } from "@/components/Karte"
 import womandog from "@/images/womandog.webp"
 import Image from "next/image"
 
 export function Kurzprofil() {
   return (
-    <>
-      <Container>
-        <section className="content mt-5 mb-1">
-          <div className="md:flex">
-            <Karte className="md:mr-5" heading="Über Lisa">
+    <div className="my-16 bg-slate-50 py-8">
+      <Container className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="flex flex-col gap-6 xl:flex-row">
+          <Image
+            className="aspect-[4/5] w-64 flex-none rounded-2xl object-cover"
+            src={womandog}
+            alt=""
+            width={100}
+            height={100}
+          />
+          <div className="flex-auto">
+            <h3 className="text-lg font-semibold leading-8 tracking-tight text-gray-900">
+              Über mich
+            </h3>
+            <p className="text-base leading-7 text-gray-600">
+              Lisa Freund, verheiratet, freiberuflich tätig seit 2022
+            </p>
+            <div className="mt-1 text-base leading-7 text-gray-600">
               <p>
                 In meiner beraterischen / therapeutischen Tätigkeit widme ich
                 mich mit Leidenschaft, Empathie, Professionalität und Klarheit
@@ -20,9 +32,6 @@ export function Kurzprofil() {
                 Sitzung etwas Konkretes mit nach Hause nehmen. Zum anderen bin
                 ich gern spontan und entwickle gemeinsam mit meinen Klienten
                 individuell auf sie zugeschnittene Ideen und Wege.
-              </p>
-              <p className="italic">
-                Lisa Freund, verheiratet, freiberuflich tätig seit 2022
               </p>
               <h3 className="mt-5">Berufliche Erfahrungen</h3>
               <ul className="ml-5 list-inside list-disc">
@@ -39,17 +48,10 @@ export function Kurzprofil() {
                 </li>
                 <li>Studium der Rehabilitationspädagogik (B.A.)</li>
               </ul>
-            </Karte>
-            <Image
-              className="image"
-              src={womandog}
-              alt="Bild von Lisa mit ihrem Hund Lasse"
-              width={300}
-              height={30}
-            />
+            </div>
           </div>
-        </section>
+        </div>
       </Container>
-    </>
+    </div>
   )
 }
