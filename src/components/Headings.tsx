@@ -1,3 +1,5 @@
+import { Container } from "@/components/Container"
+
 export function H2Heading({
   heading = "",
   leadHeading = "",
@@ -18,13 +20,13 @@ export function H2Heading({
 
 export function H1Heading({ heading = "", children = null, ...props }) {
   return (
-    <div className="mx-auto max-w-2xl md:text-center" {...props}>
+    <Container className="mx-auto max-w-2xl md:text-center" {...props}>
       <h1 className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">
         {heading}
       </h1>
       <div className="mt-4 text-lg tracking-tight text-slate-700">
         {children}
       </div>
-    </div>
+    </Container>
   )
 }
