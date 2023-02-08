@@ -18,10 +18,10 @@ export function Kurzprofil() {
             <h3 className="text-lg font-semibold leading-8 tracking-tight text-gray-900">
               Über mich
             </h3>
-            <p className="text-base leading-7 text-gray-600">
+            <p className="text-base leading-7 text-gray-700">
               Lisa Freund, verheiratet, freiberuflich tätig seit 2022
             </p>
-            <div className="mt-1 text-base leading-7 text-gray-600">
+            <div className="mt-1 text-base leading-7 text-gray-700">
               <p>
                 In meiner beraterischen / therapeutischen Tätigkeit widme ich
                 mich mit Leidenschaft, Empathie, Professionalität und Klarheit
