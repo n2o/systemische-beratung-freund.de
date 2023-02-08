@@ -7,14 +7,14 @@ export default function Leistungen() {
   return (
     <>
       <Head>
-        <title>Systemische Beratung Freund: Leistungen</title>
+        <title>Systemische Beratung Freund: Profil</title>
       </Head>
       <Header />
       <main>
-        <H1Heading heading="Leistungen">
+        <H1Heading heading="Profil">
           <p>
-            Verschiedene Beratungen und Therapien sind möglich. Erhalten Sie
-            hier einen Überblick über die Leistungen.
+            Hier möchte ich mich Ihnen vorstellen und Ihnen einen Einblick in
+            meine Fähigkeiten, Erfahrungen und Interessen geben.
           </p>
         </H1Heading>
       </main>

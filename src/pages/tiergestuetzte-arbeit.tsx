@@ -7,14 +7,15 @@ export default function Leistungen() {
   return (
     <>
       <Head>
-        <title>Systemische Beratung Freund: Leistungen</title>
+        <title>Systemische Beratung Freund: Tiergestützte Arbeiten</title>
       </Head>
       <Header />
       <main>
-        <H1Heading heading="Leistungen">
+        <H1Heading heading="Tiergestützte Arbeiten">
           <p>
-            Verschiedene Beratungen und Therapien sind möglich. Erhalten Sie
-            hier einen Überblick über die Leistungen.
+            Tiergestützte Arbeit ist eine innovative Methode, die Menschen dabei
+            unterstützt, Herausforderungen zu meistern und ihr Wohlbefinden zu
+            verbessern.
           </p>
         </H1Heading>
       </main>
