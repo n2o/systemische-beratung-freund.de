@@ -81,7 +81,7 @@ function LeistungsBeschreiber({
   childrenRight = undefined,
 }) {
   return (
-    <div className="overflow-hidden bg-white py-8 px-6 lg:px-8 xl:py-12">
+    <div className="mb-10 overflow-hidden bg-white py-8 px-6 lg:px-8 xl:py-12">
       <div className="mx-auto max-w-max lg:max-w-7xl">
         <div className="relative z-10 mb-8 md:mb-2 md:px-6">
           <H2HeadingLeft leadHeading={leadHeading} heading={heading} />

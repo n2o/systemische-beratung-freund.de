@@ -20,12 +20,12 @@ export function H2Heading({
 
 export function H2HeadingLeft({ heading = "", leadHeading = "" }) {
   return (
-    <div className="max-w-prose text-base lg:max-w-none">
+    <section className="max-w-prose text-base lg:max-w-none">
       <h2 className="font-semibold leading-6 text-primary">{leadHeading}</h2>
-      <p className="mt-2 text-3xl font-bold leading-8 tracking-tight text-gray-900 sm:text-4xl">
+      <p className="mt-2 text-2xl font-bold leading-8 tracking-tight text-gray-900 sm:text-3xl">
         {heading}
       </p>
-    </div>
+    </section>
   )
 }
 
