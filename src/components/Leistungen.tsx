@@ -72,8 +72,6 @@ export function LeistungsUebersicht() {
   )
 }
 
-// "Einzelberatung"
-// "Individuelle Themen und Herausforderungen"
 function LeistungsBeschreiber({
   heading = "",
   leadHeading = "",
