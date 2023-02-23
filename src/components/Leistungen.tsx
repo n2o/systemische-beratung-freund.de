@@ -1,5 +1,5 @@
 import { FadeIn } from "@/components/FadeIn"
-import { H2Heading, H2HeadingLeft } from "@/components/Headings"
+import { H2, H2Left } from "@/components/Headings"
 import {
   ArrowPathIcon,
   CloudArrowUpIcon,
@@ -63,7 +63,7 @@ export function LeistungsUebersicht() {
   return (
     <div className="bg-white py-8">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <H2Heading
+        <H2
           heading="Leistungsübersicht"
           leadHeading="Was kommt für Sie in Frage?"
         >
@@ -72,7 +72,7 @@ export function LeistungsUebersicht() {
             anbieten kann. Sollten Sie Fragen haben, kontaktieren Sie mich
             gerne.
           </p>
-        </H2Heading>
+        </H2>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
           <dl className="grid max-w-xl grid-cols-1 gap-y-10 gap-x-8 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
             {leistungen.map((leistung, leistungIndex) => (
@@ -97,7 +97,7 @@ function LeistungsBeschreiber({
     <div className="mb-10 overflow-hidden bg-white py-8 px-6 lg:px-8 xl:py-12">
       <div className="mx-auto max-w-max lg:max-w-7xl">
         <div className="relative z-10 mb-8 md:mb-2 md:px-6">
-          <H2HeadingLeft leadHeading={leadHeading} heading={heading} />
+          <H2Left leadHeading={leadHeading} heading={heading} />
         </div>
         <div className="relative">
           <svg

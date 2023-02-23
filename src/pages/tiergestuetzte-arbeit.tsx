@@ -1,6 +1,6 @@
 import { Footer } from "@/components/Footer"
 import { Header } from "@/components/Header"
-import { H1Heading } from "@/components/Headings"
+import { H1 } from "@/components/Headings"
 import Head from "next/head"
 
 export default function Leistungen() {
@@ -11,13 +11,13 @@ export default function Leistungen() {
       </Head>
       <Header />
       <main>
-        <H1Heading heading="Tiergestützte Arbeiten">
+        <H1 heading="Tiergestützte Arbeiten">
           <p>
             Tiergestützte Arbeit ist eine innovative Methode, die Menschen dabei
             unterstützt, Herausforderungen zu meistern und ihr Wohlbefinden zu
             verbessern.
           </p>
-        </H1Heading>
+        </H1>
       </main>
       <Footer />
     </>

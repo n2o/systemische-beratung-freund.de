@@ -1,10 +1,10 @@
 import { Container } from "@/components/Container"
-import { H1Heading } from "@/components/Headings"
+import { H1 } from "@/components/Headings"
 
 export default function Welcome() {
   return (
     <Container className="my-12">
-      <H1Heading heading="Herzlich Willkommen" />
+      <H1 heading="Herzlich Willkommen" />
       <p>
         Sehen wir uns nicht alle bei Zeit im Alltag gewissen Herausforderungen
         ausgesetzt, die in einem Moment kaum der Rede wert sind und an anderer

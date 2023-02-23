@@ -1,6 +1,6 @@
 import { Footer } from "@/components/Footer"
 import { Header } from "@/components/Header"
-import { H1Heading } from "@/components/Headings"
+import { H1 } from "@/components/Headings"
 import Head from "next/head"
 
 export default function Leistungen() {
@@ -11,7 +11,7 @@ export default function Leistungen() {
       </Head>
       <Header />
       <main>
-        <H1Heading heading="Leitbild">
+        <H1 heading="Leitbild">
           <p>
             Unser Leitbild ist das Fundament unserer Arbeit und zeigt, was uns
             antreibt und woran wir glauben. Es gibt uns Orientierung und hilft
@@ -19,7 +19,7 @@ export default function Leistungen() {
             stehen. Hier möchten wir Ihnen zeigen, wer wir sind und was uns
             wichtig ist.
           </p>
-        </H1Heading>
+        </H1>
       </main>
       <Footer />
     </>

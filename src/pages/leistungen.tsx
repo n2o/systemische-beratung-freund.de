@@ -1,6 +1,6 @@
 import { Footer } from "@/components/Footer"
 import { Header } from "@/components/Header"
-import { H1Heading } from "@/components/Headings"
+import { H1 } from "@/components/Headings"
 import { Einzelberatung, Paarberatung } from "@/components/Leistungen"
 import { Platzhalter } from "@/components/Streifen"
 import Head from "next/head"
@@ -13,12 +13,12 @@ export default function Leistungen() {
       </Head>
       <Header />
       <main>
-        <H1Heading heading="Leistungen">
+        <H1 heading="Leistungen">
           <p>
             Verschiedene Beratungen und Therapien sind möglich. Erhalten Sie
             hier einen Überblick über die Leistungen.
           </p>
-        </H1Heading>
+        </H1>
         <Platzhalter />
         <Einzelberatung />
         <Paarberatung />
