@@ -54,10 +54,12 @@ function Leistung({ leistung }) {
             </div>
             {leistung.name}
           </dt>
-          <dd className="my-2 text-base leading-7 text-gray-600">
-            {leistung.description}
+          <dd className="mt-2 text-base leading-7 text-gray-600">
+            <p>{leistung.description}</p>
+            {leistung.link && (
+              <Button href={leistung.link}>Mehr erfahren</Button>
+            )}
           </dd>
-          {leistung.link && <Button href={leistung.link}>Mehr erfahren</Button>}
         </span>
       </FadeIn>
     </span>
