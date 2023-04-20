@@ -1,3 +1,4 @@
+import { Button } from "@/components/Button"
 import { FadeIn } from "@/components/FadeIn"
 import { H2, H2Left } from "@/components/Headings"
 import {
@@ -11,18 +12,21 @@ import { useRef } from "react"
 const leistungen = [
   {
     name: "Einzelberatung",
+    link: "/leistungen#einzelberatung",
     description:
       "In einer Einzelberatung steht eine Person im Mittelpunkt. Hier geht es um individuelle Themen und Herausforderungen, die gemeistert werden müssen. Durch die systemische Sichtweise werden Zusammenhänge innerhalb des persönlichen Umfelds beleuchtet.",
     icon: CloudArrowUpIcon,
   },
   {
     name: "Paarberatung",
+    link: "/leistungen#paarberatung",
     description:
       "In der Paarberatung werden Konflikte und Probleme innerhalb einer Beziehung angesprochen und bearbeitet. Hier steht das gemeinsame Verständnis und die Stärkung der Beziehung im Fokus.",
     icon: LockClosedIcon,
   },
   {
     name: "Familienberatung",
+    link: "/leistungen#familienberatung",
     description:
       "In der Familienberatung geht es um die Interaktionen und Beziehungen innerhalb einer Familie. Hier werden Konflikte gelöst und Lösungen für Herausforderungen gefunden, um das Familienleben zu verbessern.",
     icon: ArrowPathIcon,
@@ -50,9 +54,10 @@ function Leistung({ leistung }) {
             </div>
             {leistung.name}
           </dt>
-          <dd className="mt-2 text-base leading-7 text-gray-600">
+          <dd className="my-2 text-base leading-7 text-gray-600">
             {leistung.description}
           </dd>
+          {leistung.link && <Button href={leistung.link}>Mehr erfahren</Button>}
         </span>
       </FadeIn>
     </span>
@@ -92,9 +97,13 @@ function LeistungsBeschreiber({
   leadHeading = "",
   childrenLeft = undefined,
   childrenRight = undefined,
+  ...props
 }) {
   return (
-    <div className="mb-10 overflow-hidden bg-white px-6 py-8 lg:px-8 xl:py-12">
+    <div
+      className="mb-10 overflow-hidden bg-white px-6 py-8 lg:px-8 xl:py-12"
+      {...props}
+    >
       <div className="mx-auto max-w-max lg:max-w-7xl">
         <div className="relative z-10 mb-8 md:mb-2 md:px-6">
           <H2Left leadHeading={leadHeading} heading={heading} />
@@ -209,6 +218,7 @@ export function Einzelberatung() {
 
   return (
     <LeistungsBeschreiber
+      id="einzelberatung"
       leadHeading="Einzelberatung / -therapie"
       heading="Individuelle Themen und Herausforderungen"
       childrenLeft={childrenLeft}
@@ -255,6 +265,7 @@ export function Paarberatung() {
   )
   return (
     <LeistungsBeschreiber
+      id="paarberatung"
       leadHeading="Paarberatung"
       heading="Konflikte innerhalb einer Beziehung"
       childrenLeft={childrenLeft}
@@ -297,6 +308,7 @@ export function Familienberatung() {
   )
   return (
     <LeistungsBeschreiber
+      id="familienberatung"
       leadHeading="Familienberatung / -therapie"
       heading="Gemeinsam Herausforderungen meistern"
       childrenLeft={childrenLeft}

@@ -27,9 +27,7 @@ export default function FourOhFour() {
                   </p>
                 </div>
                 <div className="sm:pl-6">
-                  <Button href="/" variant="outline" className="">
-                    Zur Startseite
-                  </Button>
+                  <Button href="/">Zur Startseite</Button>
                 </div>
               </div>
             </main>
