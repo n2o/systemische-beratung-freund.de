@@ -15,9 +15,9 @@ export function Kurzprofil() {
             height={100}
           />
           <div className="flex-auto text-gray-900">
-            <h3 className="text-lg font-semibold leading-8 tracking-tight ">
+            <h2 className="text-lg font-semibold leading-8 tracking-tight ">
               Über mich
-            </h3>
+            </h2>
             <p className="text-base leading-7">
               Lisa Freund, verheiratet, freiberuflich tätig seit 2022
             </p>
