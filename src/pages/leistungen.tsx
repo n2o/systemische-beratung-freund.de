@@ -20,9 +20,9 @@ export default function Leistungen() {
         <H1 heading="Leistungen">
           <div className="col-6">
             <blockquote className="w-50 text-xl italic text-gray-900">
-              "Wenn etwas trotz vieler Anstrengungen nicht gut genug
+              &bdquo;Wenn etwas trotz vieler Anstrengungen nicht gut genug
               funktioniert und passt- dann höre auf damit und versuche etwas
-              anderes."
+              anderes.&ldquo;
               <br />
               Steve de Shazer
             </blockquote>
