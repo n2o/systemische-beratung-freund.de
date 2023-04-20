@@ -298,7 +298,7 @@ export function Familienberatung() {
   return (
     <LeistungsBeschreiber
       leadHeading="Familienberatung / -therapie"
-      heading="Konflikte innerhalb einer Beziehung"
+      heading="Gemeinsam Herausforderungen meistern"
       childrenLeft={childrenLeft}
       childrenRight={childrenRight}
     />
