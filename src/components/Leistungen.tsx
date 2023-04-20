@@ -42,7 +42,7 @@ function Leistung({ leistung }) {
       <FadeIn parentRef={ref}>
         <span>
           <dt className="text-base font-semibold leading-7 text-gray-900">
-            <div className="absolute top-0 left-0 flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
+            <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
               <leistung.icon
                 className="h-6 w-6 text-white"
                 aria-hidden="true"
@@ -74,7 +74,7 @@ export function LeistungsUebersicht() {
           </p>
         </H2>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
-          <dl className="grid max-w-xl grid-cols-1 gap-y-10 gap-x-8 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
+          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
             {leistungen.map((leistung, leistungIndex) => (
               <div key={leistungIndex} className="relative pl-16">
                 <Leistung leistung={leistung} />
@@ -94,14 +94,14 @@ function LeistungsBeschreiber({
   childrenRight = undefined,
 }) {
   return (
-    <div className="mb-10 overflow-hidden bg-white py-8 px-6 lg:px-8 xl:py-12">
+    <div className="mb-10 overflow-hidden bg-white px-6 py-8 lg:px-8 xl:py-12">
       <div className="mx-auto max-w-max lg:max-w-7xl">
         <div className="relative z-10 mb-8 md:mb-2 md:px-6">
           <H2Left leadHeading={leadHeading} heading={heading} />
         </div>
         <div className="relative">
           <svg
-            className="absolute top-0 right-0 -mt-20 -mr-20 hidden md:block md:[overflow-anchor:none]"
+            className="absolute right-0 top-0 -mr-20 -mt-20 hidden md:block md:[overflow-anchor:none]"
             width={404}
             height={384}
             fill="none"
@@ -186,35 +186,30 @@ export function Einzelberatung() {
   const childrenLeft = (
     <>
       <p>
-        Sie haben das Gefühl auf der Stelle zu treten, ein Thema aus ihrer
-        Vergangenheit holt sie immer wieder ein, Sie stehen vor einer wichtigen
-        Entscheidung. Sie sind unzufrieden mit sich selbst oder befinden sich in
-        einer Krise, aus der Sie keinen Ausweg sehen.
+        Sie sind mit sich im hier und jetzt unzufrieden, zögern eine wichtige
+        Entscheidung heraus, haben das Gefühl auf der Stelle zu treten oder
+        sehen sich gar einer augenscheinlich unüberwindbaren Hürde gegenüber.
       </p>
       <p>
-        Dann kommen Sie mit ihrem persönlichen Anliegen zu mir in die
-        Einzelberatung und wir machen uns gemeinsam auf den Weg hin zu einer
-        Zukunft gemäß ihrer Wünsche und Bedürfnisse. Erwecken Sie mit mir an
-        Ihrer Seite ihre Ressourcen und Kräfte, wagen Sie neue Perspektiven
-        einzunehmen und lernen Sie sich selbst als wichtigstes Werkzeug ihres
-        Lebens anzuwenden.
+        Was auch immer Ihr guter Grund ist, sich Unterstützung zu suchen: Ich
+        möchte Ihnen dabei ein Wegbegleiter sein, der Ihnen wann immer
+        notwendig, Halt und Sicherheit bietet. Wagen Sie mit mir an Ihrer Seite
+        Ihren ganz persönlichen Entwicklungsprozess und lernen Sie sich als
+        wichtigstes Werkzeug Ihres Lebens anzuwenden.
       </p>
     </>
   )
   const childrenRight = (
-    <>
-      <p>
-        Dem vorweg steht für mich eine wertschätzende und vertrauensvolle
-        Beziehung. Lernen Sie mich in einem ersten persönlichen / telefonischen
-        Gespräch kennen und überprüfen Sie für sich, ob Sie sich eine
-        Zusammenarbeit mit mir vorstellen können.
-      </p>
-    </>
+    <p>
+      Hierfür benötige ich von Ihnen die Offenheit und den Mut andere
+      Perspektiven einzunehmen, Neues auszuprobieren, sowie vertraute
+      Verhaltensmuster und Glaubenssätze zu durchbrechen.
+    </p>
   )
 
   return (
     <LeistungsBeschreiber
-      leadHeading="Einzelberatung"
+      leadHeading="Einzelberatung / -therapie"
       heading="Individuelle Themen und Herausforderungen"
       childrenLeft={childrenLeft}
       childrenRight={childrenRight}
@@ -224,28 +219,85 @@ export function Einzelberatung() {
 
 export function Paarberatung() {
   const childrenLeft = (
-    <p>
-      Bestimmen Gefühle wie Enttäuschung, Wut, Trauer, Frust, Müdigkeit, Sorge
-      oder Eifersucht den Alltag ihrer Partnerschaft kann es hilfreich sein in
-      neutraler, geschützter Atmosphäre mit Unterstützung eines objektiven
-      Dritten darüber ins Gespräch zu kommen. Weg von der Schuldfrage, sondern
-      in dem Bewusstsein, dass zu einer Partnerschaft zwei gehören, möchte ich
-      Ihnen dazu verhelfen sich ihrer persönlichen Wünsche und Bedürfnisse
-      gewahr zu werden und darüber in den Austausch zu kommen. Wagen Sie mit mir
-      einen Perspektivwechsel, um einen rationalen Blick auf ihre Probleme zu
-      entwickeln und im Miteinander konstruktive Lösungsstrategien zu
-      erarbeiten.
-    </p>
+    <>
+      <p>
+        Konfliktfähige Themen in einer Partnerschaft sind vielfältig: fehlende
+        Wertschätzung, Familienplanung, Eifersucht, Sexualität,
+        Freizeitgestaltung, Kommunikation oder Loyalität seien hier nur
+        beispielhaft aufgelistet.
+      </p>
+      <p>
+        Entscheidend ist, wie wir damit umgehen. Erhalten jene Themen Raum zur
+        Besprechung, nach Möglichkeit sachlich, auf Augenhöhe, konstruktiv und
+        nur unter Voraussetzung, dass beide gemeinsam an einer Lösung arbeiten
+        wollen, ist eine glückliche Paarbindung möglich. Gelingt es den Partnern
+        jedoch nicht ein adäquates Setting für Konflikte und Belastungen zu
+        schaffen, eigenständig Lösungen zu finden und/oder entwickelt einer oder
+        beide Personen körperliche/psychische Symptome, ist es ratsam sich
+        beraterische/therapeutische Hilfe zu suchen.
+      </p>
+    </>
   )
   const childrenRight = (
-    <p>
-      Vereinbaren Sie gern einen Kennenlerntermin mit mir, um herauszufinden, ob
-      ich für Sie die passende Wegbegleiterin bin.
-    </p>
+    <>
+      <p>
+        Ich biete Ihnen einen neutralen, sicheren Rahmen und unterstütze Sie
+        dabei sich achtsam und wohlwollend einander zuzuwenden. Wir erarbeiten
+        gemeinsam Ideen und Strategien zur Bewältigung Ihrer Konflikte, sodass
+        Sie wieder mit mehr Leichtigkeit, Freude und Genuss durchs Leben gehen.
+      </p>
+      <p>
+        Hierfür benötige ich von Ihnen die Bereitschaft gemeinsam mit Ihrem
+        Partner Veränderung zu schaffen und die Offenheit und Ehrlichkeit
+        Gefühle und Absichten beim Namen zu nennen.
+      </p>
+    </>
   )
   return (
     <LeistungsBeschreiber
       leadHeading="Paarberatung"
+      heading="Konflikte innerhalb einer Beziehung"
+      childrenLeft={childrenLeft}
+      childrenRight={childrenRight}
+    />
+  )
+}
+
+export function Familienberatung() {
+  const childrenLeft = (
+    <>
+      <p>
+        Das Leben in einer Familie ist immer wieder eine Achterbahnfahrt. Neben
+        Erfüllung, Liebe und Glück, sehen sich die Mitglieder gleichsam
+        Herausforderungen in Form von Alltagsstruktur, Bedürfnisbefriedigung,
+        Elternschaft vs. Partnerschaft, Erziehung, Schule u.v.m. ausgesetzt, die
+        einem bei Zeit auch über den Kopf wachsen können.
+      </p>
+      <p>
+        Sind es auf den ersten Blick häufig Belastungen der Einzelnen, die
+        Familien antreiben sich Hilfe zu holen, wirken jene sich doch immer auch
+        auf das System aus.
+      </p>
+    </>
+  )
+  const childrenRight = (
+    <>
+      <p>
+        Wagen Sie mit mir die Einnahme anderer Perspektiven, lernen Sie sich und
+        Ihre Familie neu kennen, als Team wertzuschätzen, entwickeln Sie mit
+        meiner Unterstützung einen ressourcenorientierten Blick auf das große
+        Ganze und generieren Sie für Ihre Familie passende Lösungswege. Damit
+        Sie sich endlich wieder auf das Wesentliche besinnen können.
+      </p>
+      <p>
+        Oftmals zeigen schon kleinste Veränderungen{" "}
+        <span className="font-semibold">GROßE</span> Wirkung!
+      </p>
+    </>
+  )
+  return (
+    <LeistungsBeschreiber
+      leadHeading="Familienberatung / -therapie"
       heading="Konflikte innerhalb einer Beziehung"
       childrenLeft={childrenLeft}
       childrenRight={childrenRight}

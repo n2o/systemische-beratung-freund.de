@@ -1,7 +1,11 @@
 import { Footer } from "@/components/Footer"
 import { Header } from "@/components/Header"
 import { H1 } from "@/components/Headings"
-import { Einzelberatung, Paarberatung } from "@/components/Leistungen"
+import {
+  Einzelberatung,
+  Familienberatung,
+  Paarberatung,
+} from "@/components/Leistungen"
 import { Platzhalter } from "@/components/Streifen"
 import Head from "next/head"
 
@@ -14,14 +18,20 @@ export default function Leistungen() {
       <Header />
       <main>
         <H1 heading="Leistungen">
-          <p>
-            Verschiedene Beratungen und Therapien sind möglich. Erhalten Sie
-            hier einen Überblick über die Leistungen.
-          </p>
+          <div className="col-6">
+            <blockquote className="w-50 text-xl italic text-gray-900">
+              "Wenn etwas trotz vieler Anstrengungen nicht gut genug
+              funktioniert und passt- dann höre auf damit und versuche etwas
+              anderes."
+              <br />
+              Steve de Shazer
+            </blockquote>
+          </div>
         </H1>
         <Platzhalter />
         <Einzelberatung />
         <Paarberatung />
+        <Familienberatung />
       </main>
       <Footer />
     </>
