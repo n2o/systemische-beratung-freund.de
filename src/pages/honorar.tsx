@@ -25,9 +25,9 @@ const actions = [
     title: "Einzelsetting",
     body: (
       <p>
-        Systemische Therapie im Einzelsetting: 100 € / 90 Minuten
+        Systemische Therapie im Einzelsetting: 80 € / 60 Minuten
         <br />
-        (empfohlen werden 3-10 Sitzungen alle 1-2 Wochen)
+        (empfohlen werden Sitzungen alle 1-2 Wochen)
       </p>
     ),
     icon: CheckBadgeIcon,
@@ -163,9 +163,9 @@ function AbsagenVerschiebungen() {
         Absagen und Verschiebungen
       </h2>
       <p className="mt-2">
-        Eine Terminabsage muss bis spätestens 24 Stunden im Voraus erfolgen.
+        Eine Terminabsage muss bis spätestens 48 Stunden im Voraus erfolgen.
         Erfolgt die Stornierung einer Sitzung nicht oder nach Ablauf der
-        zeitlichen First, wird der Termin zum vollen Sitzungssatz in Rechnung
+        zeitlichen Frist, wird der Termin zum vollen Sitzungssatz in Rechnung
         gestellt.
       </p>
     </div>
@@ -180,7 +180,7 @@ function Verschwiegenheit() {
       </h2>
       <p className="mt-2">
         Im Setting von Beratung und Therapie sind Verschwiegenheit und
-        Diskretion unabdingbar. Hiermit sichere ich meinen Klienten, dass ich
+        Diskretion unabdingbar. Hiermit sichere ich meinen Klienten zu, dass ich
         die Inhalte unserer Gespräche zu keiner Zeit ohne ihr Einverständnis an
         Dritte weitergebe. Auch dann nicht, wenn es sich bei diesen um
         Angehörige oder Personen anderer Gesundheitsberufe handelt, die evtl. an
