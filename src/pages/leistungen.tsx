@@ -6,7 +6,6 @@ import {
   Familienberatung,
   Paarberatung,
 } from "@/components/Leistungen"
-import { Platzhalter } from "@/components/Streifen"
 import Head from "next/head"
 
 export default function Leistungen() {
@@ -28,7 +27,7 @@ export default function Leistungen() {
             </blockquote>
           </div>
         </H1>
-        <Platzhalter />
+        <div className="my-10"></div>
         <Einzelberatung />
         <Paarberatung />
         <Familienberatung />

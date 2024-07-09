@@ -96,10 +96,7 @@ export function Header() {
             </Link>
             <div className="hidden md:flex md:gap-x-6">
               <NavLink href="/leistungen">Leistungen</NavLink>
-              {/* <NavLink href="/tiergestuetzte-arbeit">
-                Tiergestützte Arbeit
-              </NavLink> */}
-              {/* <NavLink href="/leitbild">Leitbild</NavLink> */}
+              <NavLink href="/honorar">Honorar & Kosten</NavLink>
             </div>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
