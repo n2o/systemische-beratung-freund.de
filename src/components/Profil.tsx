@@ -35,7 +35,7 @@ export function Kurzprofil() {
               </p>
               <h3 className="mt-5">Berufliche Erfahrungen</h3>
               <ul className="ml-5 list-inside list-disc">
-                <li>In Ausbildung zur Systemischen Therapeutin (KiB)</li>
+                <li>Ausbildung zur Systemischen Therapeutin (KiB)</li>
                 <li>Ausbildung zur Systemischen Beraterin (KiB)</li>
                 <li>Studium der Rehabilitationswissenschaften (M.A.)</li>
                 <li>
