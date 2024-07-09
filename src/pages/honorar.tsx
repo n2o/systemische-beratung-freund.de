@@ -5,7 +5,6 @@ import { Header } from "@/components/Header"
 import { H1 } from "@/components/Headings"
 import Head from "next/head"
 
-import { Spacer } from "@/components/Spacer"
 import {
   CheckBadgeIcon,
   PhoneIcon,
@@ -217,10 +216,14 @@ export default function Page() {
       <Header />
       <main>
         <H1 heading="Honorar und Kosten"></H1>
+        <div className="bg-slate-100">
+          <div className="mx-auto w-3/4 py-5">
+            <Kosten />
+          </div>
+        </div>
         <Container>
-          <Kosten />
-          <Spacer title="Honorar und Kosten" className="my-10" />
-          <div className="flex flex-col space-y-3">
+          {/* <Spacer title="Formalia" className="my-10" /> */}
+          <div className="mt-10 flex flex-col space-y-3">
             <Zahlungsmodalitaeten />
             <Kostenuebernahme />
             <OnlineSitzungen />

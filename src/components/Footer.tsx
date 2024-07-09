@@ -5,7 +5,7 @@ import Link from "next/link"
 
 export function Footer() {
   return (
-    <footer className="bg-slate-50">
+    <footer className="mt-12 bg-slate-50">
       <Container>
         <div className="py-16">
           <div className="text-center">
