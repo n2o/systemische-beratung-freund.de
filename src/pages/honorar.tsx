@@ -217,12 +217,11 @@ export default function Page() {
       <main>
         <H1 heading="Honorar und Kosten"></H1>
         <div className="bg-slate-100">
-          <div className="mx-auto w-3/4 py-5">
+          <div className="mx-auto px-3 py-5 lg:w-3/4">
             <Kosten />
           </div>
         </div>
         <Container>
-          {/* <Spacer title="Formalia" className="my-10" /> */}
           <div className="mt-10 flex flex-col space-y-3">
             <Zahlungsmodalitaeten />
             <Kostenuebernahme />
