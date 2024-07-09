@@ -15,7 +15,6 @@ export default function Leistungen() {
       <main>
         <H1 heading="Impressum"></H1>
         <Container>
-          <h2>Angaben gemäß &sect; 5 TMG</h2>
           <p>
             Lisa Freund
             <br />
