@@ -25,15 +25,24 @@ export function H2Left({ heading = "", leadHeading = "" }) {
   )
 }
 
-export function H1({ heading = "", children = null, ...props }) {
+export function H1({
+  heading = "",
+  children,
+  ...props
+}: {
+  heading: string
+  children?: React.ReactNode
+}) {
   return (
     <Container className="mx-auto max-w-2xl md:text-center" {...props}>
       <h1 className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">
         {heading}
       </h1>
-      <div className="mt-4 text-lg tracking-tight text-slate-700">
-        {children}
-      </div>
+      {children && (
+        <div className="mt-4 text-lg tracking-tight text-slate-700">
+          {children}
+        </div>
+      )}
     </Container>
   )
 }

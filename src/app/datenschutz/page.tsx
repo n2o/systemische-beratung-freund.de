@@ -1,8 +1,13 @@
 import { Container } from "@/components/Container"
 import { H1 } from "@/components/Headings"
+import { Metadata } from "next"
 import Link from "next/link"
 
-export default function Leistungen() {
+export const metadata: Metadata = {
+  title: "Datenschutz",
+}
+
+export default function Page() {
   return (
     <>
       <H1 heading="Datenschutzerklärung"></H1>

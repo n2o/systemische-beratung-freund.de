@@ -1,8 +1,12 @@
-"use client"
 import { Container } from "@/components/Container"
 import { H1 } from "@/components/Headings"
 import praxis from "@/images/placeholder_praxis.webp"
+import { Metadata } from "next"
 import Image from "next/image"
+
+export const metadata: Metadata = {
+  title: "Therapie und Ablauf",
+}
 
 export default function Page() {
   return (

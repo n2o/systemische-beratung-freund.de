@@ -4,6 +4,11 @@ import {
   Familienberatung,
   Paarberatung,
 } from "@/components/Leistungen"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Leistungen",
+}
 
 export default function Page() {
   return (

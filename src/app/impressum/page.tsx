@@ -1,6 +1,11 @@
 import { Container } from "@/components/Container"
 import { H1 } from "@/components/Headings"
+import { Metadata } from "next"
 import Link from "next/link"
+
+export const metadata: Metadata = {
+  title: "Impressum",
+}
 
 export default function Leistungen() {
   return (
