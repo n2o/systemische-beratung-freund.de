@@ -2,10 +2,10 @@ import { Button } from "@/components/Button"
 import { FadeIn } from "@/components/FadeIn"
 import { H2, H2Left } from "@/components/Headings"
 import {
-  ArrowPathIcon,
-  CloudArrowUpIcon,
+  CheckBadgeIcon,
   FingerPrintIcon,
-  LockClosedIcon,
+  UserGroupIcon,
+  UsersIcon,
 } from "@heroicons/react/24/outline"
 import { useRef } from "react"
 
@@ -15,21 +15,21 @@ const leistungen = [
     link: "/leistungen#einzelberatung",
     description:
       "In einer Einzelberatung steht eine Person im Mittelpunkt. Hier geht es um individuelle Themen und Herausforderungen, die gemeistert werden müssen. Durch die systemische Sichtweise werden Zusammenhänge innerhalb des persönlichen Umfelds beleuchtet.",
-    icon: CloudArrowUpIcon,
+    icon: CheckBadgeIcon,
   },
   {
     name: "Paarberatung",
     link: "/leistungen#paarberatung",
     description:
       "In der Paarberatung werden Konflikte und Probleme innerhalb einer Beziehung angesprochen und bearbeitet. Hier steht das gemeinsame Verständnis und die Stärkung der Beziehung im Fokus.",
-    icon: LockClosedIcon,
+    icon: UsersIcon,
   },
   {
     name: "Familienberatung",
     link: "/leistungen#familienberatung",
     description:
       "In der Familienberatung geht es um die Interaktionen und Beziehungen innerhalb einer Familie. Hier werden Konflikte gelöst und Lösungen für Herausforderungen gefunden, um das Familienleben zu verbessern.",
-    icon: ArrowPathIcon,
+    icon: UserGroupIcon,
   },
   {
     name: "Teamberatung",
