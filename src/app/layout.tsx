@@ -1,5 +1,6 @@
 import { Footer } from "@/components/Footer"
 import { Header } from "@/components/Header"
+import { Analytics } from "@vercel/analytics/react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "../styles/tailwind.css"
@@ -8,10 +9,11 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | Praxis für Systemische Beratung und -Therapie Lisa Freund',
-    default: 'Praxis für Systemische Beratung und -Therapie Lisa Freund',
+    template: "%s | Praxis für Systemische Beratung und -Therapie Lisa Freund",
+    default: "Praxis für Systemische Beratung und -Therapie Lisa Freund",
   },
-  description: "Willkommen in der Praxis für Systemische Beratung und -Therapie Lisa Freund",
+  description:
+    "Willkommen in der Praxis für Systemische Beratung und -Therapie Lisa Freund",
 }
 
 export default function RootLayout({
@@ -28,6 +30,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <Analytics />
       </body>
     </html>
   )
