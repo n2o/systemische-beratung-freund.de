@@ -8,9 +8,9 @@ export function Footer() {
     <footer className="mt-12 bg-slate-50">
       <Container>
         <div className="py-16">
-          <div className="text-center">
+          <div className="w-full mx-auto flex justify-center">
             <Link href="/">
-              <Logo className="mx-auto h-20 w-auto" />
+              <Logo className="" />
             </Link>
           </div>
           <nav className="mt-10 text-sm" aria-label="quick links">
