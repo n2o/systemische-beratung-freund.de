@@ -1,10 +1,17 @@
-import { UserCircleIcon } from "@heroicons/react/24/outline"
+import Image from "next/image"
+import logo from "../images/logo.webp"
 
 export function Logo(props) {
   return (
     <span {...props}>
-      <div className="flex flex-row">
-        <UserCircleIcon className="inline h-6 pr-1 text-primary" />
+      <div className="flex flex-row items-center">
+        <Image
+          src={logo.src}
+          width={50}
+          height={50}
+          alt="Logo"
+          className="me-2 p-1 rounded-full"
+        />
         <span className="align-middle">
           Praxis für Systemische Beratung
           <br />
