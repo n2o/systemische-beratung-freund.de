@@ -1,6 +1,6 @@
 import { Container } from "@/components/Container"
 import { H1 } from "@/components/Headings"
-import { BugAntIcon, PhoneIcon } from "@heroicons/react/24/outline"
+import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/outline"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -52,7 +52,10 @@ export default function Page() {
             </div>
             <div className="flex gap-x-6">
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary">
-                <BugAntIcon aria-hidden="true" className="h-6 w-6 text-white" />
+                <EnvelopeIcon
+                  aria-hidden="true"
+                  className="h-6 w-6 text-white"
+                />
               </div>
               <div>
                 <h3 className="text-base font-semibold leading-7 text-gray-900">
