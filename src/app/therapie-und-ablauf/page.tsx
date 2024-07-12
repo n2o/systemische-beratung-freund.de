@@ -1,26 +1,16 @@
 "use client"
 import { Container } from "@/components/Container"
-import { Footer } from "@/components/Footer"
-import { Header } from "@/components/Header"
 import { H1 } from "@/components/Headings"
 import praxis from "@/images/placeholder_praxis.webp"
-import Head from "next/head"
 import Image from "next/image"
 
 export default function Page() {
   return (
     <>
-      <Head>
-        <title>Systemische Beratung Freund: Therapie und Ablauf</title>
-      </Head>
-      <Header />
-      <main>
-        <H1 heading="Therapie und Ablauf"></H1>
-        <Container>
-          <Content />
-        </Container>
-      </main>
-      <Footer />
+      <H1 heading="Therapie und Ablauf"></H1>
+      <Container>
+        <Content />
+      </Container>
     </>
   )
 }

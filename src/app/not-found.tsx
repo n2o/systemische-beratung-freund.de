@@ -1,13 +1,10 @@
 import { Button } from "@/components/Button"
 import { Container } from "@/components/Container"
-import { Footer } from "@/components/Footer"
-import { Header } from "@/components/Header"
 import { FaceSmileIcon } from "@heroicons/react/24/outline"
 
 export default function FourOhFour() {
   return (
     <>
-      <Header />
       <Container>
         <div className="bg-white px-4 py-16 sm:px-6 sm:py-24 md:grid md:place-items-center lg:px-8">
           <div className="mx-auto max-w-max">
@@ -34,7 +31,6 @@ export default function FourOhFour() {
           </div>
         </div>
       </Container>
-      <Footer />
     </>
   )
 }

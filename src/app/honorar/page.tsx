@@ -1,9 +1,6 @@
 "use client"
 import { Container } from "@/components/Container"
-import { Footer } from "@/components/Footer"
-import { Header } from "@/components/Header"
 import { H1 } from "@/components/Headings"
-import Head from "next/head"
 
 import {
   CheckBadgeIcon,
@@ -210,29 +207,22 @@ function Kommunikation() {
 export default function Page() {
   return (
     <>
-      <Head>
-        <title>Systemische Beratung Freund: Honorar und Kosten</title>
-      </Head>
-      <Header />
-      <main>
-        <H1 heading="Honorar und Kosten"></H1>
-        <div className="bg-slate-100">
-          <div className="mx-auto px-3 py-5 lg:w-3/4">
-            <Kosten />
-          </div>
+      <H1 heading="Honorar und Kosten"></H1>
+      <div className="bg-slate-100">
+        <div className="mx-auto px-3 py-5 lg:w-3/4">
+          <Kosten />
         </div>
-        <Container>
-          <div className="mt-10 flex flex-col space-y-3">
-            <Zahlungsmodalitaeten />
-            <Kostenuebernahme />
-            <OnlineSitzungen />
-            <AbsagenVerschiebungen />
-            <Verschwiegenheit />
-            <Kommunikation />
-          </div>
-        </Container>
-      </main>
-      <Footer />
+      </div>
+      <Container>
+        <div className="mt-10 flex flex-col space-y-3">
+          <Zahlungsmodalitaeten />
+          <Kostenuebernahme />
+          <OnlineSitzungen />
+          <AbsagenVerschiebungen />
+          <Verschwiegenheit />
+          <Kommunikation />
+        </div>
+      </Container>
     </>
   )
 }

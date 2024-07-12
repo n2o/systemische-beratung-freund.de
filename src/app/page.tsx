@@ -1,5 +1,3 @@
-import { Footer } from "@/components/Footer"
-import { Header } from "@/components/Header"
 import { LeistungsUebersicht } from "@/components/Leistungen"
 import { Kurzprofil } from "@/components/Profil"
 import Welcome from "@/components/Welcome"
@@ -12,7 +10,7 @@ export default function Home() {
         <title>Systemische Beratung Freund</title>
         <meta name="description" content="Systemische Beratung Freund" />
       </Head>
-      <Header />
+
       <main>
         <div className="h-96 w-full bg-[url('/img/sandbank.webp')] bg-cover bg-fixed bg-center">
           <div className="flex h-full w-full items-center justify-center bg-gray-900 bg-opacity-40 py-12">
@@ -33,7 +31,6 @@ export default function Home() {
         <Kurzprofil />
         <LeistungsUebersicht />
       </main>
-      <Footer />
     </>
   )
 }
