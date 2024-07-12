@@ -98,8 +98,8 @@ export function LeistungsUebersicht() {
 function LeistungsBeschreiber({
   heading = "",
   leadHeading = "",
-  childrenLeft = undefined,
-  childrenRight = undefined,
+  childrenLeft,
+  childrenRight,
   ...props
 }) {
   return (
