@@ -1,6 +1,6 @@
 import { Container } from "@/components/Container"
 
-export function H2({ heading = "", leadHeading = "", children = undefined }) {
+export function H2({ heading = "", leadHeading = "", children }) {
   return (
     <div className="mx-auto max-w-4xl lg:text-center">
       <h2 className="text-lg font-semibold leading-8 tracking-tight text-primary">
