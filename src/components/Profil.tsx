@@ -1,5 +1,5 @@
 import { Container } from "@/components/Container"
-import womandog from "@/images/womandog.webp"
+import frauMitHund from "@/images/frau_mit_hund.webp"
 import Image from "next/image"
 
 export function Kurzprofil() {
@@ -8,11 +8,11 @@ export function Kurzprofil() {
       <Container className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="flex flex-col gap-6 xl:flex-row">
           <Image
-            className="aspect-[4/5] w-64 flex-none rounded-2xl object-cover"
-            src={womandog}
-            alt=""
-            width={100}
-            height={100}
+            className="aspect-[3/5] w-80 flex-none rounded-2xl object-cover"
+            src={frauMitHund.src}
+            alt="Frau mit Hund"
+            width={200}
+            height={200}
           />
           <div className="flex-auto text-gray-900">
             <h2 className="text-lg font-semibold leading-8 tracking-tight ">

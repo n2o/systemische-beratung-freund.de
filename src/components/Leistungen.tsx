@@ -366,6 +366,7 @@ export function Teamberatung() {
 }
 
 export function TiergestuetzteArbeit() {
+  const ageOfDog = new Date().getFullYear() - 2018
   const childrenLeft = (
     <>
       <p>
@@ -376,8 +377,9 @@ export function TiergestuetzteArbeit() {
         Anspannungen zu mildern und eine erste Brücke zum Klienten zu bauen.
       </p>
       <p>
-        Mein tierischer Begleiter ist Lasse, mein 6 Jahre alter Labrador. Je
-        nach Zielsetzung nutze ich gern seine Kompetenz in meinen Sitzungen.
+        Mein tierischer Begleiter ist Lasse, mein {ageOfDog} Jahre alter
+        Labrador. Je nach Zielsetzung nutze ich gern seine Kompetenz in meinen
+        Sitzungen.
       </p>
       <p>
         Bitte haben Sie Verständnis dafür, dass die Teilnahme von Lasse einer
