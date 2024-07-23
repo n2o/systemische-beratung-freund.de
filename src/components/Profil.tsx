@@ -37,6 +37,14 @@ export function Kurzprofil() {
               <ul className="ml-5 list-inside list-disc">
                 <li>Ausbildung zur Systemischen Therapeutin (KiB)</li>
                 <li>Ausbildung zur Systemischen Beraterin (KiB)</li>
+                <li>
+                  Bis heute Therapeutin und Behandlungsleitung in einer
+                  Jugendhilfeeinrichtung mit Fachklinik
+                </li>
+                <li>
+                  bis 2023 Pädagogin im Betreuungsdienst der Kinder- und
+                  Jugendpsychiatrie
+                </li>
                 <li>Studium der Rehabilitationswissenschaften (M.A.)</li>
                 <li>
                   Bis heute Pädagogin im Betreuungsdienst und Therapeutin in der
