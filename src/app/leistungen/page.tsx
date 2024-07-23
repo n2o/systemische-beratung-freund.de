@@ -3,6 +3,8 @@ import {
   Einzelberatung,
   Familienberatung,
   Paarberatung,
+  Teamberatung,
+  TiergestuetzteArbeit,
 } from "@/components/Leistungen"
 import { Metadata } from "next"
 
@@ -27,6 +29,8 @@ export default function Page() {
         <Einzelberatung />
         <Paarberatung />
         <Familienberatung />
+        <Teamberatung />
+        <TiergestuetzteArbeit />
       </div>
     </>
   )

@@ -2,12 +2,14 @@
 import { Button } from "@/components/Button"
 import { FadeIn } from "@/components/FadeIn"
 import { H2, H2Left } from "@/components/Headings"
+import lasse from "@/images/lasse.webp"
 import {
   CheckBadgeIcon,
   FingerPrintIcon,
   UserGroupIcon,
   UsersIcon,
 } from "@heroicons/react/24/outline"
+import Image from "next/image"
 import { useRef } from "react"
 
 const leistungen = [
@@ -316,6 +318,92 @@ export function Familienberatung() {
       id="familienberatung"
       leadHeading="Familienberatung / -therapie"
       heading="Gemeinsam Herausforderungen meistern"
+      childrenLeft={childrenLeft}
+      childrenRight={childrenRight}
+    />
+  )
+}
+
+export function Teamberatung() {
+  const childrenLeft = (
+    <>
+      <p>
+        So erleichternd, produktiv, gewinnbringend und erfüllend die Arbeit in
+        einem Team sein kann, bedeutet jene doch auch eine wiederkehrende
+        Herausforderung sich stetig neu zu justieren, aufeinander einzulassen
+        und mit den Stärken und Schwächen eines jeden Einzelnen im Alltag zu
+        agieren. Nicht immer gelingt es uns andere in ihrem so sein hinzunehmen.
+        Augenscheinlich nichtige Meinungsverschiedenheiten scheinen plötzlich
+        schier unmöglich lösungsorientiert und auf Augenhöhe ausgetragen zu
+        werden. Oftmals gelingt es auch nicht mehr inhaltliche/organisatorische
+        Themen, mit welchen wir womöglich noch emotional verbandelt sind, einmal
+        wieder von der Meta-Ebene zu betrachten, uns aus unserer Befangenheit zu
+        lösen und wieder eine wohlwollenden Blick auf die Dinge einzunehmen.
+        Stattdessen fühlen wir uns anhaltend wie eine Marionette im
+        Puppentheater.
+      </p>
+    </>
+  )
+  const childrenRight = (
+    <>
+      <p>Aber bedenken Sie: wir haben immer eine Wahl!</p>
+      <p>
+        Gern begleite ich Sie auf ihrem Weg zurück in ihre Kraft und
+        Handlungsfähigkeit. Und wer weiß, vielleicht begegnet uns dabei ja gar
+        ein Stück Wir-Gefühl...
+      </p>
+    </>
+  )
+  return (
+    <LeistungsBeschreiber
+      id="teamberatung"
+      leadHeading="Teamberatung"
+      heading="Zusammenarbeit verbessern"
+      childrenLeft={childrenLeft}
+      childrenRight={childrenRight}
+    />
+  )
+}
+
+export function TiergestuetzteArbeit() {
+  const childrenLeft = (
+    <>
+      <p>
+        In meiner langjährigen Tätigkeit als Pädagogin im Betreuungsdienst und
+        so auch heute darf ich immer wieder die außergewöhnliche Atmosphäre und
+        Kraft der Anwesenheit von Tieren im Kontakt mit Menschen erleben.
+        Oftmals reicht die bloße Präsenz schon aus, um den Fokus umzulenken,
+        Anspannungen zu mildern und eine erste Brücke zum Klienten zu bauen.
+      </p>
+      <p>
+        Mein tierischer Begleiter ist Lasse, mein 6 Jahre alter Labrador. Je
+        nach Zielsetzung nutze ich gern seine Kompetenz in meinen Sitzungen.
+      </p>
+      <p>
+        Bitte haben Sie Verständnis dafür, dass die Teilnahme von Lasse einer
+        gewissen Vorbereitung bedarf und mein Hund nach einer Sitzung Zeit und
+        Ruhe benötigt, um sich hinreichend zu erholen sowie Erlebtes zu
+        verarbeiten. Folglich kann es sein, dass nicht jedem Wunsch nach
+        Teilnahme nachgekommen werden kann.
+      </p>
+    </>
+  )
+  const childrenRight = (
+    <>
+      <Image
+        src={lasse.src}
+        alt="Foto von Lasse"
+        width={453}
+        height={453}
+        className="aspect-video w-3/4 mx-auto rounded-xl bg-gray-50 object-cover"
+      />
+    </>
+  )
+  return (
+    <LeistungsBeschreiber
+      id="tiergestuetzte-arbeit"
+      leadHeading="Tiergestützte Arbeit"
+      heading="Tierische Unterstützung"
       childrenLeft={childrenLeft}
       childrenRight={childrenRight}
     />
