@@ -243,11 +243,13 @@ export function Paarberatung() {
         Entscheidend ist, wie wir damit umgehen. Erhalten jene Themen Raum zur
         Besprechung, nach Möglichkeit sachlich, auf Augenhöhe, konstruktiv und
         nur unter Voraussetzung, dass beide gemeinsam an einer Lösung arbeiten
-        wollen, ist eine glückliche Paarbindung möglich. Gelingt es den Partnern
-        jedoch nicht ein adäquates Setting für Konflikte und Belastungen zu
-        schaffen, eigenständig Lösungen zu finden und/oder entwickelt einer oder
-        beide Personen körperliche/psychische Symptome, ist es ratsam sich
-        beraterische/therapeutische Hilfe zu suchen.
+        wollen, ist eine glückliche Paarbindung möglich.
+      </p>
+      <p>
+        Gelingt es den Partnern jedoch nicht ein adäquates Setting für Konflikte
+        und Belastungen zu schaffen, eigenständig Lösungen zu finden und/oder
+        entwickelt einer oder beide Personen körperliche/psychische Symptome,
+        ist es ratsam sich beraterische/therapeutische Hilfe zu suchen.
       </p>
     </>
   )
