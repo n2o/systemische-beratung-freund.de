@@ -8,13 +8,6 @@ import clsx from "clsx"
 import { Container } from "./Container"
 
 const actions = [
-  // {
-  //   title: "Informationsgespräch",
-  //   body: <>Per Telefon: kostenfrei bis 60 Minuten</>,
-  //   icon: PhoneIcon,
-  //   iconForeground: "text-teal-700",
-  //   iconBackground: "bg-teal-50",
-  // },
   {
     title: "Einzelsetting",
     body: (
