@@ -18,7 +18,7 @@ export default function Page() {
             <div className="mt-10">
               <p>
                 Kontaktieren Sie mich gern telefonisch, via SMS oder über das
-                hiesige Kontaktformular für einen Termin für ein
+                hiesige Kontaktformular für einen Termin zum
                 Informationsgespräch.
               </p>
               <p className="mt-2">
@@ -36,14 +36,15 @@ export default function Page() {
               </p>
               <p className="mt-2">
                 Einzelsitzungen dauern in der Regel 60 Minuten, Paar- /
-                Familiensitzungen ca. 90 Minuten. Der Rhythmus beläuft sich bei
-                Einzel- und Paarsitzungen zumeist auf alle 1-2 Wochen, bei
-                Familiensitzungen auf etwa alle 4 Wochen. Je nach Situation kann
-                es auch sinnvoll sein individuelle Absprachen zu treffen.
+                Familiensitzungen ca. 90 Minuten. Dabei beläuft sich der
+                Rhythmus bei Einzel- und Paarsitzungen zumeist auf alle 1-2
+                Wochen, bei Familiensitzungen auf etwa alle 4 Wochen. Je nach
+                Situation kann es auch sinnvoll sein individuelle Absprachen zu
+                treffen.
               </p>
               <p className="mt-2">
                 Zwischen den Sitzungen lade ich Sie immer wieder mit Hilfe von
-                Impulsen, Übungen und Experimenten dazu ein Inhalte weiter zu
+                Impulsen, Übungen und Experimenten dazu ein, Inhalte weiter zu
                 denken, Ihre Perspektive zu verändern, neue Erfahrungen zu
                 machen und damit Ihr Handlungsrepertoire zu erweitern.
               </p>

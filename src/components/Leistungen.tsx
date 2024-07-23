@@ -204,7 +204,7 @@ export function Einzelberatung() {
       </p>
       <p>
         Was auch immer Ihr guter Grund ist, sich Unterstützung zu suchen: Ich
-        möchte Ihnen dabei ein Wegbegleiter sein, der Ihnen wann immer
+        möchte Ihnen dabei eine Wegbegleiterin sein, die Ihnen wann immer
         notwendig, Halt und Sicherheit bietet. Wagen Sie mit mir an Ihrer Seite
         Ihren ganz persönlichen Entwicklungsprozess und lernen Sie sich als
         wichtigstes Werkzeug Ihres Lebens anzuwenden.
