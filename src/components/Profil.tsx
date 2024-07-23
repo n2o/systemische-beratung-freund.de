@@ -11,8 +11,8 @@ export function Kurzprofil() {
             className="aspect-[3/5] w-80 flex-none rounded-2xl object-cover"
             src={frauMitHund.src}
             alt="Frau mit Hund"
-            width={200}
-            height={200}
+            width={320}
+            height={533}
           />
           <div className="flex-auto text-gray-900">
             <h2 className="text-lg font-semibold leading-8 tracking-tight ">
