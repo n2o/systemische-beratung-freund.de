@@ -3,9 +3,11 @@ import { Button } from "@/components/Button"
 import { FadeIn } from "@/components/FadeIn"
 import { H2, H2Left } from "@/components/Headings"
 import lasse from "@/images/lasse.webp"
+import { faDog } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
+  ChatBubbleLeftRightIcon,
   CheckBadgeIcon,
-  FingerPrintIcon,
   UserGroupIcon,
   UsersIcon,
 } from "@heroicons/react/24/outline"
@@ -14,21 +16,21 @@ import { useRef } from "react"
 
 const leistungen = [
   {
-    name: "Einzelberatung",
+    name: "Einzelberatung / -therapie",
     link: "/leistungen#einzelberatung",
     description:
       "In einer Einzelberatung steht eine Person im Mittelpunkt. Hier geht es um individuelle Themen und Herausforderungen, die gemeistert werden müssen. Durch die systemische Sichtweise werden Zusammenhänge innerhalb des persönlichen Umfelds beleuchtet.",
     icon: CheckBadgeIcon,
   },
   {
-    name: "Paarberatung",
+    name: "Paarberatung / -therapie",
     link: "/leistungen#paarberatung",
     description:
       "In der Paarberatung werden Konflikte und Probleme innerhalb einer Beziehung angesprochen und bearbeitet. Hier steht das gemeinsame Verständnis und die Stärkung der Beziehung im Fokus.",
     icon: UsersIcon,
   },
   {
-    name: "Familienberatung",
+    name: "Familienberatung / -therapie",
     link: "/leistungen#familienberatung",
     description:
       "In der Familienberatung geht es um die Interaktionen und Beziehungen innerhalb einer Familie. Hier werden Konflikte gelöst und Lösungen für Herausforderungen gefunden, um das Familienleben zu verbessern.",
@@ -38,7 +40,17 @@ const leistungen = [
     name: "Teamberatung",
     description:
       "In der Teamberatung werden Prozesse und Interaktionen innerhalb eines Teams betrachtet. Hier geht es darum, die Zusammenarbeit zu verbessern und Konflikte zu lösen, um ein erfolgreiches Arbeiten zu ermöglichen",
-    icon: FingerPrintIcon,
+    icon: ChatBubbleLeftRightIcon,
+    link: "/leistungen#teamberatung",
+  },
+  {
+    name: "Tiergestützte Arbeit",
+    description:
+      "In der tiergestützten Arbeit wird die Anwesenheit von Tieren genutzt, um Menschen zu unterstützen. Hierbei wird die Kraft der Tiere genutzt, um den Fokus zu lenken und eine Brücke zum Klienten zu bauen.",
+    iconComponent: (
+      <FontAwesomeIcon icon={faDog} className="h-6 w-6 text-white" />
+    ),
+    link: "/leistungen#tiergestuetzte-arbeit",
   },
 ]
 
@@ -50,10 +62,13 @@ function Leistung({ leistung }) {
         <span>
           <dt className="text-base font-semibold leading-7 text-gray-900">
             <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
-              <leistung.icon
-                className="h-6 w-6 text-white"
-                aria-hidden="true"
-              />
+              {leistung.icon && (
+                <leistung.icon
+                  className="h-6 w-6 text-white"
+                  aria-hidden="true"
+                />
+              )}
+              {leistung.iconComponent && leistung.iconComponent}
             </div>
             {leistung.name}
           </dt>
