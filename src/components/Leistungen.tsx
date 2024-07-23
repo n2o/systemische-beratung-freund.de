@@ -395,7 +395,7 @@ export function TiergestuetzteArbeit() {
         alt="Foto von Lasse"
         width={453}
         height={453}
-        className="aspect-video w-3/4 mx-auto rounded-xl bg-gray-50 object-cover"
+        className="aspect-video w-full md:w-3/4 mx-auto rounded-xl bg-gray-50 object-cover"
       />
     </>
   )

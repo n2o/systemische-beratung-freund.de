@@ -14,7 +14,7 @@ export default function Page() {
       <H1 heading="Therapie und Ablauf"></H1>
       <Container>
         <div className="bg-white px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl text-base leading-7 text-gray-700">
+          <div className="text-base leading-7 text-gray-700">
             <div className="mt-10">
               <p>
                 Kontaktieren Sie mich gern telefonisch, via SMS oder über das
@@ -52,10 +52,10 @@ export default function Page() {
             <figure className="mt-16">
               <Image
                 src={praxis.src}
-                alt="Beispielbild"
+                alt="Bild der Praxis"
                 width={500}
                 height={200}
-                className="aspect-video w-full rounded-xl bg-gray-50 object-cover"
+                className="aspect-video w-full md:w-3/4 mx-auto rounded-xl bg-gray-50 object-cover"
               />
             </figure>
           </div>
