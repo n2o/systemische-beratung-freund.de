@@ -1,6 +1,6 @@
 import {
+  ChatBubbleLeftRightIcon,
   CheckBadgeIcon,
-  PhoneIcon,
   UserGroupIcon,
   UsersIcon,
 } from "@heroicons/react/24/outline"
@@ -8,13 +8,13 @@ import clsx from "clsx"
 import { Container } from "./Container"
 
 const actions = [
-  {
-    title: "Informationsgespräch",
-    body: <>Per Telefon: kostenfrei bis 60 Minuten</>,
-    icon: PhoneIcon,
-    iconForeground: "text-teal-700",
-    iconBackground: "bg-teal-50",
-  },
+  // {
+  //   title: "Informationsgespräch",
+  //   body: <>Per Telefon: kostenfrei bis 60 Minuten</>,
+  //   icon: PhoneIcon,
+  //   iconForeground: "text-teal-700",
+  //   iconBackground: "bg-teal-50",
+  // },
   {
     title: "Einzelsetting",
     body: (
@@ -29,10 +29,10 @@ const actions = [
     iconBackground: "bg-purple-50",
   },
   {
-    title: "Paartherapie",
+    title: "Paarberatung/-therapie",
     body: (
       <p>
-        Systemische Paartherapie: 100 € / 90 Minuten
+        Systemische Paarberatung/-therapie: 100 € / 90 Minuten
         <br />
         (empfohlen werden Sitzungen alle 1-2 Wochen)
       </p>
@@ -42,7 +42,7 @@ const actions = [
     iconBackground: "bg-sky-50",
   },
   {
-    title: "Familientherapie",
+    title: "Familienberatung/-therapie",
     body: (
       <p>
         Systemische Familientherapie: 100 € / 90 Minuten
@@ -53,6 +53,19 @@ const actions = [
     icon: UserGroupIcon,
     iconForeground: "text-yellow-700",
     iconBackground: "bg-yellow-50",
+  },
+  {
+    title: "Teamberatung",
+    body: (
+      <p>
+        Teamberatung: 200 € / 90 Minuten
+        <br />
+        (empfohlen wird eine individuelle Taktung)
+      </p>
+    ),
+    icon: ChatBubbleLeftRightIcon,
+    iconForeground: "text-rose-700",
+    iconBackground: "bg-rose-50",
   },
 ]
 
@@ -71,7 +84,7 @@ function Kosten() {
             actionIdx === actions.length - 1
               ? "rounded-bl-lg rounded-br-lg sm:rounded-bl-none"
               : "",
-            "group relative bg-white p-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500",
+            "group relative bg-white p-6",
           )}
         >
           <div>
@@ -79,7 +92,7 @@ function Kosten() {
               className={clsx(
                 action.iconBackground,
                 action.iconForeground,
-                "inline-flex rounded-lg p-3 ring-4 ring-white",
+                "inline-flex rounded-lg p-3",
               )}
             >
               <action.icon aria-hidden="true" className="h-6 w-6" />
@@ -204,6 +217,11 @@ function Kommunikation() {
 export function HonorarPage() {
   return (
     <div>
+      <Container className="w-1/2 mt-3 mb-5 text-center">
+        Finden Sie hier Informationen zu den Kosten und den Rahmenbedingungen
+        meiner Beratung und Therapie. Ein Informationsgespräch per Telefon ist
+        kostenfrei bis 60 Minuten.
+      </Container>
       <div className="bg-slate-100">
         <div className="mx-auto px-3 py-5 lg:w-3/4">
           <Kosten />
