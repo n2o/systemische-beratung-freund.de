@@ -1,13 +1,33 @@
+"use client"
+import { faDog } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   ChatBubbleLeftRightIcon,
   CheckBadgeIcon,
+  PhoneIcon,
   UserGroupIcon,
   UsersIcon,
 } from "@heroicons/react/24/outline"
 import clsx from "clsx"
 import { Container } from "./Container"
 
-const actions = [
+type Action = {
+  title: string
+  body: React.ReactNode
+  icon?: React.ElementType
+  iconComponent?: React.ReactNode
+  iconForeground: string
+  iconBackground: string
+}
+
+const actions: Action[] = [
+  {
+    title: "Informationsgespräch",
+    body: <>Per Telefon: kostenfrei bis 60 Minuten</>,
+    icon: PhoneIcon,
+    iconForeground: "text-teal-700",
+    iconBackground: "bg-teal-50",
+  },
   {
     title: "Einzelsetting",
     body: (
@@ -60,6 +80,13 @@ const actions = [
     iconForeground: "text-rose-700",
     iconBackground: "bg-rose-50",
   },
+  {
+    title: "Tiergestützte Arbeit",
+    body: <>Pro Sitzung werden 20 € zusätzlich berechnet.</>,
+    iconComponent: <FontAwesomeIcon icon={faDog} className="h-6 w-6" />,
+    iconForeground: "text-indigo-700",
+    iconBackground: "bg-indigo-50",
+  },
 ]
 
 function Kosten() {
@@ -88,7 +115,10 @@ function Kosten() {
                 "inline-flex rounded-lg p-3",
               )}
             >
-              <action.icon aria-hidden="true" className="h-6 w-6" />
+              {action.icon && (
+                <action.icon aria-hidden="true" className="h-6 w-6" />
+              )}
+              {action.iconComponent && action.iconComponent}
             </span>
           </div>
           <div className="mt-2">
@@ -212,8 +242,7 @@ export function HonorarPage() {
     <div>
       <Container className="w-1/2 mt-3 mb-5 text-center">
         Finden Sie hier Informationen zu den Kosten und den Rahmenbedingungen
-        meiner Beratung und Therapie. Ein Informationsgespräch per Telefon ist
-        kostenfrei bis 60 Minuten.
+        meiner Beratung und Therapie.
       </Container>
       <div className="bg-slate-100">
         <div className="mx-auto px-3 py-5 lg:w-3/4">
