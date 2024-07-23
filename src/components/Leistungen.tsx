@@ -273,7 +273,7 @@ export function Paarberatung() {
   return (
     <LeistungsBeschreiber
       id="paarberatung"
-      leadHeading="Paarberatung"
+      leadHeading="Paarberatung / -therapie"
       heading="Konflikte innerhalb einer Beziehung"
       childrenLeft={childrenLeft}
       childrenRight={childrenRight}

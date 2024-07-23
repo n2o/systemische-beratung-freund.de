@@ -1,3 +1,4 @@
+import { Container } from "@/components/Container"
 import { H1 } from "@/components/Headings"
 import {
   Einzelberatung,
@@ -6,6 +7,7 @@ import {
   Teamberatung,
   TiergestuetzteArbeit,
 } from "@/components/Leistungen"
+import { LeistungenNavigation } from "@/components/LeistungenNavigation"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -26,6 +28,9 @@ export default function Page() {
       </H1>
       <div className="my-10" />
       <div>
+        <Container>
+          <LeistungenNavigation />
+        </Container>
         <Einzelberatung />
         <Paarberatung />
         <Familienberatung />
