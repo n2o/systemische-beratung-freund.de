@@ -6,8 +6,8 @@ export function Button({ href, className = "", ...props }) {
     <Link
       href={href}
       className={clsx(
-        "rounded-md bg-primary-dark px-2.5 py-1.5 text-sm font-semibold text-white shadow-sm transition ease-in hover:bg-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-dark",
-        className
+        "rounded-md bg-primary px-2.5 py-1.5 text-sm font-semibold text-white shadow-sm transition ease-in hover:bg-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary",
+        className,
       )}
       {...props}
     />
