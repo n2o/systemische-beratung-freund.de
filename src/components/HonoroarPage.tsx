@@ -149,8 +149,8 @@ function OnlineSitzungen() {
         Online-Sitzungen
       </h2>
       <p className="mt-2">
-        Psychotherapie via Internet ist im deutschsprachigem Raum nicht
-        zulässig. Eine Systemische Beratung ist derweil möglich.
+        Psychotherapie via Internet ist im deutschsprachigem Raum seit 2021
+        unter bestimmten Voraussetzungen möglich.
       </p>
     </div>
   )
