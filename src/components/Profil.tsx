@@ -47,10 +47,6 @@ export function Kurzprofil() {
                 </li>
                 <li>Studium der Rehabilitationswissenschaften (M.A.)</li>
                 <li>
-                  Bis heute Pädagogin im Betreuungsdienst und Therapeutin in der
-                  Kinder- und Jugendpsychiatrie
-                </li>
-                <li>
                   Bis 2016 Pädagogin im Betreuungsdienst in der
                   Erwachsenenpsychiatrie
                 </li>
