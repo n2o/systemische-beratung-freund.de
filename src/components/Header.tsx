@@ -25,13 +25,13 @@ function MobileNavIcon({ open }) {
       <Bars3Icon
         className={clsx(
           "h-8 origin-center transition",
-          open && "hidden scale-90 opacity-0"
+          open && "hidden scale-90 opacity-0",
         )}
       />
       <XMarkIcon
         className={clsx(
           "h-8 origin-center transition",
-          !open && "hidden scale-90 opacity-0"
+          !open && "hidden scale-90 opacity-0",
         )}
       />
     </div>
@@ -73,10 +73,10 @@ function MobileNavigation() {
             className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5"
           >
             <MobileNavLink href="/leistungen">Leistungen</MobileNavLink>
-            <MobileNavLink href="/honorar">Kosten</MobileNavLink>
             <MobileNavLink href="/therapie-und-ablauf">
               Therapie und Ablauf
             </MobileNavLink>
+            <MobileNavLink href="/honorar">Kosten</MobileNavLink>
             <MobileNavLink href="/kontakt">Kontakt</MobileNavLink>
           </Popover.Panel>
         </Transition.Child>
@@ -96,8 +96,8 @@ export function Header() {
             </Link>
             <div className="hidden md:flex md:gap-x-6">
               <NavLink href="/leistungen">Leistungen</NavLink>
-              <NavLink href="/honorar">Kosten</NavLink>
               <NavLink href="/therapie-und-ablauf">Therapie und Ablauf</NavLink>
+              <NavLink href="/honorar">Kosten</NavLink>
             </div>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
