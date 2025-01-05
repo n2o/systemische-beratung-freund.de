@@ -1,5 +1,5 @@
 import { Container } from "@/components/Container"
-import frauMitHund from "@/images/frau_mit_hund.webp"
+import lisaLasse from "@/images/lisa-mit-lasse.webp"
 import Image from "next/image"
 
 export function Kurzprofil() {
@@ -8,18 +8,18 @@ export function Kurzprofil() {
       <Container className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="flex flex-col gap-6 xl:flex-row">
           <Image
-            className="aspect-[3/5] w-80 flex-none rounded-2xl object-cover"
-            src={frauMitHund.src}
-            alt="Frau mit Hund"
+            className="aspect-[3/4] w-80 flex-none rounded-2xl object-cover"
+            src={lisaLasse.src}
+            alt="Lisa mit Lasse"
             width={320}
-            height={533}
+            height={427}
           />
           <div className="flex-auto text-gray-900">
-            <h2 className="text-lg font-semibold leading-8 tracking-tight ">
+            <h2 className="text-lg font-semibold leading-8 tracking-tight">
               Über mich
             </h2>
             <p className="text-base leading-7">
-              Lisa Freund, verheiratet, freiberuflich tätig seit 2022
+              Lisa Freund, verheiratet, freiberuflich tätig seit 2022.
             </p>
             <div className="mt-1 text-base leading-7">
               <p>

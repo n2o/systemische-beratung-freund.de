@@ -3,6 +3,7 @@ import { Button } from "@/components/Button"
 import { FadeIn } from "@/components/FadeIn"
 import { H2, H2Left } from "@/components/Headings"
 import lasse from "@/images/lasse.webp"
+import lisa from "@/images/lisa.webp"
 import { faDog } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
@@ -264,7 +265,17 @@ export function Wiedereingliederung() {
       </p>
     </>
   )
-  const childrenRight = <p></p>
+  const childrenRight = (
+    <div className="w-96">
+      <Image
+        src={lisa.src}
+        alt="Foto von Lisa"
+        width={453}
+        height={453}
+        className="aspect-video w-full md:w-3/4 mx-auto rounded-xl bg-gray-50 object-cover"
+      />
+    </div>
+  )
 
   return (
     <LeistungsBeschreiber
