@@ -143,14 +143,14 @@ export default function Page() {
         <p>
           Lisa Freund
           <br />
-          Entenstr. 42
+          Westhauser Straße 39
           <br />
-          000000 Entenhausen
+          42857 Remscheid
         </p>
         <p>
-          Telefon: (01 23 34) 00 00 00
+          Telefon: 0176 62579217
           <br />
-          E-Mail: some@mail.de
+          E-Mail: info@systemische-beratung-freund.de
         </p>
         <p>
           Verantwortliche Stelle ist die natürliche oder juristische Person, die

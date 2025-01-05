@@ -25,8 +25,8 @@ const actions: Action[] = [
     title: "Informationsgespräch",
     body: <>Per Telefon: kostenfrei bis 60 Minuten</>,
     icon: PhoneIcon,
-    iconForeground: "text-teal-700",
-    iconBackground: "bg-teal-50",
+    iconForeground: "text-primary",
+    iconBackground: "bg-primary-light",
   },
   {
     title: "Einzelsetting",
@@ -38,8 +38,8 @@ const actions: Action[] = [
       </p>
     ),
     icon: CheckBadgeIcon,
-    iconForeground: "text-purple-700",
-    iconBackground: "bg-purple-50",
+    iconForeground: "text-primary",
+    iconBackground: "bg-primary-light",
   },
   {
     title: "Paarberatung/-therapie",
@@ -51,8 +51,8 @@ const actions: Action[] = [
       </p>
     ),
     icon: UsersIcon,
-    iconForeground: "text-sky-700",
-    iconBackground: "bg-sky-50",
+    iconForeground: "text-primary",
+    iconBackground: "bg-primary-light",
   },
   {
     title: "Familienberatung/-therapie",
@@ -64,8 +64,8 @@ const actions: Action[] = [
       </p>
     ),
     icon: UserGroupIcon,
-    iconForeground: "text-yellow-700",
-    iconBackground: "bg-yellow-50",
+    iconForeground: "text-primary",
+    iconBackground: "bg-primary-light",
   },
   {
     title: "Teamberatung",
@@ -77,15 +77,15 @@ const actions: Action[] = [
       </p>
     ),
     icon: ChatBubbleLeftRightIcon,
-    iconForeground: "text-rose-700",
-    iconBackground: "bg-rose-50",
+    iconForeground: "text-primary",
+    iconBackground: "bg-primary-light",
   },
   {
     title: "Tiergestützte Arbeit",
     body: <>Pro Sitzung werden 20 € zusätzlich berechnet.</>,
     iconComponent: <FontAwesomeIcon icon={faDog} className="h-6 w-6" />,
-    iconForeground: "text-indigo-700",
-    iconBackground: "bg-indigo-50",
+    iconForeground: "text-primary",
+    iconBackground: "bg-primary-light",
   },
 ]
 

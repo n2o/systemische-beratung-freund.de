@@ -7,6 +7,7 @@ import lisa from "@/images/lisa.webp"
 import { faDog } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
+  ArrowUpIcon,
   ChatBubbleLeftRightIcon,
   CheckBadgeIcon,
   UserGroupIcon,
@@ -16,6 +17,13 @@ import Image from "next/image"
 import { useRef } from "react"
 
 const leistungen = [
+  {
+    name: "Wiedereingliederung",
+    link: "/leistungen#wiedereingliederung",
+    description:
+      "Nach einem stationären Aufenthalt ist die Rückkehr in den Alltag eine Herausforderung. Ich begleite Sie auf Ihrem Weg zurück in Ihr Leben.",
+    icon: ArrowUpIcon,
+  },
   {
     name: "Einzelberatung / -therapie",
     link: "/leistungen#einzelberatung",
@@ -62,10 +70,10 @@ function Leistung({ leistung }) {
       <FadeIn parentRef={ref}>
         <span>
           <dt className="text-base font-semibold leading-7 text-gray-900">
-            <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
+            <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-primary-light">
               {leistung.icon && (
                 <leistung.icon
-                  className="h-6 w-6 text-white"
+                  className="h-6 w-6 text-primary"
                   aria-hidden="true"
                 />
               )}
@@ -74,7 +82,7 @@ function Leistung({ leistung }) {
             {leistung.name}
           </dt>
           <dd className="mt-2 text-base leading-7 text-gray-600">
-            <p>{leistung.description}</p>
+            {/* <p>{leistung.description}</p> */}
             {leistung.link && (
               <Button href={leistung.link}>Mehr erfahren</Button>
             )}
