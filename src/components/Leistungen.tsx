@@ -94,14 +94,18 @@ export function LeistungsUebersicht() {
         >
           <p>
             Finden Sie hier eine Übersicht über die Leistungen, die ich Ihnen
-            anbieten kann. Sollten Sie Fragen haben, kontaktieren Sie mich
-            gerne.
+            anbieten kann.
+          </p>
+          <p>
+            Je nach individuellem Bedarf besuchen Sie mich gerne in meinen
+            Praxisräumen, ich komme zu Ihnen nach Hause oder wir suchen das
+            gemeinsame Gespräch in Bewegung.
           </p>
         </H2>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
-            {leistungen.map((leistung, leistungIndex) => (
-              <div key={leistungIndex} className="relative pl-16">
+            {leistungen.map((leistung, idx) => (
+              <div key={idx} className="relative pl-16">
                 <Leistung leistung={leistung} />
               </div>
             ))}

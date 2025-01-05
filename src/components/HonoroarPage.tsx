@@ -45,7 +45,7 @@ const actions: Action[] = [
     title: "Paarberatung/-therapie",
     body: (
       <p>
-        Systemische Paarberatung/-therapie: 100 € / 90 Minuten
+        Systemische Paarberatung/-therapie: 120 € / 90 Minuten
         <br />
         (empfohlen werden Sitzungen alle 1-2 Wochen)
       </p>
@@ -58,7 +58,7 @@ const actions: Action[] = [
     title: "Familienberatung/-therapie",
     body: (
       <p>
-        Systemische Familientherapie: 100 € / 90 Minuten
+        Systemische Familientherapie: 120 € / 90 Minuten
         <br />
         (empfohlen werden Sitzungen alle 2-4 Wochen)
       </p>
@@ -237,6 +237,20 @@ function Kommunikation() {
   )
 }
 
+function Sitzungsbegebenheiten() {
+  return (
+    <div>
+      <h2 className="text-lg font-semibold leading-8 tracking-tight">
+        Sitzungsbegebenheiten
+      </h2>
+      <p className="mt-2">
+        Die Sitzungen finden entweder in meinen Praxisräumen, in Ihrem Zuhause
+        oder in Bewegung an einem neutralen Ort statt.
+      </p>
+    </div>
+  )
+}
+
 export function HonorarPage() {
   return (
     <div>
@@ -253,6 +267,7 @@ export function HonorarPage() {
         <div className="mt-10 flex flex-col space-y-3">
           <Zahlungsmodalitaeten />
           <Kostenuebernahme />
+          <Sitzungsbegebenheiten />
           <OnlineSitzungen />
           <AbsagenVerschiebungen />
           <Verschwiegenheit />
