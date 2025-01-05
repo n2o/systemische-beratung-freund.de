@@ -76,7 +76,9 @@ function MobileNavigation() {
             <MobileNavLink href="/therapie-und-ablauf">
               Therapie und Ablauf
             </MobileNavLink>
-            <MobileNavLink href="/honorar">Kosten</MobileNavLink>
+            <MobileNavLink href="/honorar">
+              Honorar und Modalitäten
+            </MobileNavLink>
             <MobileNavLink href="/kontakt">Kontakt</MobileNavLink>
           </Popover.Panel>
         </Transition.Child>
@@ -97,7 +99,7 @@ export function Header() {
             <div className="hidden md:flex md:gap-x-6">
               <NavLink href="/leistungen">Leistungen</NavLink>
               <NavLink href="/therapie-und-ablauf">Therapie und Ablauf</NavLink>
-              <NavLink href="/honorar">Kosten</NavLink>
+              <NavLink href="/honorar">Honorar und Modalitäten</NavLink>
             </div>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">

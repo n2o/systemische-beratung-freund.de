@@ -1,4 +1,5 @@
 const links = [
+  // { name: "Postationär", href: "/leistungen#poststationär" },
   { name: "Einzelberatung / -therapie", href: "/leistungen#einzelberatung" },
   { name: "Paarberatung / -therapie", href: "/leistungen#paarberatung" },
   {

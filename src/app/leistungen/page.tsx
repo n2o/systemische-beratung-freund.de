@@ -6,6 +6,7 @@ import {
   Paarberatung,
   Teamberatung,
   TiergestuetzteArbeit,
+  Wiedereingliederung,
 } from "@/components/Leistungen"
 import { LeistungenNavigation } from "@/components/LeistungenNavigation"
 import { Metadata } from "next"
@@ -31,6 +32,7 @@ export default function Page() {
         <Container>
           <LeistungenNavigation />
         </Container>
+        <Wiedereingliederung />
         <Einzelberatung />
         <Paarberatung />
         <Familienberatung />

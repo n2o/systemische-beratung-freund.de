@@ -125,7 +125,7 @@ function LeistungsBeschreiber({
 }) {
   return (
     <div
-      className="mb-10 overflow-hidden bg-white px-6 py-8 lg:px-8 xl:py-12"
+      className="overflow-hidden bg-white px-6 py-8 lg:px-8 xl:py-12 my-24"
       {...props}
     >
       <div className="mx-auto max-w-max lg:max-w-7xl">
@@ -245,6 +245,32 @@ export function Einzelberatung() {
       id="einzelberatung"
       leadHeading="Einzelberatung / -therapie"
       heading="Individuelle Themen und Herausforderungen"
+      childrenLeft={childrenLeft}
+      childrenRight={childrenRight}
+    />
+  )
+}
+
+export function Wiedereingliederung() {
+  const childrenLeft = (
+    <>
+      <p>
+        Aller (Wieder)-Anfang ist schwer. So groß auch die Freude endlich wieder
+        im eigenen Bett zu schlafen, Freunde und Familie zu treffen, selbst zu
+        wählen worauf ich heute Appetit habe, so groß auch der Respekt fernab
+        von vorgegeben Strukturen nun wieder eigenständig meinen Alltag zu
+        gestalten. Gerne begleite ich Sie ein Stück auf Ihrer Reise zurück in
+        Ihr Leben.
+      </p>
+    </>
+  )
+  const childrenRight = <p></p>
+
+  return (
+    <LeistungsBeschreiber
+      id="wiedereingliederung"
+      leadHeading="Poststationär"
+      heading="Wiedereingliederung nach stationärem Aufenthalt"
       childrenLeft={childrenLeft}
       childrenRight={childrenRight}
     />
