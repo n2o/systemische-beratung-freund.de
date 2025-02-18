@@ -1,5 +1,5 @@
 import { Container } from "@/components/Container"
-import lisaLasse from "@/images/lisa-mit-lasse.webp"
+import lisa from "@/images/lisa.webp"
 import Image from "next/image"
 
 export function Kurzprofil() {
@@ -9,7 +9,7 @@ export function Kurzprofil() {
         <div className="flex flex-col gap-6 xl:flex-row">
           <Image
             className="aspect-[3/4] w-80 flex-none rounded-2xl object-cover"
-            src={lisaLasse.src}
+            src={lisa.src}
             alt="Lisa mit Lasse"
             width={320}
             height={427}
