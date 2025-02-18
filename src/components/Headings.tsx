@@ -35,11 +35,11 @@ export function H1({
 }) {
   return (
     <Container className="mx-auto max-w-2xl md:text-center" {...props}>
-      <h1 className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">
+      <h1 className="font-display text-3xl tracking-tight sm:text-4xl">
         {heading}
       </h1>
       {children && (
-        <div className="mt-4 text-lg tracking-tight text-slate-700">
+        <div className="mt-4 text-lg tracking-tight text-primary-dark">
           {children}
         </div>
       )}
