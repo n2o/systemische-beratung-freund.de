@@ -70,9 +70,14 @@ function Leistung({ leistung }) {
             />
             {leistung.name}
           </dt>
-          <dd className="mt-2 text-base leading-7 text-gray-600">
+          <dd className="mt-2 text-base leading-7">
             {leistung.link && (
-              <Button href={leistung.link}>Mehr erfahren</Button>
+              <Button
+                href={leistung.link}
+                className="bg-transparent outline outline-1"
+              >
+                Mehr erfahren
+              </Button>
             )}
           </dd>
         </span>
