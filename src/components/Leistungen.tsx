@@ -274,13 +274,13 @@ export function Wiedereingliederung() {
     </>
   )
   const childrenRight = (
-    <div className="w-96">
+    <div className="w-64 mx-auto">
       <Image
         src={lisa.src}
         alt="Foto von Lisa"
         width={453}
         height={453}
-        className="aspect-video w-full md:w-3/4 mx-auto rounded-xl bg-gray-50 object-cover"
+        className="aspect-video w-full mx-auto rounded-xl bg-gray-50 object-cover mr-0 mt-0"
       />
     </div>
   )
