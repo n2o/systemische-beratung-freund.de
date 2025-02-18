@@ -16,37 +16,44 @@ import {
 import Image from "next/image"
 import { useRef } from "react"
 
+const leistungWiedereingliederung = {
+  name: "Wiedereingliederung",
+  link: "/leistungen#wiedereingliederung",
+  iconComponent: <FontAwesomeIcon icon={faRecycle} className="h-6 w-6" />,
+}
+const leistungEinzelberatung = {
+  name: "Einzelberatung / -therapie",
+  link: "/leistungen#einzelberatung",
+  icon: CheckBadgeIcon,
+}
+const leistungPaarberatung = {
+  name: "Paarberatung / -therapie",
+  link: "/leistungen#paarberatung",
+  icon: UsersIcon,
+}
+const leistungFamilienberatung = {
+  name: "Familienberatung / -therapie",
+  link: "/leistungen#familienberatung",
+  icon: UserGroupIcon,
+}
+const leistungTeamberatung = {
+  name: "Teamberatung",
+  icon: ChatBubbleLeftRightIcon,
+  link: "/leistungen#teamberatung",
+}
+const leistungTiergestuetzteArbeit = {
+  name: "Tiergestützte Arbeit",
+  iconComponent: <FontAwesomeIcon icon={faDog} className="h-6 w-6" />,
+  link: "/leistungen#tiergestuetzte-arbeit",
+}
+
 const leistungen = [
-  {
-    name: "Wiedereingliederung",
-    link: "/leistungen#wiedereingliederung",
-    iconComponent: <FontAwesomeIcon icon={faRecycle} className="h-6 w-6" />,
-  },
-  {
-    name: "Einzelberatung / -therapie",
-    link: "/leistungen#einzelberatung",
-    icon: CheckBadgeIcon,
-  },
-  {
-    name: "Paarberatung / -therapie",
-    link: "/leistungen#paarberatung",
-    icon: UsersIcon,
-  },
-  {
-    name: "Familienberatung / -therapie",
-    link: "/leistungen#familienberatung",
-    icon: UserGroupIcon,
-  },
-  {
-    name: "Teamberatung",
-    icon: ChatBubbleLeftRightIcon,
-    link: "/leistungen#teamberatung",
-  },
-  {
-    name: "Tiergestützte Arbeit",
-    iconComponent: <FontAwesomeIcon icon={faDog} className="h-6 w-6" />,
-    link: "/leistungen#tiergestuetzte-arbeit",
-  },
+  leistungWiedereingliederung,
+  leistungEinzelberatung,
+  leistungPaarberatung,
+  leistungFamilienberatung,
+  leistungTeamberatung,
+  leistungTiergestuetzteArbeit,
 ]
 
 function Leistung({ leistung }) {
@@ -109,6 +116,7 @@ export function LeistungsUebersicht() {
 function LeistungsBeschreiber({
   heading = "",
   leadHeading = "",
+  leistungRaw,
   childrenLeft,
   childrenRight,
   ...props
@@ -120,6 +128,11 @@ function LeistungsBeschreiber({
     >
       <div className="mx-auto max-w-max lg:max-w-7xl">
         <div className="relative z-10 mb-8 md:mb-2 md:px-6">
+          <LeistungIcon
+            className="mb-2"
+            Icon={leistungRaw?.icon}
+            IconComponent={leistungRaw?.iconComponent}
+          />
           <H2Left leadHeading={leadHeading} heading={heading} />
         </div>
         <div className="relative">
@@ -233,7 +246,8 @@ export function Einzelberatung() {
   return (
     <LeistungsBeschreiber
       id="einzelberatung"
-      leadHeading="Einzelberatung / -therapie"
+      leistungRaw={leistungEinzelberatung}
+      leadHeading={leistungEinzelberatung.name}
       heading="Individuelle Themen und Herausforderungen"
       childrenLeft={childrenLeft}
       childrenRight={childrenRight}
@@ -269,6 +283,7 @@ export function Wiedereingliederung() {
   return (
     <LeistungsBeschreiber
       id="wiedereingliederung"
+      leistungRaw={leistungWiedereingliederung}
       leadHeading="Poststationär"
       heading="Wiedereingliederung nach stationärem Aufenthalt"
       childrenLeft={childrenLeft}
@@ -318,7 +333,8 @@ export function Paarberatung() {
   return (
     <LeistungsBeschreiber
       id="paarberatung"
-      leadHeading="Paarberatung / -therapie"
+      leistungRaw={leistungPaarberatung}
+      leadHeading={leistungPaarberatung.name}
       heading="Konflikte innerhalb einer Beziehung"
       childrenLeft={childrenLeft}
       childrenRight={childrenRight}
@@ -361,7 +377,8 @@ export function Familienberatung() {
   return (
     <LeistungsBeschreiber
       id="familienberatung"
-      leadHeading="Familienberatung / -therapie"
+      leistungRaw={leistungFamilienberatung}
+      leadHeading={leistungFamilienberatung.name}
       heading="Gemeinsam Herausforderungen meistern"
       childrenLeft={childrenLeft}
       childrenRight={childrenRight}
@@ -402,7 +419,8 @@ export function Teamberatung() {
   return (
     <LeistungsBeschreiber
       id="teamberatung"
-      leadHeading="Teamberatung"
+      leistungRaw={leistungTeamberatung}
+      leadHeading={leistungTeamberatung.name}
       heading="Zusammenarbeit verbessern"
       childrenLeft={childrenLeft}
       childrenRight={childrenRight}
@@ -449,7 +467,8 @@ export function TiergestuetzteArbeit() {
   return (
     <LeistungsBeschreiber
       id="tiergestuetzte-arbeit"
-      leadHeading="Tiergestützte Arbeit"
+      leistungRaw={leistungTiergestuetzteArbeit}
+      leadHeading={leistungTiergestuetzteArbeit.name}
       heading="Tierische Unterstützung"
       childrenLeft={childrenLeft}
       childrenRight={childrenRight}
