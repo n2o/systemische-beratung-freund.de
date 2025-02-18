@@ -2,6 +2,7 @@
 import { Button } from "@/components/Button"
 import { FadeIn } from "@/components/FadeIn"
 import { H2, H2Left } from "@/components/Headings"
+import { LeistungIcon } from "@/components/LeistungIcon"
 import lasse from "@/images/lasse.webp"
 import lisa from "@/images/lisa.webp"
 import { faDog } from "@fortawesome/free-solid-svg-icons"
@@ -69,16 +70,12 @@ function Leistung({ leistung }) {
     <span ref={ref}>
       <FadeIn parentRef={ref}>
         <span>
-          <dt className="text-base font-semibold leading-7 text-gray-900">
-            <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-primary-light">
-              {leistung.icon && (
-                <leistung.icon
-                  className="h-6 w-6 text-primary"
-                  aria-hidden="true"
-                />
-              )}
-              {leistung.iconComponent && leistung.iconComponent}
-            </div>
+          <dt className="text-base font-semibold leading-7 text-primary-dark">
+            <LeistungIcon
+              className="absolute left-0 top-0"
+              Icon={leistung.icon}
+              IconComponent={leistung.iconComponent}
+            />
             {leistung.name}
           </dt>
           <dd className="mt-2 text-base leading-7 text-gray-600">

@@ -1,4 +1,5 @@
 "use client"
+import { LeistungIcon } from "@/components/LeistungIcon"
 import { faDog } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
@@ -107,23 +108,14 @@ function Kosten() {
             "group relative bg-white p-6",
           )}
         >
-          <div>
-            <span
-              className={clsx(
-                action.iconBackground,
-                action.iconForeground,
-                "inline-flex rounded-lg p-3",
-              )}
-            >
-              {action.icon && (
-                <action.icon aria-hidden="true" className="h-6 w-6" />
-              )}
-              {action.iconComponent && action.iconComponent}
-            </span>
-          </div>
           <div className="mt-2">
             <h3 className="text-base font-semibold leading-6 text-gray-900">
               <span aria-hidden="true" className="absolute inset-0" />
+              <LeistungIcon
+                className="mb-1"
+                Icon={action.icon}
+                IconComponent={action.iconComponent}
+              />
               {action.title}
             </h3>
             <div className="mt-2 text-sm text-gray-900">{action.body}</div>
