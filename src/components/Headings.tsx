@@ -3,7 +3,7 @@ import { Container } from "@/components/Container"
 export function H2({ heading = "", leadHeading = "", children }) {
   return (
     <div className="mx-auto max-w-4xl lg:text-center">
-      <h2 className="text-lg font-semibold leading-8 tracking-tight text-primary">
+      <h2 className="text-lg font-semibold leading-8 tracking-tight">
         {leadHeading}
       </h2>
       <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -17,7 +17,7 @@ export function H2({ heading = "", leadHeading = "", children }) {
 export function H2Left({ heading = "", leadHeading = "" }) {
   return (
     <section className="max-w-prose text-base lg:max-w-none">
-      <h2 className="font-semibold leading-6 text-primary">{leadHeading}</h2>
+      <h2 className="font-semibold leading-6">{leadHeading}</h2>
       <p className="mt-2 text-2xl font-bold leading-8 tracking-tight text-gray-900 sm:text-3xl">
         {heading}
       </p>

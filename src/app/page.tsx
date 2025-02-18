@@ -9,8 +9,8 @@ export default function Page() {
         <div className="flex h-full w-full items-center justify-center bg-gray-900 bg-opacity-40 py-12">
           <div className="text-center">
             <div className="container mx-auto px-4">
-              <div className="mx-auto max-w-4xl text-center">
-                <span className="text-xl font-semibold text-white md:text-2xl lg:text-3xl">
+              <div className="mx-auto max-w-4xl text-center bg-primary-light opacity-80 p-4 rounded-lg">
+                <span className="text-xl font-semibold text-primary md:text-2xl lg:text-3xl">
                   &quot;Vielleicht stehen wir uns manchmal selbst im Weg, damit
                   wir über unsere Bedürfnisse stolpern&quot;
                 </span>
