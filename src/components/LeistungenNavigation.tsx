@@ -17,7 +17,7 @@ export function LeistungenNavigation() {
         <a
           key={link.href}
           href={link.href}
-          className="mx-auto text-center py-1 px-2 text-sm font-semibold text-gray-900 hover:bg-gray-100 rounded-lg duration-200 outline outline-1 outline-gray-200 flex items-center justify-center w-full"
+          className="mx-auto text-center py-1 px-2 bg-white text-sm font-semibold text-gray-900 hover:bg-gray-100 rounded-lg duration-200 outline outline-1 outline-gray-200 flex items-center justify-center w-full"
         >
           {link.name}
         </a>

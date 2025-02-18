@@ -29,9 +29,11 @@ export default function Page() {
       </H1>
       <div className="my-10" />
       <div>
-        <Container>
-          <LeistungenNavigation />
-        </Container>
+        <div className="bg-slate-100 px-3 py-5">
+          <Container>
+            <LeistungenNavigation />
+          </Container>
+        </div>
         <Wiedereingliederung />
         <Einzelberatung />
         <Paarberatung />
