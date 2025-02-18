@@ -20,42 +20,30 @@ const leistungen = [
   {
     name: "Wiedereingliederung",
     link: "/leistungen#wiedereingliederung",
-    description:
-      "Nach einem stationären Aufenthalt ist die Rückkehr in den Alltag eine Herausforderung. Ich begleite Sie auf Ihrem Weg zurück in Ihr Leben.",
     iconComponent: <FontAwesomeIcon icon={faRecycle} className="h-6 w-6" />,
   },
   {
     name: "Einzelberatung / -therapie",
     link: "/leistungen#einzelberatung",
-    description:
-      "In einer Einzelberatung steht eine Person im Mittelpunkt. Hier geht es um individuelle Themen und Herausforderungen, die gemeistert werden müssen. Durch die systemische Sichtweise werden Zusammenhänge innerhalb des persönlichen Umfelds beleuchtet.",
     icon: CheckBadgeIcon,
   },
   {
     name: "Paarberatung / -therapie",
     link: "/leistungen#paarberatung",
-    description:
-      "In der Paarberatung werden Konflikte und Probleme innerhalb einer Beziehung angesprochen und bearbeitet. Hier steht das gemeinsame Verständnis und die Stärkung der Beziehung im Fokus.",
     icon: UsersIcon,
   },
   {
     name: "Familienberatung / -therapie",
     link: "/leistungen#familienberatung",
-    description:
-      "In der Familienberatung geht es um die Interaktionen und Beziehungen innerhalb einer Familie. Hier werden Konflikte gelöst und Lösungen für Herausforderungen gefunden, um das Familienleben zu verbessern.",
     icon: UserGroupIcon,
   },
   {
     name: "Teamberatung",
-    description:
-      "In der Teamberatung werden Prozesse und Interaktionen innerhalb eines Teams betrachtet. Hier geht es darum, die Zusammenarbeit zu verbessern und Konflikte zu lösen, um ein erfolgreiches Arbeiten zu ermöglichen",
     icon: ChatBubbleLeftRightIcon,
     link: "/leistungen#teamberatung",
   },
   {
     name: "Tiergestützte Arbeit",
-    description:
-      "In der tiergestützten Arbeit wird die Anwesenheit von Tieren genutzt, um Menschen zu unterstützen. Hierbei wird die Kraft der Tiere genutzt, um den Fokus zu lenken und eine Brücke zum Klienten zu bauen.",
     iconComponent: <FontAwesomeIcon icon={faDog} className="h-6 w-6" />,
     link: "/leistungen#tiergestuetzte-arbeit",
   },
@@ -76,7 +64,6 @@ function Leistung({ leistung }) {
             {leistung.name}
           </dt>
           <dd className="mt-2 text-base leading-7 text-gray-600">
-            {/* <p>{leistung.description}</p> */}
             {leistung.link && (
               <Button href={leistung.link}>Mehr erfahren</Button>
             )}
