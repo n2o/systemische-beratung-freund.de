@@ -5,10 +5,9 @@ import { H2, H2Left } from "@/components/Headings"
 import { LeistungIcon } from "@/components/LeistungIcon"
 import lasse from "@/images/lasse.webp"
 import lisa from "@/images/lisa.webp"
-import { faDog } from "@fortawesome/free-solid-svg-icons"
+import { faDog, faRecycle } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
-  ArrowUpIcon,
   ChatBubbleLeftRightIcon,
   CheckBadgeIcon,
   UserGroupIcon,
@@ -23,7 +22,7 @@ const leistungen = [
     link: "/leistungen#wiedereingliederung",
     description:
       "Nach einem stationären Aufenthalt ist die Rückkehr in den Alltag eine Herausforderung. Ich begleite Sie auf Ihrem Weg zurück in Ihr Leben.",
-    icon: ArrowUpIcon,
+    iconComponent: <FontAwesomeIcon icon={faRecycle} className="h-6 w-6" />,
   },
   {
     name: "Einzelberatung / -therapie",
@@ -57,9 +56,7 @@ const leistungen = [
     name: "Tiergestützte Arbeit",
     description:
       "In der tiergestützten Arbeit wird die Anwesenheit von Tieren genutzt, um Menschen zu unterstützen. Hierbei wird die Kraft der Tiere genutzt, um den Fokus zu lenken und eine Brücke zum Klienten zu bauen.",
-    iconComponent: (
-      <FontAwesomeIcon icon={faDog} className="h-6 w-6 text-primary-dark" />
-    ),
+    iconComponent: <FontAwesomeIcon icon={faDog} className="h-6 w-6" />,
     link: "/leistungen#tiergestuetzte-arbeit",
   },
 ]
