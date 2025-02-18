@@ -57,8 +57,8 @@ const leistungen = [
     description:
       "In der tiergestützten Arbeit wird die Anwesenheit von Tieren genutzt, um Menschen zu unterstützen. Hierbei wird die Kraft der Tiere genutzt, um den Fokus zu lenken und eine Brücke zum Klienten zu bauen.",
     iconComponent: (
-      <FontAwesomeIcon icon={faDog} className="h-6 w-6 text-white" />
-    ),
+      <FontAwesomeIcon icon={faDog} className="h-6 w-6 text-primary-dark" />
+    ), // WIP
     link: "/leistungen#tiergestuetzte-arbeit",
   },
 ]
