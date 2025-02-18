@@ -287,7 +287,7 @@ export function Wiedereingliederung() {
 
   return (
     <LeistungsBeschreiber
-      id="wiedereingliederung"
+      id="poststationär"
       leadHeading="Poststationär"
       heading="Wiedereingliederung nach stationärem Aufenthalt"
       childrenLeft={childrenLeft}
