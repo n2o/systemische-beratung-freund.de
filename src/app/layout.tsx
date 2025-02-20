@@ -1,5 +1,5 @@
 import { Footer } from "@/components/Footer"
-import { Header } from "@/components/Header"
+import { Navbar } from "@/components/Navbar"
 import { Analytics } from "@vercel/analytics/react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
@@ -27,7 +27,7 @@ export default function RootLayout({
       className={`h-full scroll-smooth bg-white antialiased [font-feature-settings:'ss01'] ${inter.className}`}
     >
       <body className="flex h-full flex-col">
-        <Header />
+        <Navbar />
         {children}
         <Footer />
         <Analytics />

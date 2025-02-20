@@ -87,7 +87,7 @@ function MobileNavigation() {
   )
 }
 
-export function Header() {
+export function Navbar() {
   return (
     <header className="py-10">
       <Container>
