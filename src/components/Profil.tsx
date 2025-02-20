@@ -8,7 +8,7 @@ export function Kurzprofil() {
       <Container className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="flex flex-col gap-6 xl:flex-row">
           <Image
-            className="aspect-[3/4] w-80 flex-none rounded-2xl object-cover"
+            className="aspect-3/4 w-80 flex-none rounded-2xl object-cover"
             src={lisa.src}
             alt="Lisa mit Lasse"
             width={320}

@@ -19,7 +19,7 @@ export default function Page() {
   return (
     <>
       <H1 heading="Leistungen">
-        <blockquote className="w-50 text-xl italic text-gray-900">
+        <blockquote className="w-3/4 mx-auto text-xl italic text-gray-900">
           &bdquo;Wenn etwas trotz vieler Anstrengungen nicht gut genug
           funktioniert und passt- dann höre auf damit und versuche etwas
           anderes.&ldquo;
