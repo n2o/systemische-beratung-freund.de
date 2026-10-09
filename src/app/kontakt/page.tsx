@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Kontakt",
 }
 
-const phoneNumber = "0176 62579217"
+const phoneNumber = "0176 62597217"
 function Number() {
   return (
     <a href={`tel:${phoneNumber}`} className="underline">

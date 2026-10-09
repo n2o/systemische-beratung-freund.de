@@ -22,7 +22,7 @@ export default function Leistungen() {
 
         <h2>Kontakt</h2>
         <p>
-          Telefon: 0176 62579217
+          Telefon: 0176 62597217
           <br />
           E-Mail: info@systemische-beratung-freund.de
         </p>
