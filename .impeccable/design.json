@@ -1,0 +1,322 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-09T10:30:02+00:00",
+  "title": "Design System: Praxis für Systemische Beratung und -Therapie Lisa Freund",
+  "extensions": {
+    "colorMeta": {
+      "fir": {
+        "role": "primary",
+        "displayName": "Tannengrün",
+        "tonalRamp": [
+          "#03140c",
+          "#082a1a",
+          "#0e3f29",
+          "#1f5a3f",
+          "#3a7759",
+          "#629a7e",
+          "#9cc4ae",
+          "#d9ebe1"
+        ]
+      },
+      "sun": {
+        "role": "secondary",
+        "displayName": "Sonnengelb",
+        "tonalRamp": [
+          "#3d2a05",
+          "#6b4a0a",
+          "#9c6c12",
+          "#c98d22",
+          "#f2b33d",
+          "#f6c76d",
+          "#fadb9f",
+          "#fdf0d4"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Kühles Papier",
+        "tonalRamp": [
+          "#1d2420",
+          "#3a433e",
+          "#5b655f",
+          "#808a84",
+          "#a6afaa",
+          "#ccd3cf",
+          "#e6ece8",
+          "#f5f7f6"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Tiefe Tinte",
+        "tonalRamp": [
+          "#0a110d",
+          "#14201a",
+          "#28362f",
+          "#3f4f46",
+          "#5b6b62",
+          "#808f86",
+          "#aeb9b2",
+          "#dde3df"
+        ]
+      },
+      "mist": {
+        "role": "neutral",
+        "displayName": "Nebel",
+        "tonalRamp": [
+          "#1f2723",
+          "#3c4741",
+          "#5e6a63",
+          "#84908a",
+          "#abb6b0",
+          "#cdd6d1",
+          "#e6ece8",
+          "#f4f7f5"
+        ]
+      },
+      "muted-ink": {
+        "role": "neutral",
+        "displayName": "Gedämpfte Tinte",
+        "tonalRamp": [
+          "#121a16",
+          "#26312b",
+          "#3a4840",
+          "#4a5c52",
+          "#66796e",
+          "#8a9b91",
+          "#b6c2bb",
+          "#e1e7e3"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Linie",
+        "tonalRamp": [
+          "#141c18",
+          "#2a3a31",
+          "#425a4d",
+          "#5e7a6a",
+          "#7a9686",
+          "#9db2a5",
+          "#c4d2c9",
+          "#e8eee9"
+        ]
+      },
+      "sage": {
+        "role": "neutral",
+        "displayName": "Salbei (nur dekorativ)",
+        "tonalRamp": [
+          "#18211c",
+          "#2f3f36",
+          "#4b6155",
+          "#6a8477",
+          "#8fa89a",
+          "#adc1b5",
+          "#cfdcd4",
+          "#edf2ef"
+        ]
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Haarlinie",
+        "canonical": "color-mix(in oklab, var(--fir) 15%, transparent)"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Ein h1 pro Seite: Startseiten-Headline und Seitentitel."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Abschnittstitel (h2)."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Leistungsnamen, mobile Menüeinträge, hervorgehobene Kernsätze."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "Einleitungsabsätze unter Display und Headline."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Fließtext, max. 65ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Hinweiszeilen, Tabellenköpfe, Copyright."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "draw",
+        "value": "1.6s cubic-bezier(0.16, 1, 0.3, 1) both",
+        "purpose": "Linien zeichnen sich einmal ein (draw-in); im Diagramm um 90ms je Kante versetzt. Nur bei prefers-reduced-motion: no-preference."
+      },
+      {
+        "name": "state",
+        "value": "200ms",
+        "purpose": "Übergang für Outline-Ring, Strichstärke, Unterstreichung und Pfeilversatz."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "0.01ms",
+        "purpose": "Bei prefers-reduced-motion: reduce werden Animationen und Übergänge praktisch abgeschaltet, Scrollen ohne Glättung."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Anruf-Button",
+      "kind": "button",
+      "refersTo": "button-call",
+      "description": "Primärer Anruf: Sonnengelb mit Tannengrün-Rahmen; Hover verdoppelt die Linie.",
+      "html": "<a class=\"ds-btn ds-btn-lg ds-btn-sun\" href=\"#\">0176 62597217</a>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:44px;padding:0 20px;border-radius:9999px;border:var(--stroke,1.5px) solid transparent;font-family:inherit;font-size:1rem;font-weight:600;white-space:nowrap;outline:var(--stroke,1.5px) solid transparent;outline-offset:3px;transition:outline-color .2s,background-color .2s,color .2s;cursor:pointer;text-decoration:none}.ds-btn:focus-visible{outline:2px solid var(--fir,#0e3f29);outline-offset:3px}.ds-btn-lg{height:52px;padding:0 24px;font-size:1.125rem}.ds-btn-sun{background:var(--sun,#f2b33d);color:var(--fir,#0e3f29);border-color:var(--fir,#0e3f29)}.ds-btn-sun:hover{outline-color:var(--fir,#0e3f29)}"
+    },
+    {
+      "name": "Outline-Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Sekundärer Kontaktweg und Leistungsnavigation; Hover verdoppelt die Linie.",
+      "html": "<a class=\"ds-btn ds-btn-lg ds-btn-outline\" href=\"#\">E-Mail schreiben</a>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:44px;padding:0 20px;border-radius:9999px;border:var(--stroke,1.5px) solid transparent;font-family:inherit;font-size:1rem;font-weight:600;white-space:nowrap;outline:var(--stroke,1.5px) solid transparent;outline-offset:3px;transition:outline-color .2s,background-color .2s,color .2s;cursor:pointer;text-decoration:none}.ds-btn:focus-visible{outline:2px solid var(--fir,#0e3f29);outline-offset:3px}.ds-btn-lg{height:52px;padding:0 24px;font-size:1.125rem}.ds-btn-outline{background:transparent;color:var(--fir,#0e3f29);border-color:var(--fir,#0e3f29)}.ds-btn-outline:hover{outline-color:var(--fir,#0e3f29)}"
+    },
+    {
+      "name": "Tannengrün-Button",
+      "kind": "button",
+      "refersTo": "button-fir",
+      "description": "Default-Variante; im Code vorhanden, derzeit nicht auf den Seiten eingesetzt.",
+      "html": "<button class=\"ds-btn ds-btn-fir\">Weiter</button>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:44px;padding:0 20px;border-radius:9999px;border:var(--stroke,1.5px) solid transparent;font-family:inherit;font-size:1rem;font-weight:600;white-space:nowrap;outline:var(--stroke,1.5px) solid transparent;outline-offset:3px;transition:outline-color .2s,background-color .2s,color .2s;cursor:pointer;text-decoration:none}.ds-btn:focus-visible{outline:2px solid var(--fir,#0e3f29);outline-offset:3px}.ds-btn-lg{height:52px;padding:0 24px;font-size:1.125rem}.ds-btn-fir{background:var(--fir,#0e3f29);color:var(--paper,#f5f7f6)}.ds-btn-fir:hover{outline-color:var(--fir,#0e3f29)}"
+    },
+    {
+      "name": "Hauptnavigation",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Hover einfache, aktuelle Seite doppelte Unterstreichung.",
+      "html": "<nav class=\"ds-nav\"><a href=\"#\" aria-current=\"page\">Leistungen</a><a href=\"#\">Therapie und Ablauf</a><a href=\"#\">Kontakt</a></nav>",
+      "css": ".ds-nav{display:flex;gap:28px;font-weight:600;color:var(--fir,#0e3f29)}.ds-nav a{color:inherit;text-decoration:underline;text-decoration-color:transparent;text-decoration-thickness:var(--stroke,1.5px);text-underline-offset:.4em;transition:text-decoration-color .2s}.ds-nav a:hover{text-decoration-color:currentColor}.ds-nav a[aria-current=page]{text-decoration-color:currentColor;text-decoration-style:double}.ds-nav a:focus-visible{outline:2px solid var(--fir,#0e3f29);outline-offset:3px}"
+    },
+    {
+      "name": "Textlink",
+      "kind": "custom",
+      "refersTo": "link-fir",
+      "description": "Inline-Link: einfach unterstrichen, Hover doppelt.",
+      "html": "<p class=\"ds-p\">Gern auch per <a class=\"ds-link\" href=\"#\">SMS</a>.</p>",
+      "css": ".ds-p{color:var(--ink,#14201a)}.ds-link{color:var(--fir,#0e3f29);font-weight:600;text-decoration:underline;text-decoration-thickness:var(--stroke,1.5px);text-underline-offset:.2em}.ds-link:hover{text-decoration-style:double}.ds-link:focus-visible{outline:2px solid var(--fir,#0e3f29);outline-offset:3px}"
+    },
+    {
+      "name": "Leistungszeile",
+      "kind": "custom",
+      "refersTo": "ServiceList",
+      "description": "Gestapelte Form des Systemdiagramms: Genogramm-Glyphe, Name, Kurztext, Haarlinie unten.",
+      "html": "<a class=\"ds-service\" href=\"#\"><svg viewBox=\"0 0 48 48\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"ds-glyph\"><circle cx=\"13\" cy=\"17\" r=\"7\"/><circle cx=\"35\" cy=\"17\" r=\"7\"/><path d=\"M13 24v10h22V24\"/></svg><span class=\"ds-service-text\"><span class=\"ds-service-name\">Paarberatung</span><span class=\"ds-service-sub\">Wieder einander zuwenden</span></span><span class=\"ds-service-arrow\" aria-hidden=\"true\">&#8594;</span></a>",
+      "css": ".ds-service{display:flex;align-items:center;gap:20px;padding:24px 0;border-bottom:var(--stroke,1.5px) solid var(--border,rgba(14,63,41,.15));color:var(--fir,#0e3f29);text-decoration:none}.ds-glyph{width:56px;height:56px;flex-shrink:0;stroke-width:var(--stroke,1.5px)}.ds-glyph *{vector-effect:non-scaling-stroke}.ds-service-text{flex:1}.ds-service-name{display:block;font-size:1.25rem;font-weight:600;text-decoration:underline;text-decoration-color:transparent;text-decoration-thickness:var(--stroke,1.5px);text-underline-offset:4px}.ds-service-sub{color:var(--muted-foreground,#4a5c52)}.ds-service-arrow{transition:transform .2s}.ds-service:hover .ds-service-name{text-decoration-color:currentColor;text-decoration-style:double}.ds-service:hover .ds-service-arrow{transform:translateX(4px)}.ds-service:focus-visible{outline:2px solid var(--fir,#0e3f29);outline-offset:4px}"
+    },
+    {
+      "name": "Phasen",
+      "kind": "custom",
+      "refersTo": "PhaseSteps",
+      "description": "Ablauf als Knoten auf einer Salbei-Linie; der erste Knoten trägt den Doppelring.",
+      "html": "<ol class=\"ds-phases\"><li class=\"ds-phase ds-phase-first\"><h3>Kontakt aufnehmen</h3><p>Telefonisch, per SMS oder E-Mail.</p></li><li class=\"ds-phase\"><h3>Informationsgespräch</h3><p>Kostenfrei, bis 60 Minuten.</p></li><li class=\"ds-phase\"><h3>Entscheidung</h3><p>Sie entscheiden.</p></li></ol>",
+      "css": ".ds-phases{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;list-style:none;padding:0;margin:0}.ds-phase{position:relative;padding-top:56px}.ds-phase::before{content:'';position:absolute;top:11px;left:0;width:calc(100% + 32px);height:var(--stroke,1.5px);background:var(--sage,#8fa89a)}.ds-phase:last-child::before{display:none}.ds-phase::after{content:'';position:absolute;top:0;left:0;width:24px;height:24px;box-sizing:border-box;border-radius:9999px;border:var(--stroke,1.5px) solid var(--fir,#0e3f29);background:var(--paper,#f5f7f6)}.ds-phase-first::after{outline:var(--stroke,1.5px) solid var(--fir,#0e3f29);outline-offset:2px}.ds-phase h3{margin:0;font-size:1.125rem;font-weight:600;color:var(--fir,#0e3f29)}.ds-phase p{margin:4px 0 0;color:var(--muted-foreground,#4a5c52)}"
+    },
+    {
+      "name": "Systemknoten",
+      "kind": "custom",
+      "refersTo": "SystemDiagram",
+      "description": "Signatur: gelber Doppelkreis „Sie“, Kante zu einem Leistungsknoten; Hover macht die Kante doppelt.",
+      "html": "<svg class=\"ds-system\" viewBox=\"0 0 360 160\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><a href=\"#\" class=\"ds-edge-link\"><path class=\"ds-edge\" d=\"M117 80H226\"/><path class=\"ds-edge-core\" d=\"M117 80H226\"/><circle cx=\"270\" cy=\"80\" r=\"40\" fill=\"#f5f7f6\"/><g transform=\"translate(246 56)\" stroke=\"#0e3f29\"><circle cx=\"24\" cy=\"24\" r=\"10\"/></g><text x=\"270\" y=\"146\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"600\" fill=\"#0e3f29\">Einzeln</text></a><circle cx=\"70\" cy=\"80\" r=\"41\" stroke=\"#0e3f29\"/><circle cx=\"70\" cy=\"80\" r=\"33\" fill=\"#f2b33d\" stroke=\"#0e3f29\"/><text x=\"70\" y=\"87\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#0e3f29\">Sie</text></svg>",
+      "css": ".ds-system{width:360px;max-width:100%;stroke-width:var(--stroke,1.5px)}.ds-system *{vector-effect:non-scaling-stroke}.ds-edge{stroke:var(--fir,#0e3f29);transition:stroke-width .2s}.ds-edge-core{stroke:var(--paper,#f5f7f6);stroke-width:4px;opacity:0;transition:opacity .2s}.ds-edge-link{outline:none}.ds-edge-link:hover .ds-edge,.ds-edge-link:focus-visible .ds-edge{stroke-width:7px}.ds-edge-link:hover .ds-edge-core,.ds-edge-link:focus-visible .ds-edge-core{opacity:1}.ds-edge-link:hover text,.ds-edge-link:focus-visible text{text-decoration:underline}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Systemische Notation",
+    "overview": "Die Seite zeichnet, wie systemische Arbeit denkt: Menschen sind Knoten, Beziehungen sind Linien, und „Sie“ stehen in der Mitte. Die Sprache ist die des Genogramms. Kreise stehen für Personen, eine Klammer für Partnerschaft, eine Raute für Lasse, ein Doppelkreis für die Indexperson. Diese Zeichen tragen Navigation, Ablauf und Leistungen, nicht Dekoration.\n\nDer Grund ist kühles Papier, die einzige Tinte ist Tannengrün. Alles ist mit einer einzigen Strichstärke gezeichnet. Tiefe gibt es nicht: keine Schatten, keine Karten, keine Kacheln. Flächen werden durch Haarlinien und einen einzigen Tonwechsel (Nebel) gegliedert. Ein warmes Gelb markiert genau die Stellen, an denen die Besucherin selbst vorkommt oder handeln kann. Bewegung ist ruhig: Linien zeichnen sich einmal ein, und Zustände zeigen sich durch eine andere Linienart.\n\nDie Dichte ist großzügig, die Schrift groß und gut lesbar (Atkinson Hyperlegible Next, Fließtext 17px). Bewusst abgelehnt wird die Branchen-Norm aus Salbei-Karten, Serifen-Headlines und Stock-Ruhe.",
+    "keyCharacteristics": [
+      "Eine Tinte (Tannengrün) für Text und bedeutungstragende Linien; Gelb nur für „Sie“ und den Anruf.",
+      "Eine Strichstärke (1,5px) für Rahmen, Trennlinien, Icons und gezeichnete Diagramme.",
+      "Kreise als Knoten, Linien als Beziehungen; Genogramm-Glyphen statt generischer Icons.",
+      "Zustände wechseln die Linienart (keine → einfach → doppelt, gestrichelt für Fokus), nie nur die Farbe.",
+      "Flach: Haarlinien und eine Nebel-Fläche statt Schatten und Karten.",
+      "Linien zeichnen sich einmal ein, mit Rücksicht auf `prefers-reduced-motion`."
+    ],
+    "rules": [
+      {
+        "name": "The One Ink Rule",
+        "body": "Text und bedeutungstragende Linien sind Tannengrün (Überschriften, Links, Kanten) oder Tiefe Tinte (Fließtext). Keine zweite Textfarbe außer der gedämpften Tinte für Sekundärtext.",
+        "section": "colors"
+      },
+      {
+        "name": "The Sie Rule",
+        "body": "Sonnengelb erscheint nur dort, wo die Besucherin gemeint ist oder handelt: der „Sie“-Knoten und der Anruf. Textauswahl und Skip-Link sind die einzigen Ausnahmen. Kein gelber Text, keine gelben Flächen als Schmuck.",
+        "section": "colors"
+      },
+      {
+        "name": "The Decorative Sage Rule",
+        "body": "Salbei ist zu hell für Bedeutung. Was gelesen oder angeklickt werden muss, ist nie salbeifarben.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Family Rule",
+        "body": "Atkinson Hyperlegible Next für alles. Keine Serifen-Headline, keine zweite Display-Schrift.",
+        "section": "typography"
+      },
+      {
+        "name": "The Seventeen Rule",
+        "body": "Fließtext beginnt bei 17px (1.0625rem). Kleiner als 14px nur im Logo-Untertitel auf Mobil.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Paper Rule",
+        "body": "Keine `box-shadow`, keine schwebenden Karten. Eine Fläche hebt sich nur durch eine Linie oder durch Nebel ab.",
+        "section": "elevation"
+      },
+      {
+        "name": "The One Stroke Rule",
+        "body": "Jede Linie ist 1,5px stark: Trennlinie, Button-Rahmen, Icon, Diagrammkante, Unterstreichung. Dicker wird eine Linie nur als Zustand (Hover-Kante im Diagramm), und auch dann als zwei parallele Linien.",
+        "section": "shapes"
+      },
+      {
+        "name": "The Node Rule",
+        "body": "Personen sind Kreise. Ein Doppelkreis markiert die Indexperson („Sie“, erster Schritt im Ablauf).",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "**Do** zeichne jede Linie mit `--stroke` (1,5px): `hairline-*` für Rahmen, `stroke-system` für SVG.",
+      "**Do** zeige Zustände über die Linienart: keine → einfach (Hover) → doppelt (aktiv/Hover bei Buttons und Listen), gestrichelt für den Fokus auf Diagrammknoten.",
+      "**Do** setze Sonnengelb nur für den „Sie“-Knoten und den Anruf, immer mit Tannengrün-Text und -Rahmen.",
+      "**Do** verwende die Genogramm-Glyphen (Kreis = Person, Klammer = Paar, Raute = Lasse) für Leistungen, auch in Tabellen und Navigation.",
+      "**Do** gliedere Abschnitte mit `section-y`, Haarlinien oder dem Nebel-Band.",
+      "**Do** lass neue gezeichnete Linien höchstens einmal einzeichnen (`draw-in`) und respektiere `prefers-reduced-motion`.",
+      "**Do** halte Kontaktwege groß: Touch-Ziele mindestens 44px."
+    ],
+    "donts": [
+      "**Don't** verwende Schatten oder schwebende Karten; das System ist flach.",
+      "**Don't** baue Kartenraster oder Salbei-Kacheln für Leistungen; Leistungen sind Knoten und Listenzeilen.",
+      "**Don't** setze eine Serifen- oder zweite Display-Schrift ein.",
+      "**Don't** zeige einen Zustand nur durch Farbwechsel.",
+      "**Don't** nutze Salbei für Text, Icons oder bedeutungstragende Linien.",
+      "**Don't** setze Text in Sonnengelb oder Gelb als Schmuckfläche.",
+      "**Don't** mische Strichstärken; Ausnahme ist allein das Logo."
+    ]
+  }
+}

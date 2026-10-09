@@ -1,32 +1,48 @@
 import { Container } from "@/components/Container"
-import { Logo } from "@/components/Logo"
-import { NavLink } from "@/components/NavLink"
+import { PracticeAddress } from "@/components/ContactActions"
+import { LogoMark } from "@/components/Logo"
+import { legalNav, nav, site } from "@/config/site"
+import { keepTogether } from "@/lib/utils"
 import Link from "next/link"
 
 export function Footer() {
   return (
-    <footer className="mt-12 bg-slate-50">
-      <Container>
-        <div className="py-16">
-          <div className="w-full mx-auto flex justify-center">
-            <Link href="/">
-              <Logo className="" />
-            </Link>
-          </div>
-          <nav className="mt-10 text-sm" aria-label="quick links">
-            <div className="-my-1 flex justify-center gap-x-6">
-              <NavLink href="/impressum">Impressum</NavLink>
-              <NavLink href="/datenschutz">Datenschutz</NavLink>
-            </div>
-          </nav>
-        </div>
-        <div className="flex flex-col items-center border-t border-slate-400/10 py-10 sm:flex-row-reverse sm:justify-between">
-          <div className="flex gap-x-6"></div>
-          <p className="mt-6 text-sm text-slate-500 sm:mt-0">
-            &copy; {new Date().getFullYear()} Praxis für Systemische Beratung
-            und -Therapie Lisa Freund.
+    <footer className="mt-24 bg-fir text-paper">
+      <Container className="grid gap-12 py-16 md:grid-cols-[1.4fr_1fr_1fr]">
+        <div className="flex gap-4">
+          <LogoMark className="size-12 shrink-0" />
+          <p className="max-w-xs font-semibold leading-snug">
+            {keepTogether(site.name)}
           </p>
         </div>
+
+        <div>
+          <h2 className="mb-3 text-base font-semibold text-paper">
+            Kontakt
+          </h2>
+          <PracticeAddress linkClassName="underline" />
+        </div>
+
+        <nav aria-label="Fußzeile">
+          <h2 className="mb-3 text-base font-semibold text-paper">
+            Seiten
+          </h2>
+          <ul className="space-y-1">
+            {[...nav, ...legalNav].map((item) => (
+              <li key={item.href}>
+                <Link
+                  href={item.href}
+                  className="underline decoration-transparent hover:decoration-current"
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </Container>
+      <Container className="hairline-t border-paper/20 py-6 text-sm text-paper/80">
+        © {new Date().getFullYear()} {keepTogether(site.name)}
       </Container>
     </footer>
   )

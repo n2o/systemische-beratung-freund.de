@@ -1,91 +1,69 @@
+import { ContactActions, PracticeAddress } from "@/components/ContactActions"
 import { Container } from "@/components/Container"
-import { H1 } from "@/components/Headings"
-import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/outline"
-import { Metadata } from "next"
+import { PageHeader } from "@/components/Headings"
+import { site, pages } from "@/config/site"
+import { pageMetadata } from "@/lib/metadata"
 
-export const metadata: Metadata = {
-  title: "Kontakt",
-}
-
-const phoneNumber = "0176 62597217"
-function Number() {
-  return (
-    <a href={`tel:${phoneNumber}`} className="underline">
-      {phoneNumber}
-    </a>
-  )
-}
+export const metadata = pageMetadata({
+  title: pages.kontakt.label,
+  description: `Kontakt zur ${site.name} in ${site.address.city}: telefonisch, per SMS oder E-Mail. Das Informationsgespräch ist kostenfrei.`,
+  path: pages.kontakt.href,
+})
 
 export default function Page() {
   return (
     <>
-      <H1 heading="Kontakt" />
-      <Container>
-        <div>
-          <p className="mt-2 text-lg leading-8 text-gray-600 md:w-3/4 mx-auto">
-            Ich freue mich auf Ihre Kontaktaufnahme. Bitte nutzen Sie eine der
-            folgenden Möglichkeiten, um mit mir in Verbindung zu treten. Ich
-            werde mich so schnell wie möglich bei Ihnen melden.
-          </p>
-          <div className="mx-auto mt-12 md:max-w-4xl grid grid-cols-1 lg:grid-cols-2">
-            <div>
-              <div className="flex gap-x-6">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary-light text-primary-dark">
-                  <PhoneIcon aria-hidden="true" className="h-6 w-6 " />
-                </div>
-                <div>
-                  <h3 className="text-base font-semibold leading-7 text-primary-dark">
-                    Per Telefon: <br />
-                    <Number />
-                  </h3>
-                  <p className="mt-2 leading-7 text-gray-600">
-                    Ich freue mich auf Ihren Anruf.
-                  </p>
-                  <p className="mt-4">
-                    <a
-                      href={`tel:${phoneNumber}`}
-                      className="text-sm font-semibold leading-6 text-primary"
-                    >
-                      Jetzt anrufen <span aria-hidden="true">&rarr;</span>
-                    </a>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div className="flex gap-x-6">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary-light text-primary-dark">
-                  <EnvelopeIcon aria-hidden="true" className="h-6 w-6 " />
-                </div>
-                <div>
-                  <h3 className="text-base font-semibold leading-7 text-primary-dark">
-                    Per E-Mail:
-                    <br />
-                    <a
-                      href="mailto:info@systemische-beratung-freund.de"
-                      className="underline"
-                    >
-                      info@systemische-beratung-freund.de
-                    </a>
-                  </h3>
-                  <p className="mt-2 leading-7 text-gray-600">
-                    Schreiben Sie mir eine E-Mail. Ich werde mich so schnell wie
-                    möglich bei Ihnen melden.
-                  </p>
-                  <p className="mt-4">
-                    <a
-                      href="mailto:info@systemische-beratung-freund.de"
-                      className="text-sm font-semibold leading-6 text-primary"
-                    >
-                      E-Mail schreiben <span aria-hidden="true">&rarr;</span>
-                    </a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </Container>
+      <PageHeader title={pages.kontakt.label}>
+        Ich freue mich auf Ihre Kontaktaufnahme. Bitte nutzen Sie eine der
+        folgenden Möglichkeiten, um mit mir in Verbindung zu treten. Ich werde
+        mich so schnell wie möglich bei Ihnen melden.
+      </PageHeader>
+      <section aria-label="Kontaktmöglichkeiten" className="pb-20 md:pb-28">
+        <Container className="grid gap-12 lg:grid-cols-2">
+          <ContactActions />
+          <PracticeAddress
+            className="hairline-t pt-6 lg:border-t-0 lg:hairline-l lg:pt-0 lg:pl-12"
+            linkClassName="link-fir"
+          >
+            {/* The one relationship this page is about: you and me. */}
+            <svg
+              viewBox="0 0 220 60"
+              aria-hidden="true"
+              className="stroke-system mb-6 w-52"
+              fill="none"
+            >
+              <circle cx="30" cy="30" r="27" className="stroke-fir" />
+              <circle cx="30" cy="30" r="21" className="fill-sun stroke-fir" />
+              <path
+                d="M64 30H162"
+                className="draw-in stroke-fir"
+                pathLength={1}
+              />
+              <circle
+                cx="190"
+                cy="30"
+                r="25"
+                className="fill-paper stroke-fir"
+              />
+              {[
+                [30, "Sie"],
+                [190, site.owner.split(" ")[0]],
+              ].map(([x, label]) => (
+                <text
+                  key={label}
+                  x={x}
+                  y="35"
+                  textAnchor="middle"
+                  fontSize="14"
+                  className="fill-fir stroke-none font-bold"
+                >
+                  {label}
+                </text>
+              ))}
+            </svg>
+          </PracticeAddress>
+        </Container>
+      </section>
     </>
   )
 }

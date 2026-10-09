@@ -1,46 +1,36 @@
 import { Container } from "@/components/Container"
-import { H1 } from "@/components/Headings"
-import {
-  Einzelberatung,
-  Familienberatung,
-  Paarberatung,
-  Teamberatung,
-  TiergestuetzteArbeit,
-  Wiedereingliederung,
-} from "@/components/Leistungen"
+import { PageHeader } from "@/components/Headings"
+import { ServiceSection } from "@/components/Leistungen"
 import { LeistungenNavigation } from "@/components/LeistungenNavigation"
-import { Metadata } from "next"
+import { services, site, pages } from "@/config/site"
+import { pageMetadata } from "@/lib/metadata"
 
-export const metadata: Metadata = {
-  title: "Leistungen",
-}
+export const metadata = pageMetadata({
+  title: pages.leistungen.label,
+  description: `Systemische Beratung und Therapie in ${site.address.city}: Einzel-, Paar-, Familien- und Teamberatung, Wiedereingliederung nach stationärem Aufenthalt und tiergestützte Arbeit.`,
+  path: pages.leistungen.href,
+})
 
 export default function Page() {
   return (
     <>
-      <H1 heading="Leistungen">
-        <blockquote className="w-3/4 mx-auto text-xl italic text-gray-900">
-          &bdquo;Wenn etwas trotz vieler Anstrengungen nicht gut genug
-          funktioniert und passt- dann höre auf damit und versuche etwas
-          anderes.&ldquo;
-          <br />
-          Steve de Shazer
+      <PageHeader title={pages.leistungen.label}>
+        <blockquote>
+          <p>
+            „Wenn etwas trotz vieler Anstrengungen nicht gut genug funktioniert
+            und passt – dann höre auf damit und versuche etwas anderes.“
+          </p>
+          <cite className="mt-2 block not-italic">Steve de Shazer</cite>
         </blockquote>
-      </H1>
-      <div className="my-10" />
-      <div>
-        <div className="bg-slate-100 px-3 py-5">
-          <Container>
-            <LeistungenNavigation />
-          </Container>
-        </div>
-        <Wiedereingliederung />
-        <Einzelberatung />
-        <Paarberatung />
-        <Familienberatung />
-        <Teamberatung />
-        <TiergestuetzteArbeit />
+      </PageHeader>
+      <div className="bg-mist py-6">
+        <Container>
+          <LeistungenNavigation />
+        </Container>
       </div>
+      {services.map((s) => (
+        <ServiceSection key={s.id} id={s.id} />
+      ))}
     </>
   )
 }

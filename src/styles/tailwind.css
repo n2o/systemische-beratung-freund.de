@@ -1,118 +1,189 @@
-@import 'tailwindcss';
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
-@plugin '@tailwindcss/forms';
-@plugin '@tailwindcss/typography';
-@plugin '@tailwindcss/aspect-ratio';
-
-@theme {
-  --text-*: initial;
-  --text-xs: 0.75rem;
-  --text-xs--line-height: 1rem;
-  --text-sm: 0.875rem;
-  --text-sm--line-height: 1.5rem;
-  --text-base: 1rem;
-  --text-base--line-height: 1.75rem;
-  --text-lg: 1.125rem;
-  --text-lg--line-height: 2rem;
-  --text-xl: 1.25rem;
-  --text-xl--line-height: 2rem;
-  --text-2xl: 1.5rem;
-  --text-2xl--line-height: 2rem;
-  --text-3xl: 2rem;
-  --text-3xl--line-height: 2.5rem;
-  --text-4xl: 2.5rem;
-  --text-4xl--line-height: 3.5rem;
-  --text-5xl: 3rem;
-  --text-5xl--line-height: 3.5rem;
-  --text-6xl: 3.75rem;
-  --text-6xl--line-height: 1;
-  --text-7xl: 4.5rem;
-  --text-7xl--line-height: 1.1;
-  --text-8xl: 6rem;
-  --text-8xl--line-height: 1;
-  --text-9xl: 8rem;
-  --text-9xl--line-height: 1;
-
-  --color-primary: #0e3f29;
-  --color-primary-dark: #0a2b1d;
-  --color-primary-light: #dce1cd;
-  --color-secondary: #ffdd00;
-  --color-accent: #69c9cd;
-
-  --radius-4xl: 2rem;
-
-  --font-sans:
-    Inter, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
-    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  --font-display:
-    Lexend, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
-    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-
-  --container-2xl: 40rem;
-}
+@plugin "@tailwindcss/typography";
 
 /*
-  The default border color has changed to `currentColor` in Tailwind CSS v4,
-  so we've added these compatibility styles to make sure everything still
-  looks the same as it did with Tailwind CSS v3.
-
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
+  Design tokens — "Systemische Notation".
+  Fir green is the only ink for text and meaningful lines; sun marks
+  "Sie" and the primary call action and never carries text itself.
+  Sage is for decorative lines only (2.4:1 on paper).
+  Every line in the system is one stroke wide: use the hairline-* utilities
+  (colour comes from --border) or border-(length:--stroke) for fir lines.
 */
-@layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentColor);
-  }
+:root {
+  --paper: #f5f7f6;
+  --ink: #14201a;
+  --fir: #0e3f29;
+  --line: #5e7a6a;
+  --sage: #8fa89a;
+  --mist: #e6ece8;
+  --sun: #f2b33d;
+  --stroke: 1.5px;
+
+  --background: var(--paper);
+  --foreground: var(--ink);
+  --popover: var(--paper);
+  --popover-foreground: var(--ink);
+  --muted: var(--mist);
+  --muted-foreground: #4a5c52;
+  --border: color-mix(in oklab, var(--fir) 15%, transparent);
+  --ring: var(--fir);
 }
 
-@layer utilities {
-  #__next {
-    min-height: 100%;
-  }
+@theme inline {
+  --font-sans: var(--font-atkinson), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-sans);
 
-  .hyphens-none {
-    hyphens: none;
-  }
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
 
-  .hyphens-manual {
-    hyphens: manual;
-  }
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-fir: var(--fir);
+  --color-line: var(--line);
+  --color-sage: var(--sage);
+  --color-mist: var(--mist);
+  --color-sun: var(--sun);
 
-  .hyphens-auto {
-    hyphens: auto;
-  }
+  --text-body: 1.0625rem;
+  --text-display: clamp(2.5rem, 1.6rem + 3.6vw, 4.25rem);
+  --text-display--line-height: 1.04;
+  --text-display--letter-spacing: -0.025em;
+  --text-title: clamp(1.875rem, 1.5rem + 1.5vw, 2.75rem);
+  --text-title--line-height: 1.1;
+  --text-title--letter-spacing: -0.02em;
 }
 
 @layer base {
-  h1 {
-    @apply text-3xl;
+  * {
+    @apply border-border outline-ring;
   }
-
-  h2 {
-    @apply text-2xl;
+  html {
+    @apply scroll-smooth bg-background font-sans text-foreground antialiased;
+    scroll-padding-top: 6rem;
   }
-
+  body {
+    @apply min-h-dvh text-body leading-relaxed;
+  }
+  h1,
+  h2,
   h3 {
-    @apply text-xl;
+    @apply font-heading font-semibold text-balance text-fir;
+    overflow-wrap: break-word;
   }
-
-  h4 {
-    @apply text-lg;
+  /* Icons draw with the system stroke at any size. */
+  svg.lucide {
+    stroke-width: var(--stroke);
   }
-
-  h1, h2, h3, h4, h5, h6 {
-    @apply mb-3 text-primary-dark;
+  svg.lucide * {
+    vector-effect: non-scaling-stroke;
   }
-
   p {
-    @apply mb-2;
+    @apply text-pretty;
   }
+  /* Grid items may shrink below their content (large images, long words). */
+  :where(.grid > *) {
+    min-width: 0;
+  }
+  ::selection {
+    background: var(--sun);
+    color: var(--fir);
+  }
+  :focus-visible {
+    outline: 2px solid var(--fir);
+    outline-offset: 3px;
+  }
+  a {
+    text-underline-offset: 0.2em;
+    text-decoration-thickness: var(--stroke);
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    ::before,
+    ::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
 
-  .link {
-    @apply text-primary hover:underline;
+/* Lines that draw themselves once, from an already-visible state. */
+@keyframes draw {
+  from {
+    stroke-dashoffset: 1;
   }
+}
+@utility draw-in {
+  @media (prefers-reduced-motion: no-preference) {
+    stroke-dasharray: 1;
+    animation: draw 1.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+}
+
+/* For authored SVG: strokes stay one system stroke wide at any scale. */
+@utility stroke-system {
+  stroke-width: var(--stroke);
+  & * {
+    vector-effect: non-scaling-stroke;
+  }
+}
+
+@utility hairline {
+  border-width: var(--stroke);
+}
+@utility hairline-t {
+  border-top-width: var(--stroke);
+}
+@utility hairline-b {
+  border-bottom-width: var(--stroke);
+}
+@utility hairline-y {
+  border-block-width: var(--stroke);
+}
+@utility hairline-l {
+  border-left-width: var(--stroke);
+}
+
+/* Inline text link: single underline, double on hover. */
+@utility link-fir {
+  color: var(--fir);
+  font-weight: 600;
+  text-decoration-line: underline;
+  &:hover {
+    text-decoration-style: double;
+  }
+}
+
+@utility section-y {
+  padding-block: 5rem;
+  @media (width >= 48rem) {
+    padding-block: 7rem;
+  }
+}
+
+@utility prose-fir {
+  overflow-wrap: break-word;
+  hyphens: auto;
+  --tw-prose-body: var(--ink);
+  --tw-prose-headings: var(--fir);
+  --tw-prose-links: var(--fir);
+  --tw-prose-bold: var(--ink);
+  --tw-prose-bullets: var(--line);
+  --tw-prose-counters: var(--line);
+  --tw-prose-hr: var(--border);
 }

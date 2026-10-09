@@ -1,16 +1,23 @@
-import clsx from "clsx"
-import Link from "next/link"
+"use client"
 
-export function NavLink({ href, children, className = "" }) {
+import { cn } from "@/lib/utils"
+import Link from "next/link"
+import { usePathname } from "next/navigation"
+
+// Hover = single underline, current page = double: states change line type.
+export function NavLink({
+  className,
+  ...props
+}: React.ComponentProps<typeof Link> & { href: string }) {
+  const pathname = usePathname()
   return (
     <Link
-      href={href}
-      className={clsx(
-        "text-md inline-block rounded-lg py-1 px-2 font-semibold text-slate-700 hover:bg-slate-100 hover:text-slate-900 duration-200",
+      aria-current={pathname.startsWith(props.href) ? "page" : undefined}
+      className={cn(
+        "underline decoration-transparent underline-offset-[0.4em] transition-colors hover:decoration-current aria-[current=page]:decoration-current aria-[current=page]:decoration-double",
         className,
       )}
-    >
-      {children}
-    </Link>
+      {...props}
+    />
   )
 }

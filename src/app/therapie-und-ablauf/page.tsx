@@ -1,66 +1,69 @@
+import { ContactActions } from "@/components/ContactActions"
 import { Container } from "@/components/Container"
-import { H1 } from "@/components/Headings"
-import praxis from "@/images/placeholder_praxis.webp"
-import { Metadata } from "next"
-import Image from "next/image"
+import { PageHeader } from "@/components/Headings"
+import { PhaseSteps } from "@/components/PhaseSteps"
+import { pages, servicePrice, site } from "@/config/site"
+import { pageMetadata } from "@/lib/metadata"
 
-export const metadata: Metadata = {
-  title: "Therapie und Ablauf",
-}
+export const metadata = pageMetadata({
+  title: pages.ablauf.label,
+  description: `So läuft die systemische Therapie in ${site.address.city} ab: kostenfreies Informationsgespräch, Entscheidung, Sitzungen in Praxis, bei Ihnen zu Hause oder in Bewegung.`,
+  path: pages.ablauf.href,
+})
+
+const einzel = servicePrice("einzelberatung")
+const paar = servicePrice("paarberatung")
+const familie = servicePrice("familienberatung")
 
 export default function Page() {
   return (
     <>
-      <H1 heading="Therapie und Ablauf"></H1>
-      <Container>
-        <div className="bg-white px-6 lg:px-8">
-          <div className="text-base leading-7 text-gray-700">
-            <div className="mt-10">
-              <p>
-                Kontaktieren Sie mich gern telefonisch, via SMS oder über das
-                hiesige Kontaktformular für einen Termin zum
-                Informationsgespräch.
-              </p>
-              <p className="mt-2">
-                In diesem Erstkontakt lernen wir einander zunächst kennen. Sie
-                haben die Möglichkeit einen ersten Einblick von mir und meiner
-                Arbeitsweise als Therapeutin zu gewinnen, während ich einen
-                Eindruck erhalte, was Sie thematisch zu mir führt, sowie welche
-                Vorstellungen und Ziele Sie im Hinblick auf Therapie und
-                Beratung verfolgen.
-              </p>
-              <p className="mt-2">
-                Im Anschluss treffen Sie die Entscheidung, ob Sie sich eine
-                Zusammenarbeit mit mir vorstellen können. Ich prüfe derweil, ob
-                ich Ihren Therapieauftrag annehmen kann.
-              </p>
-              <p className="mt-2">
-                Einzelsitzungen dauern in der Regel 60 Minuten, Paar- /
-                Familiensitzungen ca. 90 Minuten. Dabei beläuft sich der
-                Rhythmus bei Einzel- und Paarsitzungen zumeist auf alle 1-2
-                Wochen, bei Familiensitzungen auf etwa alle 4 Wochen. Je nach
-                Situation kann es auch sinnvoll sein individuelle Absprachen zu
-                treffen.
-              </p>
-              <p className="mt-2">
-                Zwischen den Sitzungen lade ich Sie immer wieder mit Hilfe von
-                Impulsen, Übungen und Experimenten dazu ein, Inhalte weiter zu
-                denken, Ihre Perspektive zu verändern, neue Erfahrungen zu
-                machen und damit Ihr Handlungsrepertoire zu erweitern.
-              </p>
-            </div>
-            <figure className="mt-16">
-              <Image
-                src={praxis.src}
-                alt="Bild der Praxis"
-                width={500}
-                height={200}
-                className="aspect-video w-full md:w-3/4 mx-auto rounded-xl bg-gray-50 object-cover"
-              />
-            </figure>
+      <PageHeader title={pages.ablauf.label} />
+      <section aria-labelledby="phasen" className="pb-16 md:pb-20">
+        <Container>
+          <h2 id="phasen" className="sr-only">
+            Die vier Phasen
+          </h2>
+          <PhaseSteps />
+        </Container>
+      </section>
+      <section className="hairline-t section-y">
+        <Container>
+          <div className="max-w-prose space-y-4 text-lg">
+            <p>
+              Kontaktieren Sie mich gern telefonisch, per SMS oder E-Mail für
+              einen Termin zum Informationsgespräch.
+            </p>
+            <p>
+              In diesem Erstkontakt lernen wir einander zunächst kennen. Sie
+              haben die Möglichkeit einen ersten Einblick von mir und meiner
+              Arbeitsweise als Therapeutin zu gewinnen, während ich einen
+              Eindruck erhalte, was Sie thematisch zu mir führt, sowie welche
+              Vorstellungen und Ziele Sie im Hinblick auf Therapie und Beratung
+              verfolgen.
+            </p>
+            <p>
+              Im Anschluss treffen Sie die Entscheidung, ob Sie sich eine
+              Zusammenarbeit mit mir vorstellen können. Ich prüfe derweil, ob
+              ich Ihren Therapieauftrag annehmen kann.
+            </p>
+            <p>
+              Einzelsitzungen dauern in der Regel {einzel.unit}, Paar- /
+              Familiensitzungen ca. {paar.unit}. Dabei beläuft sich der Rhythmus
+              bei Einzel- und Paarsitzungen zumeist auf {einzel.rhythm}, bei
+              Familiensitzungen auf {familie.rhythm}. Je nach Situation kann es
+              auch sinnvoll sein individuelle Absprachen zu treffen.
+            </p>
+            <p>
+              Zwischen den Sitzungen lade ich Sie immer wieder mit Hilfe von
+              Impulsen, Übungen und Experimenten dazu ein, Inhalte weiter zu
+              denken, Ihre Perspektive zu verändern, neue Erfahrungen zu machen
+              und damit Ihr Handlungsrepertoire zu erweitern.
+            </p>
           </div>
-        </div>
-      </Container>
+          <ContactActions className="mt-12" />
+        </Container>
+      </section>
     </>
   )
 }

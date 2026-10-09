@@ -1,119 +1,76 @@
-"use client"
+import { ContactActions } from "@/components/ContactActions"
 import { Container } from "@/components/Container"
 import { Logo } from "@/components/Logo"
 import { NavLink } from "@/components/NavLink"
-import { Popover, Transition } from "@headlessui/react"
-import { Bars3Icon, PhoneIcon, XMarkIcon } from "@heroicons/react/24/outline"
-import clsx from "clsx"
+import { Button } from "@/components/ui/button"
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetDescription,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet"
+import { nav, site } from "@/config/site"
+import { MenuIcon, PhoneIcon } from "lucide-react"
 import Link from "next/link"
-import { Fragment } from "react"
-
-function MobileNavLink({ href, children }) {
-  return (
-    <Link
-      href={href}
-      className="block w-full rounded-sm p-2 hover:bg-slate-100 hover:underline"
-    >
-      {children}
-    </Link>
-  )
-}
-
-function MobileNavIcon({ open }) {
-  return (
-    <div className="m-3 overflow-visible stroke-slate-700">
-      <Bars3Icon
-        className={clsx(
-          "h-8 origin-center transition",
-          open && "hidden scale-90 opacity-0",
-        )}
-      />
-      <XMarkIcon
-        className={clsx(
-          "h-8 origin-center transition",
-          !open && "hidden scale-90 opacity-0",
-        )}
-      />
-    </div>
-  )
-}
-
-function MobileNavigation() {
-  return (
-    <Popover>
-      <Popover.Button
-        className="relative z-10 flex h-8 w-8 items-center justify-center not-focus-visible:focus:outline-hidden"
-        aria-label="Toggle Navigation"
-      >
-        {({ open }) => <MobileNavIcon open={open} />}
-      </Popover.Button>
-      <Transition.Root>
-        <Transition.Child
-          as={Fragment}
-          enter="duration-150 ease-out"
-          enterFrom="opacity-0"
-          enterTo="opacity-100"
-          leave="duration-150 ease-in"
-          leaveFrom="opacity-100"
-          leaveTo="opacity-0"
-        >
-          <Popover.Overlay className="fixed inset-0 bg-slate-300/50" />
-        </Transition.Child>
-        <Transition.Child
-          as={Fragment}
-          enter="duration-150 ease-out"
-          enterFrom="opacity-0 scale-95"
-          enterTo="opacity-100 scale-100"
-          leave="duration-100 ease-in"
-          leaveFrom="opacity-100 scale-100"
-          leaveTo="opacity-0 scale-95"
-        >
-          <Popover.Panel
-            as="div"
-            className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5"
-          >
-            <MobileNavLink href="/leistungen">Leistungen</MobileNavLink>
-            <MobileNavLink href="/therapie-und-ablauf">
-              Therapie und Ablauf
-            </MobileNavLink>
-            <MobileNavLink href="/honorar">
-              Honorar und Modalitäten
-            </MobileNavLink>
-            <MobileNavLink href="/kontakt">Kontakt</MobileNavLink>
-          </Popover.Panel>
-        </Transition.Child>
-      </Transition.Root>
-    </Popover>
-  )
-}
 
 export function Navbar() {
   return (
-    <header className="py-10">
-      <Container>
-        <nav className="relative z-50 flex justify-between">
-          <div className="flex items-center md:gap-x-12">
-            <Link href="/" aria-label="Home">
-              <Logo className="h-16 w-auto md:h-28" />
-            </Link>
-            <div className="hidden md:flex md:gap-x-6">
-              <NavLink href="/leistungen">Leistungen</NavLink>
-              <NavLink href="/therapie-und-ablauf">Therapie und Ablauf</NavLink>
-              <NavLink href="/honorar">Honorar und Modalitäten</NavLink>
-            </div>
-          </div>
-          <div className="flex items-center gap-x-5 md:gap-x-8">
-            <div className="hidden md:block">
-              <NavLink href="/kontakt">
-                <PhoneIcon className="mr-2 inline h-5" />
-                Kontakt
-              </NavLink>
-            </div>
-            <div className="-mr-1 md:hidden">
-              <MobileNavigation />
-            </div>
-          </div>
+    <header className="sticky top-0 z-40 hairline-b bg-paper">
+      <Container className="flex h-20 items-center justify-between gap-6">
+        <Link href="/" aria-label={`${site.shortName}, zur Startseite`}>
+          <Logo />
+        </Link>
+
+        <nav aria-label="Hauptnavigation" className="hidden lg:block">
+          <ul className="flex items-center gap-7 font-semibold text-fir">
+            {nav.map((item) => (
+              <li key={item.href}>
+                <NavLink href={item.href}>{item.label}</NavLink>
+              </li>
+            ))}
+          </ul>
         </nav>
+
+        <div className="flex items-center gap-2">
+          <Button asChild variant="sun" className="max-sm:size-11 max-sm:px-0">
+            <a href={site.phone.href}>
+              <PhoneIcon aria-hidden="true" />
+              <span className="sr-only">Anrufen: </span>
+              <span className="max-sm:sr-only">{site.phone.display}</span>
+            </a>
+          </Button>
+
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button variant="outline" size="icon" className="lg:hidden">
+                <MenuIcon aria-hidden="true" />
+                <span className="sr-only">Menü öffnen</span>
+              </Button>
+            </SheetTrigger>
+            <SheetContent className="gap-0 bg-paper p-6 pt-20">
+              <SheetTitle className="sr-only">Navigation</SheetTitle>
+              <SheetDescription className="sr-only">
+                Seiten der Praxis und Kontaktwege
+              </SheetDescription>
+              <nav aria-label="Mobile Navigation">
+                <ul className="hairline-t text-xl font-semibold text-fir">
+                  {nav.map((item) => (
+                    <li key={item.href} className="hairline-b">
+                      <SheetClose asChild>
+                        <NavLink href={item.href} className="block py-4">
+                          {item.label}
+                        </NavLink>
+                      </SheetClose>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+              <ContactActions className="mt-8" />
+            </SheetContent>
+          </Sheet>
+        </div>
       </Container>
     </header>
   )
